@@ -1,12 +1,21 @@
 ##START: test_one
-require 'test_helper' # <label id="code.test_require" />
+require 'test_helper'
 
-class ProjectTest < ActiveSupport::TestCase # <label id="code.test_superclass" />
+class ProjectTest < ActiveSupport::TestCase
 
-  test "a project with no tasks is done" do # <label id="code.test_test" />
+  test "a project with no tasks is done" do
     project = Project.new
-    assert(project.done?) # <label id="code.test_assert" />
+    assert(project.done?)
   end
+
+  ##START: test_two
+  test "a project with an incomplete task is not done" do
+    project = Project.new
+    task = Task.new
+    project.tasks << task
+    refute(project.done?)
+  end
+  ##END:  test_two
 
 end
 ##END: test_one
