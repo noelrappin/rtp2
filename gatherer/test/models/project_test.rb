@@ -1,11 +1,11 @@
 ##START: test_one
-require 'test_helper' # <label id="test_require_01" />
+require 'test_helper' # <label id="code.test_require" />
 
-class ProjectTest < ActiveSupport::TestCase # <label id="test_superclass" />
+class ProjectTest < ActiveSupport::TestCase # <label id="code.test_superclass" />
 
-  test "a project with no tasks is done" do # <label id="test_test" />
+  test "a project with no tasks is done" do # <label id="code.test_test" />
     project = Project.new
-    assert(project.done?) # <label id="test_assert" />
+    assert(project.done?) # <label id="code.test_assert" />
   end
 
 end
