@@ -5,9 +5,16 @@ class Project
     @tasks = []
   end
 
-  ##START: new_done
   def done?
     tasks.reject(&:complete?).empty?
   end
-  ##END: new_done
+
+  def total_size
+    tasks.sum(&:size)
+  end
+
+  def remaining_size
+    tasks.reject(&:complete?).sum(&:size)
+  end
+
 end
