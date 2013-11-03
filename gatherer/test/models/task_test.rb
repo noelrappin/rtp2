@@ -9,4 +9,26 @@ class TaskTest < ActiveSupport::TestCase
     assert(task.complete?)
   end
 
+  ##START:vel_test
+  test "an uncompleted task does not count toward velocity" do
+    task = Task.new(size: 3)
+    refute(task.counts_toward_velocity?)
+    assert_equal(0, task.points_toward_velocity)
+  end
+
+  test "a task completed long ago does not count toward velocity" do
+    task = Task.new(size: 3)
+    task.complete!(6.months.ago)
+    refute(task.counts_toward_velocity?)
+    assert_equal(0, task.points_toward_velocity)
+  end
+
+  test "a task completed recently counts toward velocity" do
+    task = Task.new(size: 3)
+    task.complete!(1.day.ago)
+    assert(task.counts_toward_velocity?)
+    assert_equal(3, task.points_toward_velocity)
+  end
+  ##END:vel_test
+
 end
