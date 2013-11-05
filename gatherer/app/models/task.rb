@@ -3,7 +3,7 @@ class Task
   attr_accessor :size, :completed_at
 
   def initialize(options = {})
-    complete! if options[:completed]
+    complete!(options[:completed]) if options[:completed]
     @size = options[:size]
   end
 
