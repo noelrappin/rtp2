@@ -29,11 +29,11 @@ class ProjectWithDataTest < ActiveSupport::TestCase
   end
 
   test "a project knows its rate" do
-    assert_equal(1.0 / 7, @project.current_rate)
+    assert_equal(1.0 / 7, @project.current_rate) # <label id="code.algebra" />
   end
 
   test "a project knows its projected time remaining" do
-    assert_equal(35, @project.projected_days_remaining)
+    assert_equal(35, @project.projected_days_remaining) # <label id="code.number" />
   end
 
   test "a project can tell if it is on schedule" do
