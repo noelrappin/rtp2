@@ -1,4 +1,3 @@
-##START: test_one
 require 'test_helper'
 
 class ProjectTest < ActiveSupport::TestCase
@@ -8,16 +7,13 @@ class ProjectTest < ActiveSupport::TestCase
     assert(project.done?)
   end
 
-  ##START: test_two
   test "a project with an incomplete task is not done" do
     project = Project.new
     task = Task.new
     project.tasks << task
     refute(project.done?)
   end
-  ##END:  test_two
 
-  ##START: test_three
   test "a project is only done if all its tests are done" do
     project = Project.new
     task = Task.new
@@ -26,7 +22,16 @@ class ProjectTest < ActiveSupport::TestCase
     task.complete!
     assert(project.done?)
   end
-  ##END:  test_three
+
+  ##START:init_project
+  test "a project with no completed tasks projects correctly" do
+    project = Project.new
+    assert_equal(0, project.completed_velocity)
+    assert_equal(0, project.current_rate)
+    assert(project.projected_days_remaining.nan?)
+    refute(project.on_schedule?)
+  end
+  ##END:init_project
+
 
 end
-##END: test_one

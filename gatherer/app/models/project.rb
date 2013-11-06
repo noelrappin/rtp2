@@ -21,7 +21,6 @@ class Project
     incomplete_tasks.sum(&:size)
   end
 
-  ##START:new_math
   def completed_velocity
     tasks.sum(&:points_toward_velocity)
   end
@@ -34,9 +33,11 @@ class Project
     remaining_size / current_rate
   end
 
+  ##START:newer_math
   def on_schedule?
+    return false if projected_days_remaining.nan?
     (Date.today + projected_days_remaining) <= due_date
   end
-  ##END:new_math
+  ##END:newer_math
 
 end

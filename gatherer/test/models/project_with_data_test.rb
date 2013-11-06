@@ -4,7 +4,6 @@ class ProjectWithDataTest < ActiveSupport::TestCase
 
   setup :create_project_with_data
 
-  ##START:new_setup
   def create_project_with_data
     @project = Project.new
     newly_done = Task.new(size: 3, completed: 1.day.ago)
@@ -13,7 +12,6 @@ class ProjectWithDataTest < ActiveSupport::TestCase
     large_not_done = Task.new(size: 4)
     @project.tasks = [newly_done, old_done, small_not_done, large_not_done]
   end
-  ##END:new_setup
 
   test "a project can tell its total size" do
     assert_equal(10, @project.total_size)
@@ -42,6 +40,5 @@ class ProjectWithDataTest < ActiveSupport::TestCase
     @project.due_date = 6.months.from_now
     assert(@project.on_schedule?)
   end
-  ##END:new_tests
 
 end
