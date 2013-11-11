@@ -1,14 +1,15 @@
-class Project
-  attr_accessor :tasks, :due_date
+##START:as_active_record
+class Project < ActiveRecord::Base
+  attr_accessor :tasks
 
-  ##START:velocity_length
+  def initialize(*args)
+    super
+    @tasks = []
+  end
+##END:as_active_record
+
   def self.velocity_length_in_days
     21
-  end
-  ##END:velocity_length
-
-  def initialize
-    @tasks = []
   end
 
   def incomplete_tasks

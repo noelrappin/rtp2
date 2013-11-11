@@ -2,6 +2,7 @@ require "test_helper"
 
 class AddTaskTest < Capybara::Rails::TestCase
   test "a user can add a task to a project" do
+    Project.create!(name: "Project Runway")          # <label id="given_start" />
     visit new_task_path                              # <label id="when_start" />
     fill_in "Title", with: "Something to do"
     fill_in project_name, with: "Project Runway"
