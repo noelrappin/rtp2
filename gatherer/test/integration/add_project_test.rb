@@ -1,17 +1,18 @@
 require "test_helper"
 
-class AddTaskTest < Capybara::Rails::TestCase
-  test "a user can add a task to a project" do
-    Project.create!(name: "Project Runway")          # <label id="given_start" />
-    visit new_task_path                              # <label id="when_start" />
-    fill_in "Title", with: "Something to do"
-    fill_in project_name, with: "Project Runway"
-    select "3", from: "Size"
-    click_on("Submit")                              # <label id="when_end" />
-    visit projects_path
-    click_on("Project Runway")                      # <label id="then_start" />
-    assert_content("Something to do")
+class AddProjectTest < Capybara::Rails::TestCase
+  test "a user can add a a project and give it tasks" do
+    visit new_project_path
+    fill_in "Title", with: "Project Runway"         # <label id="when_start" />
+    fill_in "Tasks", with: "Task 1:3\nTask2:5"
+    click_on("Submit")
+    visit projects_path                             # <label id="when_end" />
+    assert_content("Project Runway")                # <label id="then_start" />
+    assert_content("8")
   end
 
 end
+
+
+
 
