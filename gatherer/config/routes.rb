@@ -1,7 +1,7 @@
 Gatherer::Application.routes.draw do
   resources :tasks
 
-  resources :projects
+  #resources :projects
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -43,7 +43,7 @@ Gatherer::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
