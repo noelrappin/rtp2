@@ -8,4 +8,38 @@ class CreatesProjectTest < ActiveSupport::TestCase
     assert_equal "Project Runway", creator.project.name
   end
 
+  test "saves a project" do
+    creator = CreatesProject.new(name: "Project Runway")
+    creator.build.save
+    refute creator.project.new_record?
+  end
+
+  test "handles an empty string" do
+    creator = CreatesProject.new(name: "Test", task_string: "")
+    tasks = creator.convert_string_to_tasks
+    assert_equal 0, tasks.size
+  end
+
+  test "handles a single string" do
+    creator = CreatesProject.new(name: "Test", task_string: "start things")
+    tasks = creator.convert_string_to_tasks
+    assert_equal 1, tasks.size
+    assert_equal "start things", tasks.first.title
+    assert_equal 1, tasks.first.size
+  end
+
+  test "handles a single string with a size" do
+    creator = CreatesProject.new(name: "Test", task_string: "start things:3")
+    tasks = creator.convert_string_to_tasks
+    assert_equal 1, tasks.size
+    assert_equal "start things", tasks.first.title
+    assert_equal 3, tasks.first.size
+  end
+
+  test "handles multiple tasks" do
+    creator = CreatesProject.new(
+        name: "Test", task_string: "start things:3\nend things:2")
+    tasks = creator.convert_string_to_tasks
+    assert_equal 2, tasks.size
+  end
 end
