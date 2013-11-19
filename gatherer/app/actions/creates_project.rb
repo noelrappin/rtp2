@@ -22,7 +22,7 @@ class CreatesProject
       Task.new(title: title, size: size)
     end
   end
-  ##END:
+  ##END: string_convert
 
   def save
     project.save
