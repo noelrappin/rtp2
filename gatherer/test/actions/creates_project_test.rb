@@ -8,12 +8,7 @@ class CreatesProjectTest < ActiveSupport::TestCase
     assert_equal "Project Runway", creator.project.name
   end
 
-  test "saves a project" do
-    creator = CreatesProject.new(name: "Project Runway")
-    creator.build.save
-    refute creator.project.new_record?
-  end
-
+  ##START:stringy
   test "handles an empty string" do
     creator = CreatesProject.new(name: "Test", task_string: "")
     tasks = creator.convert_string_to_tasks
@@ -42,4 +37,13 @@ class CreatesProjectTest < ActiveSupport::TestCase
     tasks = creator.convert_string_to_tasks
     assert_equal 2, tasks.size
   end
+
+  test "saves a project with tasks" do
+    creator = CreatesProject.new(name: "Project Runway",
+        task_string: "start things:3\nend things:2")
+    creator.build.save
+    assert_equal 2, creator.project.tasks.size
+    refute creator.project.new_record?
+  end
+  ##END: stringy
 end

@@ -7,9 +7,13 @@ class CreatesProject
     @task_string = task_string
   end
 
+  ##START: string_convert
   def build
     self.project = Project.new(name: name)
+    project.tasks = convert_string_to_tasks
+    project
   end
+
 
   def convert_string_to_tasks
     task_string.split("\n").map do |task_string|
@@ -18,6 +22,7 @@ class CreatesProject
       Task.new(title: title, size: size)
     end
   end
+  ##END:
 
   def save
     project.save
