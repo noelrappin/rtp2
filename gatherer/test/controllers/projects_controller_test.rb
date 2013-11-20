@@ -8,9 +8,11 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal "Runway", assigns[:action].project.name # <label id="assert_assigns" />
   end
 
+  ##START: failure
   test "on failure we go back to the form" do
     post :create, project: {name: "", tasks: ""}
     assert_template :new
     refute_nil assigns(:project)
   end
+  ##END: failure
 end
