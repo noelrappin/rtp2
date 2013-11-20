@@ -22,10 +22,16 @@ class CreatesProject
       Task.new(title: title, size: size)
     end
   end
-  ##END: string_convert
 
   def save
     project.save
   end
+
+  def create
+    build
+    save
+  end
+
+  ##END: string_convert
 
 end

@@ -2,6 +2,8 @@
 class Project < ActiveRecord::Base
   has_many :tasks
 
+  validates :name, presence: true
+
   def total_size
     tasks.to_a.sum(&:size)
   end
