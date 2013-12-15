@@ -31,4 +31,10 @@ class TaskTest < ActiveSupport::TestCase
   end
   ##END:vel_test
 
+  test "it finds completed tasks" do
+    complete = Task.create(completed_at: 1.day.ago, title: "Completed")
+    incomplete = Task.create(completed_at: nil, title: "Not Completed")
+    assert_equal([complete], Task.complete)
+  end
+
 end

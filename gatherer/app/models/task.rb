@@ -2,6 +2,10 @@
 class Task < ActiveRecord::Base
 ##END:as_active_record
 
+  def self.complete
+    []
+  end
+
   def complete!(date = nil)
     self.completed_at = (date || Time.current)
   end
