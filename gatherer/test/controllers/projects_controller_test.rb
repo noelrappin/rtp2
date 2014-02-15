@@ -31,7 +31,7 @@ class ProjectsControllerTest < ActionController::TestCase
     patch :update, id: projects(:one), project: {name: "Fred"} # <label id="update_controller" />
     assert_template('edit') # <label id="update_template" />
     actual = Project.find(sample.id)
-    assert_not_equal("Fred", actual.name)
+    assert_not_equal("Fred", actual.name) # <label id="update_find" />
   end
 ##END:  mock_failure
 end
