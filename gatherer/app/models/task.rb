@@ -1,9 +1,7 @@
-##START:as_active_record
 class Task < ActiveRecord::Base
-##END:as_active_record
 
   def self.complete
-    []
+    where(["completed_at < ?", Time.current])
   end
 
   def complete!(date = nil)

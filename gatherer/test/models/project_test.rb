@@ -23,7 +23,6 @@ class ProjectTest < ActiveSupport::TestCase
     assert(project.done?)
   end
 
-  ##START:init_project
   test "a project with no completed tasks projects correctly" do
     project = Project.new
     assert_equal(0, project.completed_velocity)
@@ -31,7 +30,14 @@ class ProjectTest < ActiveSupport::TestCase
     assert(project.projected_days_remaining.nan?)
     refute(project.on_schedule?)
   end
-  ##END:init_project
+
+  ##START:stub_one
+  test "lets stub an object" do
+    project = Project.new(name: "Project Greenlight")
+    project.stubs(:name)
+    assert_nil(project.name)
+  end
+  ##END:stub_one
 
 
 end

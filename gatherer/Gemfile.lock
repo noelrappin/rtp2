@@ -59,6 +59,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.2)
     method_source (0.8.2)
     mime-types (1.25)
     mini_portile (0.5.2)
@@ -77,6 +78,8 @@ GEM
       minitest-capybara (~> 0.4)
       minitest-metadata (~> 0.4)
       minitest-rails (~> 0.9.1)
+    mocha (1.0.0)
+      metaclass (~> 0.0.1)
     multi_json (1.8.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -144,6 +147,7 @@ DEPENDENCIES
   jquery-rails
   m
   minitest-rails-capybara
+  mocha
   rails (= 4.0.1)
   sass-rails (~> 4.0.0)
   sdoc
