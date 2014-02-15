@@ -15,4 +15,14 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil assigns(:project) # <label id="refute_nil" />
   end
   ##END: failure
+
+##START: mock_failure
+  test "fail create gracefully" do
+    assert_no_difference('Project.count') do
+      Project.any_instance.stubs(:save).returns(false)
+      post :create, :project => {:name => 'Project Runway'}
+      assert_template('new')
+    end
+  end
+##END:  mock_failure
 end
