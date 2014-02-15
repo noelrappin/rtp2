@@ -9,10 +9,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+group :development, :test do
+  gem "mocha", require: false
+end
+
 group :test do
   gem "minitest-rails-capybara"
   gem 'm'
-  gem "mocha", require: false
 end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
