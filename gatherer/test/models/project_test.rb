@@ -50,7 +50,7 @@ class ProjectTest < ActiveSupport::TestCase
 ##START: stub_class
   test "let's stub a class" do
     Project.stubs(:find).returns(Project.new(:name => "Project Greenlight"))
-    project = Project.find(1)
+    project = Project.find(1) # <label id="stub_class_stub" />
     assert_equal("Project Greenlight", project.name)
   end
 ##END:  stub_class
