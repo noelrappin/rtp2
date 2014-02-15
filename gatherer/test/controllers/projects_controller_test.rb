@@ -19,10 +19,19 @@ class ProjectsControllerTest < ActionController::TestCase
 ##START: mock_failure
   test "fail create gracefully" do
     assert_no_difference('Project.count') do
-      Project.any_instance.stubs(:save).returns(false)
-      post :create, :project => {:name => 'Project Runway'}
-      assert_template('new')
+      Project.any_instance.stubs(:save).returns(false) # <label id="create_any_instance" />
+      post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
+      assert_template('new') # <label id="create_template" />
     end
+  end
+
+  test "fail update gracefully" do
+    sample = Project.create!(name: "Test Project")
+    Project.any_instance.stubs(:update_attributes).returns(false) # <label id="update_any_instance" />
+    patch :update, id: projects(:one), project: {name: "Fred"} # <label id="update_controller" />
+    assert_template('edit') # <label id="update_template" />
+    actual = Project.find(sample.id)
+    assert_not_equal("Fred", actual.name)
   end
 ##END:  mock_failure
 end

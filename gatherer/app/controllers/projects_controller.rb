@@ -22,4 +22,15 @@ class ProjectsController < ApplicationController
     end
   end
   ##END: create
+
+  ##START: update
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(params[:project])
+      redirect_to @project, notice: "'project was successfully updated.'"
+    else
+      render action: 'edit'
+    end
+  end
+  ##END: update
 end
