@@ -65,4 +65,13 @@ class ProjectTest < ActiveSupport::TestCase
   end
 ##END:  multi_return
 
+##START: mock_one
+  test "lets mock an object" do
+    mock_project = Project.new(:name => "Project Greenlight")
+    mock_project.expects(:name).returns("Fred")
+    assert_equal("Fred", mock_project.name)
+  end
+##END:  mock_one
+
+
 end
