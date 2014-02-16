@@ -34,4 +34,15 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_not_equal("Fred", actual.name) # <label id="update_find" />
   end
 ##END:  mock_failure
+
+##START: stub_with
+  test "let's stub a class again" do
+    Project.stubs(:find).with(1).returns(
+        Project.new(:name => "Project Greenlight"))
+    Project.stubs(:find).with(2).returns(
+        Project.new(:name => "Project Blue Book"))
+    assert_equal("Project Greenlight", Project.find(1).name)
+    assert_equal("Project Blue Book", Project.find(2).name)
+  end
+##END:  stub_with
 end
