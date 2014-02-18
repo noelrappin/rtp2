@@ -13,7 +13,8 @@ class ProjectsControllerTest < ActionController::TestCase
   ##START:mock_test
   test "the project method creates a project (mock version)" do
     fake_project = mock(create: true) # <label id="mock_project" />
-    CreatesProject.expects(:new).with(name: "Runway", task_string: "start something:2") # <label id="mock_action" />
+    CreatesProject.expects(:new)  # <label id="mock_action" />
+        .with(name: "Runway", task_string: "start something:2")
         .returns(fake_project)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
