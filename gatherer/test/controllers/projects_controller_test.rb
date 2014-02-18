@@ -12,12 +12,12 @@ class ProjectsControllerTest < ActionController::TestCase
 
   ##START:mock_test
   test "the project method creates a project (mock version)" do
-    fake_project = mock(create: true)
-    CreatesProject.expects(:new).with(name: "Runway", task_string: "start something:2")
+    fake_project = mock(create: true) # <label id="mock_project" />
+    CreatesProject.expects(:new).with(name: "Runway", task_string: "start something:2") # <label id="mock_action" />
         .returns(fake_project)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
-    refute_nil assigns[:action]
+    refute_nil assigns[:action] # <label id="mock_refute_nil" />
   end
   ##END:mock_test
 
