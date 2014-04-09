@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
 ##END:as_active_record
 
   def self.complete
-    []
+    where("completed_at IS NOT NULL")
   end
 
   def mark_completed(date = nil)
