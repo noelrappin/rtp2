@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
     where(["completed_at < ?", Time.current])
   end
 
-  def complete!(date = nil)
+  def mark_completed(date = nil)
     self.completed_at = (date || Time.current)
   end
 
