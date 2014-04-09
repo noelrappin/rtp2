@@ -4,7 +4,7 @@ class Task
     @completed = false
   end
 
-  def complete!
+  def mark_completed
     @completed = true
   end
 

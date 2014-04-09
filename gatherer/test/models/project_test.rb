@@ -23,7 +23,7 @@ class ProjectTest < ActiveSupport::TestCase
     task = Task.new
     project.tasks << task
     refute(project.done?)
-    task.complete!
+    task.mark_completed
     assert(project.done?)
   end
   ##END:  test_three
