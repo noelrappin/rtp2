@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
 ##END:as_active_record
 
   def mark_completed(date = nil)
-    @completed_at = (date || Time.current)
+    self.completed_at = (date || Time.current)
   end
 
   def complete?
