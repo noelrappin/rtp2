@@ -9,8 +9,7 @@ class Task
   end
 
 ##END:task_setup
-
-  def complete!
+  def mark_completed
     @completed = true
   end
 
