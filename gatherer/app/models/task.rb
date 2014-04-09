@@ -7,8 +7,8 @@ class Task
     @size = options[:size]
   end
 
-  def complete!(date = nil)
-    @completed_at = (date || Time.current)
+  def mark_completed
+    @completed = true
   end
 
   def complete?
