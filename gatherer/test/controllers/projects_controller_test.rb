@@ -32,7 +32,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
 ##START: mock_failure
   test "fail create gracefully" do
-    assert_no_difference('Project.count') do
+    assert_no_difference('Project.count') do # <label id="assert_no_difference" />
       Project.any_instance.expects(:save).returns(false) # <label id="create_any_instance" />
       post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
       assert_template('new') # <label id="create_template" />
