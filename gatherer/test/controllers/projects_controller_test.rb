@@ -1,55 +1,55 @@
+##START:intro
 require 'test_helper'
 
-class ProjectsControllerTest < ActionController::TestCase
+class ProjectsControllerTest < ActionController::TestCase # <label id="inheritance" />
 
-  ##START:state_test
   test "the project method creates a project" do
-    post :create, project: {name: "Runway", tasks: "start something:2"}
-    assert_redirected_to projects_path
-    assert_equal "Runway", assigns[:action].project.name
+    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="create_request" />
+    assert_redirected_to projects_path # <label id="controller_assert_redirect" />
+    assert_equal "Runway", assigns[:action].project.name # <label id="assigns" />
   end
-  ##END:state_test
+##END:intro
 
-  ##START:mock_test
+
   test "the project method creates a project (mock version)" do
-    fake_project = mock(create: true) # <label id="mock_project" />
-    CreatesProject.expects(:new)  # <label id="mock_action" />
+    fake_project = mock(create: true)
+    CreatesProject.expects(:new)
         .with(name: "Runway", task_string: "start something:2")
         .returns(fake_project)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
-    refute_nil assigns[:action] # <label id="mock_refute_nil" />
+    refute_nil assigns[:action]
   end
-  ##END:mock_test
 
-  ##START: failure
+
+
   test "on failure we go back to the form" do
-    post :create, project: {name: "", tasks: ""} # <label id="blank_form" />
-    assert_template :new # <label id="assert_template" />
-    refute_nil assigns(:project) # <label id="refute_nil" />
+    post :create, project: {name: "", tasks: ""}
+    assert_template :new
+    refute_nil assigns(:project)
   end
-  ##END: failure
 
-##START: mock_failure
+
+
   test "fail create gracefully" do
-    assert_no_difference('Project.count') do # <label id="assert_no_difference" />
-      Project.any_instance.expects(:save).returns(false) # <label id="create_any_instance" />
-      post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
-      assert_template('new') # <label id="create_template" />
+    assert_no_difference('Project.count') do
+      Project.any_instance.expects(:save).returns(false)
+      post :create, :project => {:name => 'Project Runway'}
+      assert_template('new')
     end
   end
 
   test "fail update gracefully" do
     sample = Project.create!(name: "Test Project")
-    Project.any_instance.expects(:update_attributes).returns(false) # <label id="update_any_instance" />
-    patch :update, id: projects(:one), project: {name: "Fred"} # <label id="update_controller" />
-    assert_template('edit') # <label id="update_template" />
+    Project.any_instance.expects(:update_attributes).returns(false)
+    patch :update, id: projects(:one), project: {name: "Fred"}
+    assert_template('edit')
     actual = Project.find(sample.id)
-    assert_not_equal("Fred", actual.name) # <label id="update_find" />
+    assert_not_equal("Fred", actual.name)
   end
-##END:  mock_failure
 
-##START: stub_with
+
+
   test "let's stub a class again" do
     Project.stubs(:find).with(1).returns(
         Project.new(:name => "Project Greenlight"))
@@ -58,5 +58,5 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal("Project Greenlight", Project.find(1).name)
     assert_equal("Project Blue Book", Project.find(2).name)
   end
-##END:  stub_with
+
 end
