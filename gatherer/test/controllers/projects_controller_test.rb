@@ -21,15 +21,11 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="inheritan
     refute_nil assigns[:action]
   end
 
-
-
   test "on failure we go back to the form" do
     post :create, project: {name: "", tasks: ""}
     assert_template :new
     refute_nil assigns(:project)
   end
-
-
 
   test "fail create gracefully" do
     assert_no_difference('Project.count') do
@@ -48,8 +44,6 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="inheritan
     assert_not_equal("Fred", actual.name)
   end
 
-
-
   test "let's stub a class again" do
     Project.stubs(:find).with(1).returns(
         Project.new(:name => "Project Greenlight"))
@@ -58,5 +52,22 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="inheritan
     assert_equal("Project Greenlight", Project.find(1).name)
     assert_equal("Project Blue Book", Project.find(2).name)
   end
+
+  ##START:routing
+  test "routing" do
+    assert_routing "/projects", controller: "projects", action: "index"
+    assert_routing({path: "/projects", method: "post"},
+        controller: "projects", action: "create")
+    assert_routing "/projects/new", controller: "projects", action: "new"
+    assert_routing "/projects/1", controller: "projects",
+        action: "show", id: "1"
+    assert_routing "/projects/1/edit", controller: "projects",
+        action: "edit", id: "1"
+    assert_routing({path: "/projects/1", method: "patch"},
+        controller: "projects", action: "update", id: "1")
+    assert_routing({path: "/projects/1", method: "delete"},
+        controller: "projects", action: "destroy", id: "1")
+  end
+  ##START:routing
 
 end
