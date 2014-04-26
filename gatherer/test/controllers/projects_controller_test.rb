@@ -1,7 +1,7 @@
 ##START:intro
 require 'test_helper'
 
-class ProjectsControllerTest < ActionController::TestCase # <label id="code.d1.inheritance" />
+class ProjectsControllerTest < ActionController::TestCase # <label id="inheritance" />
 
   test "the project method creates a project" do
     post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.d1.create_request" />
