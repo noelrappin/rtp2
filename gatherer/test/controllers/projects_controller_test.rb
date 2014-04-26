@@ -4,9 +4,9 @@ require 'test_helper'
 class ProjectsControllerTest < ActionController::TestCase # <label id="inheritance" />
 
   test "the project method creates a project" do
-    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.d1.create_request" />
-    assert_redirected_to projects_path # <label id="code.d1.controller_assert_redirect" />
-    assert_equal "Runway", assigns[:action].project.name # <label id="code.d1.assigns" />
+    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="create_request" />
+    assert_redirected_to projects_path # <label id="controller_assert_redirect" />
+    assert_equal "Runway", assigns[:action].project.name # <label id="assigns" />
   end
 ##END:intro
 
