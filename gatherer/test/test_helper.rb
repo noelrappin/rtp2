@@ -14,4 +14,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  ##START:assert_select_string
+  def assert_select_string(string, *selectors, &block)
+    doc_root = HTML::Document.new(string).root
+    assert_select(doc_root, *selectors, &block)
+  end
+  ##END:assert_select_string
 end
