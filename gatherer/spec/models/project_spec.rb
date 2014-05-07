@@ -16,9 +16,6 @@ describe Project do
       @project.tasks << task
       expect(@project.done?).to be_falsy
     end
-
-
   end
-
 
 end
