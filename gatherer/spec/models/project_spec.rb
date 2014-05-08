@@ -7,15 +7,17 @@ describe Project do
       @project = Project.new
     end
 
+    ##START:be_done
     it "knows that a project with no tasks is done" do
-      expect(@project.done?).to be_truthy
+      expect(@project).to be_done
     end
 
     it "knows that a project with an incomplete task is done" do
       task = Task.new
       @project.tasks << task
-      expect(@project.done?).to be_falsy
+      expect(@project).not_to be_done
     end
+    ##END:be_done
 
     describe "with a project that has one task" do
       before(:each) do
