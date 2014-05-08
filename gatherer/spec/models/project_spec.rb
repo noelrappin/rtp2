@@ -30,6 +30,29 @@ describe Project do
         expect(@project.done?).to be_truthy
       end
     end
+
+    #START:basic_stubs
+    describe "with stubs" do
+      it "can stub an instance and return a value" do
+        project = Project.new(name: "Project Greenlight")
+        allow(project).to receive(:name).and_return("Fred")
+        expect(project.name).to eq("Fred")
+      end
+
+      it "can mock an instance and expect a value" do
+        project = Project.new(name: "Project Greenlight")
+        expect(project).to receive(:name).and_return("Fred")
+        project.name
+      end
+
+      it "can spy on an instance" do
+        project = Project.new(name: "Project Greenlight")
+        allow(project).to receive(:name).and_return("Fred")
+        project.name
+        expect(project).to have_received(:name)
+      end
+    end
+    #END:basic_stubs
   end
 
 end
