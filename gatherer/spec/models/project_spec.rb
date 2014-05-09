@@ -2,22 +2,20 @@ require 'spec_helper'
 
 describe Project do
 
+  ##START:let
   describe "with a new project" do
-    before(:each) do
-      @project = Project.new
-    end
+    let(:project) { Project.new }
+    let(:task) { Task.new }
 
-    ##START:be_done
     it "knows that a project with no tasks is done" do
-      expect(@project).to be_done
+      expect(project).to be_done
     end
 
     it "knows that a project with an incomplete task is done" do
-      task = Task.new
       @project.tasks << task
       expect(@project).not_to be_done
     end
-    ##END:be_done
+  ##END:let
 
     describe "with a project that has one task" do
       before(:each) do
