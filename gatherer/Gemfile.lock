@@ -30,6 +30,12 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt-ruby (3.0.1)
     builder (3.2.2)
+    capybara (2.2.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -58,10 +64,13 @@ GEM
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_portile (0.5.3)
     minitest (5.3.3)
     mocha (1.0.0)
       metaclass (~> 0.0.1)
     multi_json (1.9.3)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -136,12 +145,15 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  capybara
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
