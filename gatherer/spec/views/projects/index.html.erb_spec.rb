@@ -1,15 +1,3 @@
-# describe "#index" do
-  #   let(:completed_task) { Task.create!(completed_at: 1.day.ago, size: 1) }
-  #   let(:on_schedule) { Project.create!(due_date: 1.year.from_now,
-  #       name: "On Schedule", tasks: [completed_task] }
-  #   let(:incomplete_task) { Task.create!(size: 1) }
-  #   let(:behind_schedule) { Project.create!(due_date: 1.day.from_now,
-  #       name: "Behind Schedule", tasks: [incomplete_task] }
-  #   it "does something" do
-
-  #   end
-  # end
-
 require 'spec_helper'
 
 describe "projects/index" do
