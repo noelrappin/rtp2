@@ -12,20 +12,20 @@ describe Project do
     end
 
     it "knows that a project with an incomplete task is done" do
-      @project.tasks << task
-      expect(@project).not_to be_done
+      project.tasks << task
+      expect(project).not_to be_done
     end
   ##END:let
 
     describe "with a project that has one task" do
       before(:each) do
-        @project.tasks << Task.new
+        project.tasks << Task.new
       end
 
       it "knows a project is only done if all its tests are done" do
-        expect(@project.done?).to be_falsy
-        @project.tasks.first.mark_completed
-        expect(@project.done?).to be_truthy
+        expect(project.done?).to be_falsy
+        project.tasks.first.mark_completed
+        expect(project.done?).to be_truthy
       end
     end
 
