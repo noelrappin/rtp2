@@ -61,6 +61,7 @@ describe Project do
     it "uses the custom matcher" do
       project.tasks << task
       expect(project).to have_size(3)
+      expect(project).not_to have_size(5)
     end
   end
   #END:matcher
