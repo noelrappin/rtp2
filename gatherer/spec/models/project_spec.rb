@@ -53,17 +53,18 @@ describe Project do
     #END:basic_stubs
   end
 
-  #START:matcher
+  #START:matcher_chained
   describe "with a custom matcher" do
     let(:project) { Project.new }
-    let(:task) { Task.new(size: 3) }
+    let(:completed_task) { Task.new(size: 3, completed_at: 1.hour.ago) }
+    let(:incompleted_task) { Task.new(size: 2) }
 
     it "uses the custom matcher" do
-      project.tasks << task
-      expect(project).to have_size(3)
-      expect(project).not_to have_size(5)
+      project.tasks = [completed_task, incompleted_task]
+      expect(project).to have_size(5)
+      expect(project).to have_size(2).for_incomplete_tasks_only
     end
   end
-  #END:matcher
+  #END:matcher_chained
 
 end
