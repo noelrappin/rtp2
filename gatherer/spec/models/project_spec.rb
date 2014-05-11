@@ -59,6 +59,7 @@ describe Project do
     let(:task) { Task.new(size: 3) }
 
     it "uses the custom matcher" do
+      project.tasks << task
       expect(project).to have_size(3)
     end
   end
