@@ -53,4 +53,15 @@ describe Project do
     #END:basic_stubs
   end
 
+  #START:matcher
+  describe "with a custom matcher" do
+    let(:project) { Project.new }
+    let(:task) { Task.new(size: 3) }
+
+    it "uses the custom matcher" do
+      expect(project).to have_size(3)
+    end
+  end
+  #END:matcher
+
 end
