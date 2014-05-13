@@ -8,6 +8,10 @@ class Project < ActiveRecord::Base
     tasks.to_a.sum(&:size)
   end
 
+  def size
+    total_size
+  end
+
   def remaining_size
     incomplete_tasks.to_a.sum(&:size)
   end
