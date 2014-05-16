@@ -11,7 +11,6 @@ class AddProjectTest < Capybara::Rails::TestCase
     assert_selector("#project_#{@project.id} .name", text: "Project Runway")
     assert_selector("#project_#{@project.id} .total-size", text: "8")
   end
-
 end
 
 
