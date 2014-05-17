@@ -1,11 +1,11 @@
 one:
-  project: runway
-  title: Make it Work
+  project: bluebook
+  title: Hunt the aliens
   size: 1
   completed_at:
 
 two:
-  project: runway
-  title: Finish the Look
+  project: bluebook
+  title: Write a book
   size: 1
   completed_at:
