@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  project_id: 
-  title: MyString
+  project: runway
+  title: Make it Work
   size: 1
-  completed_at: 2013-11-11 00:02:16
+  completed_at:
 
 two:
-  project_id: 
-  title: MyString
+  project: runway
+  title: Finish the Look
   size: 1
-  completed_at: 2013-11-11 00:02:16
+  completed_at:
