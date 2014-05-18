@@ -31,6 +31,19 @@ class Task < ActiveRecord::Base
   def small?
     size <= 1
   end
-  ###END:size_methods
+  ##END:size_methods
+
+  ##START:first
+  def first_in_project?
+    return false unless project
+    project.tasks.first == self
+  end
+
+  def last_in_project?
+    return false unless project
+    project.tasks.last == self
+  end
+
+  ##END:first
 
 end

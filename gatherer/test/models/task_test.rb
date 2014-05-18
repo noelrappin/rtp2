@@ -38,4 +38,19 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal([complete], Task.complete.to_a)
   end
 
+  ##START:first_or_last
+  test "it finds that a test is first or last" do
+    project = Project.create!(name: "Project")
+    first = project.tasks.create!(project_order: 1)
+    second = project.tasks.create!(project_order: 2)
+    third = project.tasks.create!(project_order: 3)
+    assert first.first_in_project?
+    refute first.last_in_project?
+    refute second.first_in_project?
+    refute second.last_in_project?
+    refute third.first_in_project?
+    assert third.last_in_project?
+  end
+  ##END:first_or_last
+
 end

@@ -13,6 +13,13 @@
         <td class="name"><%= task.title %></td>
         <td class="size"><%= task.size %></td>
         <td class="completed"><%= task.completed_at.to_s %></td>
+        <td>
+          <% unless task.first_in_project? %>
+            <%= link_to "Up", task, method: :patch %>
+          <% end %>
+          <% unless task.last_in_project? %>
+            <%= link_to "Down", task, method: :patch %>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
