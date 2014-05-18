@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140518182734) do
     t.datetime "completed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "order"
+    t.integer  "project_order"
   end
 
   add_index "tasks", ["project_id"], name: "index_tasks_on_project_id"

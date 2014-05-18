@@ -73,5 +73,14 @@ class ProjectTest < ActiveSupport::TestCase
   end
 ##END:  mock_one
 
+##START: test_order
+
+  test "give me the order of the first task in an empty project" do
+    project = Project.new
+    assert_equal(1, project.next_task_order)
+  end
+
+##END: test_order
+
 
 end
