@@ -43,7 +43,6 @@ class Task < ActiveRecord::Base
     return false unless project
     project.tasks.last == self
   end
-
   ##END:first
 
 end
