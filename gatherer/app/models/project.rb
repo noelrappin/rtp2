@@ -1,6 +1,6 @@
 ##START:as_active_record
 class Project < ActiveRecord::Base
-  has_many :tasks
+  has_many :tasks, -> { order "order ASC" }
 
   validates :name, presence: true
 
