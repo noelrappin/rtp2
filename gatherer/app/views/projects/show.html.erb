@@ -10,9 +10,9 @@
   <tbody>
     <% @project.tasks.each do |task| %>
       <tr>
-        <td><%= task.title %></td>
-        <td><%= task.size %></td>
-        <td><%= task.completed_at.to_s %></td>
+        <td class="name"><%= task.title %></td>
+        <td class="size"><%= task.size %></td>
+        <td class="completed"><%= task.completed_at.to_s %></td>
       </tr>
     <% end %>
   </tbody>
