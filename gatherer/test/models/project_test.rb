@@ -76,8 +76,14 @@ class ProjectTest < ActiveSupport::TestCase
 ##START: test_order
 
   test "give me the order of the first task in an empty project" do
-    project = Project.new
+    project = Project.new(name: "Project")
     assert_equal(1, project.next_task_order)
+  end
+
+  test "give me the order of the next task in a project" do
+    project = Project.create(name: "Project")
+    project.tasks.create(project_order: 3)
+    assert_equal(4, project.next_task_order)
   end
 
 ##END: test_order
