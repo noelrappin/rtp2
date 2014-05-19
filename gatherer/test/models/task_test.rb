@@ -53,4 +53,27 @@ class TaskTest < ActiveSupport::TestCase
   end
   ##END:first_or_last
 
+  def project_with_three_tasks
+    @project = Project.create!(name: "Project")
+    @first = @project.tasks.create!(project_order: 1)
+    @second = @project.tasks.create!(project_order: 2)
+    @third = @project.tasks.create!(project_order: 3)
+  end
+
+  test "it can move up" do
+    project_with_three_tasks
+    assert_equal @first, @second.previous_task
+    @second.move_up
+    assert_equal 2, @first.reload.project_order
+    assert_equal 1, @second.reload.project_order
+  end
+
+  test "it can move down" do
+    project_with_three_tasks
+    assert_equal @third, @second.next_task
+    @second.move_down
+    assert_equal 2, @third.reload.project_order
+    assert_equal 3, @second.reload.project_order
+  end
+
 end

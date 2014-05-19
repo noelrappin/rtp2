@@ -16,6 +16,18 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def up
+    @task = Task.find(params[:id])
+    @task.move_up
+    redirect_to @task.project
+  end
+
+  def down
+    @task = Task.find(params[:id])
+    @task.move_down
+    redirect_to @task.project
+  end
+
   ##START: create_with_order
   def create
     @project = Project.find(params[:task][:project_id])

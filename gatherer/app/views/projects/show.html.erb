@@ -15,10 +15,10 @@
         <td class="completed"><%= task.completed_at.to_s %></td>
         <td>
           <% unless task.first_in_project? %>
-            <%= link_to "Up", task, method: :patch %>
+            <%= link_to "Up", up_task_path(task.id), method: :patch %>
           <% end %>
           <% unless task.last_in_project? %>
-            <%= link_to "Down", task, method: :patch %>
+            <%= link_to "Down", down_task_path(task.id), method: :patch %>
           <% end %>
         </td>
       </tr>
