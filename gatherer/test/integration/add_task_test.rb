@@ -14,7 +14,7 @@ class AddTaskTest < Capybara::Rails::TestCase
       refute_selector("a", text: "Down")
       click_on("Up")
     end
-    assert_equal project_path(projects(:runway)), current_url
+    assert_equal project_path(projects(:bluebook)), current_url
     within("#task_2") do
       assert_selector(".name", text: "Find UFOs")
     end
