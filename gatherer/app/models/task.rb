@@ -45,6 +45,7 @@ class Task < ActiveRecord::Base
   end
   ##END:first
 
+  ##START:moving
   def my_place_in_project
     project.tasks.index(self)
   end
@@ -71,5 +72,6 @@ class Task < ActiveRecord::Base
   def move_down
     swap_order_with(next_task)
   end
+  ##END:moving
 
 end

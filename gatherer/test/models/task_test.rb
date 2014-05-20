@@ -53,6 +53,7 @@ class TaskTest < ActiveSupport::TestCase
   end
   ##END:first_or_last
 
+  ##START:up_and_down
   def project_with_three_tasks
     @project = Project.create!(name: "Project")
     @first = @project.tasks.create!(project_order: 1)
@@ -75,5 +76,6 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal 2, @third.reload.project_order
     assert_equal 3, @second.reload.project_order
   end
+  ##END:up_and_down
 
 end

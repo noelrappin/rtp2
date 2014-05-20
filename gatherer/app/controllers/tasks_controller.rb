@@ -16,6 +16,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  ##START:down_and_up
   def up
     @task = Task.find(params[:id])
     @task.move_up
@@ -27,6 +28,7 @@ class TasksController < ApplicationController
     @task.move_down
     redirect_to @task.project
   end
+  ##END:down_and_up
 
   ##START: create_with_order
   def create
