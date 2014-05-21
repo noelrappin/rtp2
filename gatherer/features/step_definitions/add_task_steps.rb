@@ -1,27 +1,41 @@
+##START:a_project
 Given(/^a project$/) do
-  pending # express the regexp above with the code you wish you had
+  @project = Project.create(name: "Bluebook")
+  @project.tasks.create(title: "Hunt the Aliens", size: 1, project_order: 1)
+  @project.tasks.create(title: "Write a book", size: 1, project_order: 2)
 end
+##END:a_project
 
 When(/^I visit the project page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit project_path(@project)
 end
 
 When(/^I complete the new task form$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in "Task", with: "Find UFOs"
+  select "2", from: "Size"
+  click_on "Add Task"
 end
 
 Then(/^I am back on the project page$/) do
-  pending # express the regexp above with the code you wish you had
+  assert_equal project_path(@project), current_path
 end
 
 Then(/^I see the new task is last in the list$/) do
-  pending # express the regexp above with the code you wish you had
+  within("#task_3") do
+    assert_selector(".name", text: "Find UFOs")
+    assert_selector(".size", text: "2")
+    assert_no_selector("a", text: "Down")
+  end
 end
 
 When(/^I click to move the new task up$/) do
-  pending # express the regexp above with the code you wish you had
+  within("#task_3") do
+    click_on("Up")
+  end
 end
 
 Then(/^the new task is in the middle of the list$/) do
-  pending # express the regexp above with the code you wish you had
+  within("#task_2") do
+    assert_selector(".name", text: "Find UFOs")
+  end
 end
