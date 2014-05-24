@@ -18,7 +18,7 @@ class ProjectTest < ActiveSupport::TestCase
   ##END:  test_two
 
   ##START: test_three
-  test "a project is only done if all its tests are done" do
+  test "a project is only done if all its tasks are done" do
     project = Project.new
     task = Task.new
     project.tasks << task
