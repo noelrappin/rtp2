@@ -32,8 +32,9 @@ class ProjectsControllerTest < ActionController::TestCase
 
 ##START: mock_failure
   test "fail create gracefully" do
+    action_stub = stub(create: false, project: Project.new) # <label id="action_stub" />
     assert_no_difference('Project.count') do # <label id="assert_no_difference" />
-      Project.any_instance.expects(:save).returns(false) # <label id="create_any_instance" />
+      CreatesProject.expects(:new).returns(action_stub) # <label id="create_any_instance" />
       post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
       assert_template('new') # <label id="create_template" />
     end
@@ -41,11 +42,10 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "fail update gracefully" do
     sample = Project.create!(name: "Test Project")
-    Project.any_instance.expects(:update_attributes).returns(false) # <label id="update_any_instance" />
-    patch :update, id: projects(:one), project: {name: "Fred"} # <label id="update_controller" />
+    sample.expects(:update_attributes).returns(false) # <label id="update_attributes" />
+    Project.stubs(:find).returns(sample) # <label id="stub_find" />
+    patch :update, id: sample.id, project: {name: "Fred"} # <label id="update_controller" />
     assert_template('edit') # <label id="update_template" />
-    actual = Project.find(sample.id)
-    assert_not_equal("Fred", actual.name) # <label id="update_find" />
   end
 ##END:  mock_failure
 
