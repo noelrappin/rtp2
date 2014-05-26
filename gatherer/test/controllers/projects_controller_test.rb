@@ -39,7 +39,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "fail update gracefully" do
-    sample = Project.create!(name: "Test Project")
+    sample = Project.new(name: "Test Project")
     sample.expects(:update_attributes).returns(false) # <label id="update_attributes" />
     Project.stubs(:find).returns(sample) # <label id="stub_find" />
     patch :update, id: sample.id, project: {name: "Fred"} # <label id="update_controller" />
