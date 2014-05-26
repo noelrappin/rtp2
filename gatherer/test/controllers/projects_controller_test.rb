@@ -12,10 +12,10 @@ class ProjectsControllerTest < ActionController::TestCase
 
   ##START:mock_test
   test "the project method creates a project (mock version)" do
-    fake_project = mock(create: true) # <label id="mock_project" />
+    fake_action = mock(create: true) # <label id="mock_project" />
     CreatesProject.expects(:new)  # <label id="mock_action" />
         .with(name: "Runway", task_string: "start something:2")
-        .returns(fake_project)
+        .returns(fake_action)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
     refute_nil assigns[:action] # <label id="mock_refute_nil" />
@@ -39,7 +39,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "fail update gracefully" do
-    sample = Project.new(name: "Test Project")
+    sample = Project.create!(name: "Test Project")
     sample.expects(:update_attributes).returns(false) # <label id="update_attributes" />
     Project.stubs(:find).returns(sample) # <label id="stub_find" />
     patch :update, id: sample.id, project: {name: "Fred"} # <label id="update_controller" />
