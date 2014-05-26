@@ -33,11 +33,9 @@ class ProjectsControllerTest < ActionController::TestCase
 ##START: mock_failure
   test "fail create gracefully" do
     action_stub = stub(create: false, project: Project.new) # <label id="action_stub" />
-    assert_no_difference('Project.count') do # <label id="assert_no_difference" />
-      CreatesProject.expects(:new).returns(action_stub) # <label id="create_any_instance" />
-      post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
-      assert_template('new') # <label id="create_template" />
-    end
+    CreatesProject.expects(:new).returns(action_stub) # <label id="create_any_instance" />
+    post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
+    assert_template('new') # <label id="create_template" />
   end
 
   test "fail update gracefully" do
