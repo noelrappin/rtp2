@@ -15,11 +15,11 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem "mocha", require: false
-  gem 'rspec-rails', '3.0.0'
+  gem 'rspec-rails', '3.0.1'
 end
 
 group :test do
-  #gem "minitest-rails-capybara"
+  # gem "minitest-rails-capybara"
   gem 'm'
 end
 gem 'bcrypt-ruby', '~> 3.0.0'
