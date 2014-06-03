@@ -91,7 +91,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-mocks (3.0.0)
       rspec-support (~> 3.0.0)
-    rspec-rails (3.0.0)
+    rspec-rails (3.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -145,7 +145,7 @@ DEPENDENCIES
   m
   mocha
   rails (= 4.1.1)
-  rspec-rails (= 3.0.0)
+  rspec-rails (= 3.0.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
