@@ -2,11 +2,12 @@ require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase # <label id="code.inheritance" />
 
+  ##START:setup
   setup do
     sign_in users(:user)
   end
+  ##END:setup
 
-  ##START:index
   test "the index method displays all projects correctly" do
     on_schedule = Project.create!(due_date: 1.year.from_now,
         name: "On Schedule",
@@ -18,7 +19,6 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_select("#project_#{on_schedule.id} .on_schedule")
     assert_select("#project_#{behind_schedule.id} .behind_schedule")
   end
-  ##END:index
 
   test "the project method creates a project" do
     post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.create_request" />
@@ -68,7 +68,6 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_equal("Project Blue Book", Project.find(2).name)
   end
 
-  ##START:routing
   test "routing" do
     assert_routing "/projects", controller: "projects", action: "index"
     assert_routing({path: "/projects", method: "post"},
@@ -83,6 +82,5 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_routing({path: "/projects/1", method: "delete"},
         controller: "projects", action: "destroy", id: "1")
   end
-  ##START:routing
 
 end
