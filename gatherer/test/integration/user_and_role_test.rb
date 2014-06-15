@@ -19,4 +19,11 @@ class UserAndRoleTest < Capybara::Rails::TestCase
     assert_equal projects_path, current_path
   end
 
+  ##START:no_login
+  test "without a login, the user can't see the project page" do
+    visit(projects_path)
+    assert_equal new_user_session_path, current_path
+  end
+  ##END:no_login
+
 end

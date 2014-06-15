@@ -2,6 +2,12 @@ require "test_helper"
 
 class AddTaskTest < Capybara::Rails::TestCase
 
+  include Warden::Test::Helpers
+
+  setup do
+    login_as users(:user)
+  end
+
   test "i can add and reorder a task" do
     visit project_path(projects(:bluebook))
     fill_in "Task", with: "Find UFOs"

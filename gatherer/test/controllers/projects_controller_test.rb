@@ -2,6 +2,10 @@ require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase # <label id="code.inheritance" />
 
+  setup do
+    sign_in users(:user)
+  end
+
   ##START:index
   test "the index method displays all projects correctly" do
     on_schedule = Project.create!(due_date: 1.year.from_now,

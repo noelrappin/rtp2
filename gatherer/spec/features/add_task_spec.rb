@@ -1,6 +1,14 @@
 require 'rails_helper'
 
+include Warden::Test::Helpers
+
 describe "adding a new task" do
+
+  fixtures :all
+
+  before(:each) do
+    login_as User.create!(email: "rspec@example.com", password: "password")
+  end
 
   it "can add and reorder a task" do
     visit project_path(projects(:bluebook))

@@ -21,3 +21,9 @@ class ActiveSupport::TestCase
   end
   ##END:assert_select_string
 end
+
+##START: devise_helper
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
+##END: devise_helper

@@ -4,6 +4,7 @@ class TasksControllerTest < ActionController::TestCase
 
   setup do
     ActionMailer::Base.deliveries.clear
+    sign_in users(:user)
   end
 
   test "on update with no completion, no email is sent" do
