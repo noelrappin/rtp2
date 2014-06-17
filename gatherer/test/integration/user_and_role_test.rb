@@ -26,4 +26,21 @@ class UserAndRoleTest < Capybara::Rails::TestCase
   end
   ##END:no_login
 
+  ##START:basic_role
+  test "a user who is part of a project can see that project" do
+    project = Project.create(name: "Project Gutenberg")
+    project.roles.create(user: @user)
+    log_in_as(@user)
+    visit(project_path(project))
+    assert_equal project_path(project), current_path
+  end
+
+  test "a user who is not part of a project can not see that project" do
+    project = Project.create(name: "Project Gutenberg")
+    log_in_as(@user)
+    visit(project_path(project))
+    refute_equal project_path(project), current_path
+  end
+  ##END:basic_role
+
 end

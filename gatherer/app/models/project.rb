@@ -2,6 +2,11 @@
 class Project < ActiveRecord::Base
   has_many :tasks, -> { order "project_order ASC" }
 
+  ##START:roles
+  has_many :roles
+  has_many :users, through: :roles
+  ##END:roles
+
   validates :name, presence: true
 
   def total_size
