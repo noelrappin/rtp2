@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   has_many :projects, through: :roles
   ##END:roles
 
+  ##START:can_view
   def can_view?(project)
     projects.to_a.include?(project)
   end
+  ##END:can_view
 end
