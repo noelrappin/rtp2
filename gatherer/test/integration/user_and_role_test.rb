@@ -10,7 +10,7 @@ class UserAndRoleTest < Capybara::Rails::TestCase
   end
 
   setup do
-    @user = User.create(email: "test@example.com", password: "password")
+    @user = User.create(email: "test2@example.com", password: "password")
   end
 
   test "a logged in user can view the project index page" do

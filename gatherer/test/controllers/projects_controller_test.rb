@@ -83,4 +83,18 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
         controller: "projects", action: "destroy", id: "1")
   end
 
+  test "a user who is part of the project can see the project" do
+    project = Project.create(name: "Project Runway")
+    @controller.current_user.stubs(can_view?: true)
+    get :show, id: project.id
+    assert_template :show
+  end
+
+  test "a user who is not part of the project can not see the project" do
+    project = Project.create(name: "Project Runway")
+    @controller.current_user.stubs(can_view?: false)
+    get :show, id: project.id
+    assert_redirected_to new_user_session_path
+  end
+
 end

@@ -5,6 +5,7 @@ class AddTaskTest < Capybara::Rails::TestCase
   include Warden::Test::Helpers
 
   setup do
+    projects(:bluebook).roles.create(user: users(:user))
     login_as users(:user)
   end
 

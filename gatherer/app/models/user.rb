@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   has_many :roles
   has_many :projects, through: :roles
   ##END:roles
+
+  def can_view?(project)
+    projects.to_a.include?(project)
+  end
 end
