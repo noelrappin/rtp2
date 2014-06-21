@@ -15,4 +15,20 @@ class UserTest < ActiveSupport::TestCase
     assert user.can_view?(project)
   end
 
+  ##START:public
+  test "an admin user can view a project" do
+    user = User.new
+    user.admin = true
+    project = Project.new
+    assert user.can_view?(project)
+  end
+
+  test "a public project can be seen by anyone" do
+    user = User.new
+    project = Project.new
+    project.public = true
+    assert user.can_view?(project)
+  end
+  ##END:public
+
 end

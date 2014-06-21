@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   ##START:can_view
   def can_view?(project)
+    return true if admin? || project.public?
     projects.to_a.include?(project)
   end
   ##END:can_view
