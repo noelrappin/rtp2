@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
   validates :name, presence: true
 
   ##START:public
-  def self.public
+  def self.all_public
     where(public: true)
   end
   ##END:public

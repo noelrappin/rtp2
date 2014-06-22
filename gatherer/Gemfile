@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem "mocha", require: false
-  gem "rspec-rails", "3.0.1"
+  gem "rspec-rails", "~> 3.0.1"
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy'
