@@ -43,4 +43,16 @@ class UserAndRoleTest < Capybara::Rails::TestCase
   end
   ##END:basic_role
 
+  ##START:index_page
+  test "a user can see projects they are a part of on the index page" do
+    my_project = Project.create!(name: "My Project")
+    my_project.roles.create(user: @user)
+    not_my_project = Project.create!(name: "Not My Project")
+    log_in_as(@user)
+    visit projects_path
+    assert_selector "#project_#{my_project.id}"
+    refute_selector "#project_#{not_my_project.id}"
+  end
+  ##END:index_page
+
 end

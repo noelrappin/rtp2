@@ -9,6 +9,12 @@ class Project < ActiveRecord::Base
 
   validates :name, presence: true
 
+  ##START:public
+  def self.public
+    where(public: true)
+  end
+  ##END:public
+
   def total_size
     tasks.to_a.sum(&:size)
   end

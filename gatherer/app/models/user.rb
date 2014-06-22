@@ -4,15 +4,19 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ##START:roles
   has_many :roles
   has_many :projects, through: :roles
-  ##END:roles
 
-  ##START:can_view
+  ##START:new_can_view
   def can_view?(project)
-    return true if admin? || project.public?
-    projects.to_a.include?(project)
+    visible_projects.include?(project)
   end
-  ##END:can_view
+  ##END:new_can_view
+
+  ##START:visible_projects
+  def visible_projects
+    return Project.all.to_a if admin?
+    (projects.to_a + Project.where(public: true).to_a).uniq.sort_by(&:id)
+  end
+  ##END:visible_projecs
 end
