@@ -2,23 +2,21 @@ require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase # <label id="code.inheritance" />
 
-  ##START:setup
+
   setup do
     sign_in users(:user)
   end
-  ##END:setup
 
+  ##START:index
   test "the index method displays all projects correctly" do
-    on_schedule = Project.create!(due_date: 1.year.from_now,
-        name: "On Schedule",
-        tasks: [Task.create!(completed_at: 1.day.ago, size: 1)])
-    behind_schedule = Project.create!(due_date: 1.day.from_now,
-        name: "Behind Schedule",
-        tasks: [Task.create!(size: 1)])
+    user = User.new
+    project = Project.new(:name => "Project Greenlight")
+    @controller.expects(:current_user).returns(user)
+    user.expects(:visible_projects).returns([project])
     get :index
-    assert_select("#project_#{on_schedule.id} .on_schedule")
-    assert_select("#project_#{behind_schedule.id} .behind_schedule")
+    assert_equal assigns[:projects].map(&:__getobj__), [project]
   end
+  ##END:index
 
   test "the project method creates a project" do
     post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.create_request" />
@@ -26,15 +24,18 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_equal "Runway", assigns[:action].project.name # <label id="code.assigns" />
   end
 
+  ##START:mocks
   test "the project method creates a project (mock version)" do
     fake_project = mock(create: true)
     CreatesProject.expects(:new)
-        .with(name: "Runway", task_string: "start something:2")
+        .with(name: "Runway", task_string: "start something:2",
+            users: [users(:user)])
         .returns(fake_project)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
     refute_nil assigns[:action]
   end
+  #END:mocks
 
   test "on failure we go back to the form" do
     post :create, project: {name: "", tasks: ""}
