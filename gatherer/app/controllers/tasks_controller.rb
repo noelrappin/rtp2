@@ -28,7 +28,7 @@ class TasksController < ApplicationController
     redirect_to @task.project
   end
 
-  ##START: create_with_order
+  ##START: create
   def create
     @project = Project.find(params[:task][:project_id])
     unless current_user.can_view?(@project)
@@ -40,5 +40,5 @@ class TasksController < ApplicationController
         project_order: @project.next_task_order)
     redirect_to @project
   end
-  ##END: create_with_order
+  ##END: create
 end
