@@ -16,7 +16,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-  ##START:down_and_up
   def up
     @task = Task.find(params[:id])
     @task.move_up
@@ -28,11 +27,14 @@ class TasksController < ApplicationController
     @task.move_down
     redirect_to @task.project
   end
-  ##END:down_and_up
 
   ##START: create_with_order
   def create
     @project = Project.find(params[:task][:project_id])
+    unless current_user.can_view?(@project)
+      redirect_to new_user_session_path
+      return
+    end
     @project.tasks.create(title: params[:task][:title],
         size: params[:task][:size],
         project_order: @project.next_task_order)
