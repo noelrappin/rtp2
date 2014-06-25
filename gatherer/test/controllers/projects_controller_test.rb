@@ -60,6 +60,14 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_not_equal("Fred", actual.name)
   end
 
+  ##START:update
+  test "a user can make a project public" do
+    sample = Project.create!(name: "Test Project", public: false)
+    patch :update, id: sample.id, project: {public: true}
+    refute sample.reload.public
+  end
+  ##END:update
+
   test "let's stub a class again" do
     Project.stubs(:find).with(1).returns(
         Project.new(:name => "Project Greenlight"))

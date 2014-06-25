@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
   ##START: update
   def update
     @project = Project.find(params[:id])
-    if @project.update_attributes(params[:project])
+    if @project.update_attributes(params[:project].permit(:name))
       redirect_to @project, notice: "'project was successfully updated.'"
     else
       render action: 'edit'

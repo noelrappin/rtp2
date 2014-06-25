@@ -27,6 +27,7 @@ end
 group :test do
   gem "minitest-rails-capybara"
   gem 'm'
+  gem 'minitest-reporters'
 end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
