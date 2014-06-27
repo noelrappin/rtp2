@@ -11,6 +11,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
+gem 'gravatar-ultimate'
 
 gem 'jbuilder', '~> 2.0'
 
@@ -28,6 +29,7 @@ group :test do
   gem "minitest-rails-capybara"
   gem 'm'
   gem 'minitest-reporters'
+  gem 'vcr'
 end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
