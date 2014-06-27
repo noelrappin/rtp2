@@ -30,6 +30,7 @@ group :test do
   gem 'm'
   gem 'minitest-reporters'
   gem 'vcr'
+  gem 'webmock'
 end
 gem 'bcrypt-ruby', '~> 3.0.0'
 

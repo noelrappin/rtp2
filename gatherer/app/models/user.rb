@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :roles
   has_many :projects, through: :roles
+  has_many :tasks
 
   ##START:new_can_view
   def can_view?(project)
