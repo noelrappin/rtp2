@@ -12,11 +12,13 @@ class TaskShowsGravatar < Capybara::Rails::TestCase
   end
 
   test "i see a gravatar" do
-    visit project_path(projects(:bluebook))
-    within("#task_1") do
-      assert_selector(".completed_by", text: users(:user).email)
-      assert_selector(
-        "img[src='http://www.gravatar.com/avatar/6b767d8a4c9910e007c122d81eb4de7']")
+    VCR.use_cassette("loading gravatar") do
+      visit project_path(projects(:bluebook))
+      within("#task_1") do
+        assert_selector(".completed_by", text: users(:user).email)
+        assert_selector(
+          "img[src='http://www.gravatar.com/avatar/6b767d8a4c9910e007c122d81eb4de7']")
+      end
     end
   end
 end
