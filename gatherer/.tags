@@ -1,0 +1,615 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$document	tmp/jasmine/assets/jasmine-specs.js	/^  var $document = $(document);$/;"	v
+ANSI.color_map.green	tmp/jasmine/assets/jasmine-console-reporter.js	/^      "green" : 32,$/;"	p
+ANSI.color_map.red	tmp/jasmine/assets/jasmine-console-reporter.js	/^      "red"   : 31$/;"	p
+ANSI.colorize_text	tmp/jasmine/assets/jasmine-console-reporter.js	/^  ANSI.colorize_text = function(text, color) {$/;"	f
+ActionController	test/test_helper.rb	/^class ActionController::TestCase$/;"	c
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddOrderToTasks	db/migrate/20140518182734_add_order_to_tasks.rb	/^class AddOrderToTasks < ActiveRecord::Migration$/;"	c
+AddProjectTest	test/integration/add_project_test.rb	/^class AddProjectTest < Capybara::Rails::TestCase$/;"	c
+AddPublicFields	db/migrate/20140621051744_add_public_fields.rb	/^class AddPublicFields < ActiveRecord::Migration$/;"	c
+AddTaskTest	test/integration/add_task_test.rb	/^class AddTaskTest < Capybara::Rails::TestCase$/;"	c
+Animation	tmp/jasmine/assets/jasmine-specs.js	/^function Animation( elem, properties, options ) {$/;"	f
+Any	tmp/jasmine/assets/jasmine.js	/^  Any.prototype.jasmineMatches = function(other) {$/;"	c
+Any.jasmineMatches	tmp/jasmine/assets/jasmine.js	/^  Any.prototype.jasmineMatches = function(other) {$/;"	m
+Any.jasmineToString	tmp/jasmine/assets/jasmine.js	/^  Any.prototype.jasmineToString = function() {$/;"	m
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Gatherer
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CSRFToken.get	tmp/jasmine/assets/jasmine-specs.js	/^    get: function(doc) {$/;"	m
+CSRFToken.update	tmp/jasmine/assets/jasmine-specs.js	/^    update: function(latest) {$/;"	m
+CallTracker.all	tmp/jasmine/assets/jasmine.js	/^    this.all = function() {$/;"	m
+CallTracker.allArgs	tmp/jasmine/assets/jasmine.js	/^    this.allArgs = function() {$/;"	m
+CallTracker.any	tmp/jasmine/assets/jasmine.js	/^    this.any = function() {$/;"	m
+CallTracker.argsFor	tmp/jasmine/assets/jasmine.js	/^    this.argsFor = function(index) {$/;"	m
+CallTracker.count	tmp/jasmine/assets/jasmine.js	/^    this.count = function() {$/;"	m
+CallTracker.first	tmp/jasmine/assets/jasmine.js	/^    this.first = function() {$/;"	m
+CallTracker.mostRecent	tmp/jasmine/assets/jasmine.js	/^    this.mostRecent = function() {$/;"	m
+CallTracker.reset	tmp/jasmine/assets/jasmine.js	/^    this.reset = function() {$/;"	m
+Clock.Clock.return.slice	tmp/jasmine/assets/jasmine.js	/^      return Array.prototype.slice.call(argsObj, 2);$/;"	m
+Clock.argSlice	tmp/jasmine/assets/jasmine.js	/^    function argSlice(argsObj, n) {$/;"	f
+Clock.clearInterval	tmp/jasmine/assets/jasmine.js	/^    function clearInterval(id) {$/;"	f
+Clock.clearTimeout	tmp/jasmine/assets/jasmine.js	/^    function clearTimeout(id) {$/;"	f
+Clock.legacyIE	tmp/jasmine/assets/jasmine.js	/^    function legacyIE() {$/;"	f
+Clock.replace	tmp/jasmine/assets/jasmine.js	/^    function replace(dest, source) {$/;"	f
+Clock.return	tmp/jasmine/assets/jasmine.js	/^      return Array.prototype.slice.call(argsObj, 2);$/;"	c
+Clock.setInterval	tmp/jasmine/assets/jasmine.js	/^    function setInterval(fn, interval) {$/;"	f
+Clock.setTimeout	tmp/jasmine/assets/jasmine.js	/^    function setTimeout(fn, delay) {$/;"	f
+ConsoleReporter	tmp/jasmine/assets/jasmine-console-reporter.js	/^  ConsoleReporter = function() {$/;"	c
+CreateProjects	db/migrate/20131111054846_create_projects.rb	/^class CreateProjects < ActiveRecord::Migration$/;"	c
+CreateRoles	db/migrate/20140617021340_create_roles.rb	/^class CreateRoles < ActiveRecord::Migration$/;"	c
+CreateTasks	db/migrate/20131111060211_create_tasks.rb	/^class CreateTasks < ActiveRecord::Migration$/;"	c
+CreatesProject	app/actions/creates_project.rb	/^class CreatesProject$/;"	c
+CreatesProjectTest	test/actions/creates_project_test.rb	/^class CreatesProjectTest < ActiveSupport::TestCase$/;"	c
+Date	tmp/jasmine/assets/json2.js	/^        Date.prototype.toJSON = function (key) {$/;"	c
+Date.toJSON	tmp/jasmine/assets/json2.js	/^        Date.prototype.toJSON = function (key) {$/;"	m
+DelayedFunctionScheduler.deleteFromLookup	tmp/jasmine/assets/jasmine.js	/^    function deleteFromLookup(key) {$/;"	f
+DelayedFunctionScheduler.indexOfFirstToPass	tmp/jasmine/assets/jasmine.js	/^    function indexOfFirstToPass(array, testFn) {$/;"	f
+DelayedFunctionScheduler.reschedule	tmp/jasmine/assets/jasmine.js	/^    function reschedule(scheduledFn) {$/;"	f
+DelayedFunctionScheduler.runScheduledFunctions	tmp/jasmine/assets/jasmine.js	/^    function runScheduledFunctions(endTime) {$/;"	f
+DeviseCreateUsers	db/migrate/20140530042427_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Env.addCustomEqualityTester	tmp/jasmine/assets/jasmine.js	/^    this.addCustomEqualityTester = function(tester) {$/;"	m
+Env.beforeFns	tmp/jasmine/assets/jasmine.js	/^    var beforeFns = function(suite) {$/;"	m
+Env.expectationFactory	tmp/jasmine/assets/jasmine.js	/^    var expectationFactory = function(actual, spec) {$/;"	m
+Env.expectationFactory.addExpectationResult	tmp/jasmine/assets/jasmine.js	/^      function addExpectationResult(passed, result) {$/;"	f
+Env.getNextSuiteId	tmp/jasmine/assets/jasmine.js	/^    var getNextSuiteId = function() {$/;"	m
+Env.specFilter	tmp/jasmine/assets/jasmine.js	/^    this.specFilter = function() {$/;"	m
+Env.specStarted	tmp/jasmine/assets/jasmine.js	/^    var specStarted = function(spec) {$/;"	m
+ExceptionFormatter.stack	tmp/jasmine/assets/jasmine.js	/^    this.stack = function(error) {$/;"	m
+Expectation	tmp/jasmine/assets/jasmine.js	/^  Expectation.prototype.wrapCompare = function(name, matcherFactory) {$/;"	c
+Expectation.Factory	tmp/jasmine/assets/jasmine.js	/^  Expectation.Factory = function(options) {$/;"	f
+Expectation.addCoreMatchers	tmp/jasmine/assets/jasmine.js	/^  Expectation.addCoreMatchers = function(matchers) {$/;"	f
+Expectation.addMatchers	tmp/jasmine/assets/jasmine.js	/^  Expectation.addMatchers = function(matchersToAdd) {$/;"	f
+Expectation.resetMatchers	tmp/jasmine/assets/jasmine.js	/^  Expectation.resetMatchers = function() {$/;"	f
+Expectation.wrapCompare	tmp/jasmine/assets/jasmine.js	/^  Expectation.prototype.wrapCompare = function(name, matcherFactory) {$/;"	m
+Gatherer	config/application.rb	/^module Gatherer$/;"	m
+HtmlReporter.createDom	tmp/jasmine/assets/jasmine-html.js	/^    function createDom(type, attrs, childrenVarArgs) {$/;"	f
+HtmlReporter.find	tmp/jasmine/assets/jasmine-html.js	/^    function find(selector) {$/;"	f
+HtmlReporter.initialize	tmp/jasmine/assets/jasmine-html.js	/^    this.initialize = function() {$/;"	m
+HtmlReporter.jasmineDone	tmp/jasmine/assets/jasmine-html.js	/^    this.jasmineDone = function() {$/;"	m
+HtmlReporter.jasmineDone.summaryList	tmp/jasmine/assets/jasmine-html.js	/^      function summaryList(resultsTree, domParent) {$/;"	f
+HtmlReporter.jasmineStarted	tmp/jasmine/assets/jasmine-html.js	/^    this.jasmineStarted = function(options) {$/;"	m
+HtmlReporter.pluralize	tmp/jasmine/assets/jasmine-html.js	/^    function pluralize(singular, count) {$/;"	f
+HtmlReporter.setMenuModeTo	tmp/jasmine/assets/jasmine-html.js	/^    function setMenuModeTo(mode) {$/;"	f
+HtmlReporter.specDone	tmp/jasmine/assets/jasmine-html.js	/^    this.specDone = function(result) {$/;"	m
+HtmlReporter.specHref	tmp/jasmine/assets/jasmine-html.js	/^    function specHref(result) {$/;"	f
+HtmlReporter.specStarted	tmp/jasmine/assets/jasmine-html.js	/^    this.specStarted = function(result) {$/;"	m
+HtmlReporter.suiteDone	tmp/jasmine/assets/jasmine-html.js	/^    this.suiteDone = function(result) {$/;"	m
+HtmlReporter.suiteStarted	tmp/jasmine/assets/jasmine-html.js	/^    this.suiteStarted = function(result) {$/;"	m
+JSON.parse.walk	tmp/jasmine/assets/json2.js	/^            function walk(holder, key) {$/;"	f
+JSON.stringify	tmp/jasmine/assets/json2.js	/^        JSON.stringify = function (value, replacer, space) {$/;"	f
+JsApiReporter.executionTime	tmp/jasmine/assets/jasmine.js	/^    this.executionTime = function() {$/;"	m
+JsApiReporter.jasmineDone	tmp/jasmine/assets/jasmine.js	/^    this.jasmineDone = function() {$/;"	m
+JsApiReporter.specDone	tmp/jasmine/assets/jasmine.js	/^    this.specDone = function(result) {$/;"	m
+JsApiReporter.specResults	tmp/jasmine/assets/jasmine.js	/^    this.specResults = function(index, length) {$/;"	m
+JsApiReporter.specStarted	tmp/jasmine/assets/jasmine.js	/^    this.specStarted = function(result) { };$/;"	m
+JsApiReporter.specs	tmp/jasmine/assets/jasmine.js	/^    this.specs = function() {$/;"	m
+JsApiReporter.status	tmp/jasmine/assets/jasmine.js	/^    this.status = function() {$/;"	m
+JsApiReporter.storeSuite	tmp/jasmine/assets/jasmine.js	/^    function storeSuite(result) {$/;"	f
+JsApiReporter.suiteDone	tmp/jasmine/assets/jasmine.js	/^    this.suiteDone = function(result) {$/;"	m
+JsApiReporter.suiteStarted	tmp/jasmine/assets/jasmine.js	/^    this.suiteStarted = function(result) {$/;"	m
+JsApiReporter.suites	tmp/jasmine/assets/jasmine.js	/^    this.suites = function() {$/;"	m
+MiniTestAssertions	features/support/minitest.rb	/^module MiniTestAssertions$/;"	m
+ObjectContaining	tmp/jasmine/assets/jasmine.js	/^  ObjectContaining.prototype.jasmineMatches = function(other, mismatchKeys, mismatchValues) {$/;"	c
+ObjectContaining.jasmineMatches	tmp/jasmine/assets/jasmine.js	/^  ObjectContaining.prototype.jasmineMatches = function(other, mismatchKeys, mismatchValues) {$/;"	m
+ObjectContaining.jasmineToString	tmp/jasmine/assets/jasmine.js	/^  ObjectContaining.prototype.jasmineToString = function() {$/;"	m
+PrettyPrinter	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.format = function(value) {$/;"	c
+PrettyPrinter.emitArray	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.emitArray = j$.unimplementedMethod_;$/;"	m
+PrettyPrinter.emitObject	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.emitObject = j$.unimplementedMethod_;$/;"	m
+PrettyPrinter.emitScalar	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.emitScalar = j$.unimplementedMethod_;$/;"	m
+PrettyPrinter.emitString	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.emitString = j$.unimplementedMethod_;$/;"	m
+PrettyPrinter.format	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.format = function(value) {$/;"	m
+PrettyPrinter.iterateObject	tmp/jasmine/assets/jasmine.js	/^  PrettyPrinter.prototype.iterateObject = function(obj, fn) {$/;"	m
+Project	app/models/project.rb	/^class Project < ActiveRecord::Base$/;"	c
+ProjectPresenter	app/presenters/project_presenter.rb	/^class ProjectPresenter < SimpleDelegator$/;"	c
+ProjectPresenterTest	test/presenters/project_presenter_test.rb	/^class ProjectPresenterTest < Minitest::Test$/;"	c
+ProjectTest	test/models/project_test.rb	/^class ProjectTest < ActiveSupport::TestCase$/;"	c
+ProjectWithDataTest	test/models/project_with_data_test.rb	/^class ProjectWithDataTest < ActiveSupport::TestCase$/;"	c
+ProjectsController	app/controllers/projects_controller.rb	/^class ProjectsController < ApplicationController$/;"	c
+ProjectsControllerTest	test/controllers/projects_controller_test.rb	/^class ProjectsControllerTest < ActionController::TestCase # <label id="code.inheritance" \/>$/;"	c
+ProjectsHelper	app/helpers/projects_helper.rb	/^module ProjectsHelper$/;"	m
+ProjectsHelperTest	test/helpers/projects_helper_test.rb	/^class ProjectsHelperTest < ActionView::TestCase$/;"	c
+QueryString.getParam	tmp/jasmine/assets/jasmine-html.js	/^    this.getParam = function(key) {$/;"	m
+QueryString.queryStringToParamMap	tmp/jasmine/assets/jasmine-html.js	/^    function queryStringToParamMap() {$/;"	f
+QueryString.toQueryString	tmp/jasmine/assets/jasmine-html.js	/^    function toQueryString(paramMap) {$/;"	f
+QueueRunner	tmp/jasmine/assets/jasmine.js	/^  QueueRunner.prototype.execute = function() {$/;"	c
+QueueRunner.execute	tmp/jasmine/assets/jasmine.js	/^  QueueRunner.prototype.execute = function() {$/;"	m
+QueueRunner.run	tmp/jasmine/assets/jasmine.js	/^  QueueRunner.prototype.run = function(fns, recursiveIndex) {$/;"	m
+ReportDispatcher.dispatch	tmp/jasmine/assets/jasmine.js	/^    function dispatch(method, args) {$/;"	f
+ResultsNode.last	tmp/jasmine/assets/jasmine-html.js	/^    this.last = function() {$/;"	m
+Role	app/models/role.rb	/^class Role < ActiveRecord::Base$/;"	c
+Spec	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.addExpectationResult = function(passed, data) {$/;"	c
+Spec.addExpectationResult	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.addExpectationResult = function(passed, data) {$/;"	m
+Spec.disable	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.disable = function() {$/;"	m
+Spec.execute	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.execute = function(onComplete) {$/;"	m
+Spec.expect	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.expect = function(actual) {$/;"	m
+Spec.getFullName	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.getFullName = function() {$/;"	m
+Spec.isPendingSpecException	tmp/jasmine/assets/jasmine.js	/^  Spec.isPendingSpecException = function(e) {$/;"	f
+Spec.pend	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.pend = function() {$/;"	m
+Spec.result.id	tmp/jasmine/assets/jasmine.js	/^      id: this.id,$/;"	p
+Spec.status	tmp/jasmine/assets/jasmine.js	/^  Spec.prototype.status = function() {$/;"	m
+SpyStrategy.callFake	tmp/jasmine/assets/jasmine.js	/^    this.callFake = function(fn) {$/;"	m
+SpyStrategy.callThrough	tmp/jasmine/assets/jasmine.js	/^    this.callThrough = function() {$/;"	m
+SpyStrategy.exec	tmp/jasmine/assets/jasmine.js	/^    this.exec = function() {$/;"	m
+SpyStrategy.identity	tmp/jasmine/assets/jasmine.js	/^    this.identity = function() {$/;"	m
+SpyStrategy.plan	tmp/jasmine/assets/jasmine.js	/^      plan = function() {$/;"	f
+SpyStrategy.returnValue	tmp/jasmine/assets/jasmine.js	/^    this.returnValue = function(value) {$/;"	m
+SpyStrategy.stub	tmp/jasmine/assets/jasmine.js	/^    this.stub = function(fn) {$/;"	m
+SpyStrategy.throwError	tmp/jasmine/assets/jasmine.js	/^    this.throwError = function(something) {$/;"	m
+String	tmp/jasmine/assets/json2.js	/^        String.prototype.toJSON =$/;"	c
+String.toJSON	tmp/jasmine/assets/json2.js	/^        String.prototype.toJSON =$/;"	m
+StringPrettyPrinter	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.emitScalar = function(value) {$/;"	c
+StringPrettyPrinter.append	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.append = function(value) {$/;"	m
+StringPrettyPrinter.emitArray	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.emitArray = function(array) {$/;"	m
+StringPrettyPrinter.emitObject	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.emitObject = function(obj) {$/;"	m
+StringPrettyPrinter.emitScalar	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.emitScalar = function(value) {$/;"	m
+StringPrettyPrinter.emitString	tmp/jasmine/assets/jasmine.js	/^  StringPrettyPrinter.prototype.emitString = function(value) {$/;"	m
+Subclass	tmp/jasmine/assets/jasmine.js	/^    Subclass.prototype = parentClass.prototype;$/;"	c
+Suite	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.getFullName = function() {$/;"	c
+Suite.addChild	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.addChild = function(child) {$/;"	m
+Suite.afterEach	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.afterEach = function(fn) {$/;"	m
+Suite.beforeEach	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.beforeEach = function(fn) {$/;"	m
+Suite.disable	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.disable = function() {$/;"	m
+Suite.execute	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.execute = function(onComplete) {$/;"	m
+Suite.getFullName	tmp/jasmine/assets/jasmine.js	/^  Suite.prototype.getFullName = function() {$/;"	m
+Suite.result.id	tmp/jasmine/assets/jasmine.js	/^      id: this.id,$/;"	p
+Task	app/models/task.rb	/^class Task < ActiveRecord::Base$/;"	c
+TaskMailer	app/mailers/task_mailer.rb	/^class TaskMailer < ActionMailer::Base$/;"	c
+TaskMailerPreview	test/mailers/previews/task_mailer_preview.rb	/^class TaskMailerPreview < ActionMailer::Preview$/;"	c
+TaskMailerTest	test/mailers/task_mailer_test.rb	/^class TaskMailerTest < ActionMailer::TestCase$/;"	c
+TaskTest	test/models/task_test.rb	/^class TaskTest < ActiveSupport::TestCase$/;"	c
+TasksController	app/controllers/tasks_controller.rb	/^class TasksController < ApplicationController$/;"	c
+TasksControllerTest	test/controllers/tasks_controller_test.rb	/^class TasksControllerTest < ActionController::TestCase$/;"	c
+TasksHelper	app/helpers/tasks_helper.rb	/^module TasksHelper$/;"	m
+TasksHelperTest	test/helpers/tasks_helper_test.rb	/^class TasksHelperTest < ActionView::TestCase$/;"	c
+Timer.elapsed	tmp/jasmine/assets/jasmine.js	/^    this.elapsed = function() {$/;"	m
+Timer.start	tmp/jasmine/assets/jasmine.js	/^    this.start = function() {$/;"	m
+Tween	tmp/jasmine/assets/jasmine-specs.js	/^Tween.prototype = {$/;"	c
+Tween	tmp/jasmine/assets/jasmine-specs.js	/^function Tween( elem, options, prop, end, easing ) {$/;"	f
+Tween.constructor	tmp/jasmine/assets/jasmine-specs.js	/^	constructor: Tween,$/;"	p
+Tween.cur	tmp/jasmine/assets/jasmine-specs.js	/^	cur: function() {$/;"	m
+Tween.init	tmp/jasmine/assets/jasmine-specs.js	/^	init: function( elem, options, prop, end, easing, unit ) {$/;"	m
+Tween.init	tmp/jasmine/assets/jasmine-specs.js	/^Tween.prototype.init.prototype = Tween.prototype;$/;"	m
+Tween.propHooks._default	tmp/jasmine/assets/jasmine-specs.js	/^	_default: {$/;"	p
+Tween.run	tmp/jasmine/assets/jasmine-specs.js	/^	run: function( percent ) {$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserAndRoleTest	test/integration/user_and_role_test.rb	/^class UserAndRoleTest < Capybara::Rails::TestCase$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+_jQuery	tmp/jasmine/assets/jasmine-specs.js	/^	_jQuery = window.jQuery,$/;"	v
+_load	tmp/jasmine/assets/jasmine-specs.js	/^var _load = jQuery.fn.load;$/;"	v
+actualDisplay	tmp/jasmine/assets/jasmine-specs.js	/^function actualDisplay( name, doc ) {$/;"	f
+add	tmp/jasmine/assets/jasmine-specs.js	/^			add: function() {$/;"	m
+addGetHookIf	tmp/jasmine/assets/jasmine-specs.js	/^function addGetHookIf( conditionFn, hookFn ) {$/;"	f
+addMatchers	tmp/jasmine/assets/jasmine.js	/^    this.addMatchers = function(matchersToAdd) {$/;"	f
+addReporter	tmp/jasmine/assets/jasmine.js	/^    this.addReporter = function(reporterToAdd) {$/;"	f
+addToPrefiltersOrTransports	tmp/jasmine/assets/jasmine-specs.js	/^function addToPrefiltersOrTransports( structure ) {$/;"	f
+afterEach	tmp/jasmine/assets/jasmine.js	/^    this.afterEach = function(afterEachFunction) {$/;"	f
+ajaxConvert	tmp/jasmine/assets/jasmine-specs.js	/^function ajaxConvert( s, response, jqXHR, isSuccess ) {$/;"	f
+ajaxExtend	tmp/jasmine/assets/jasmine-specs.js	/^function ajaxExtend( target, src ) {$/;"	f
+ajaxHandleResponses	tmp/jasmine/assets/jasmine-specs.js	/^function ajaxHandleResponses( s, jqXHR, responses ) {$/;"	f
+all_public	app/models/project.rb	/^  def self.all_public$/;"	F	class:Project
+assert_select_string	test/test_helper.rb	/^  def assert_select_string(string, *selectors, &block)$/;"	f	class:ActiveSupport
+assert_visiblity_of	test/models/user_test.rb	/^  def assert_visiblity_of(*projects)$/;"	f	class:UserTest
+assetsChanged	tmp/jasmine/assets/jasmine-specs.js	/^    assetsChanged = function(doc) {$/;"	f
+augmentWidthOrHeight	tmp/jasmine/assets/jasmine-specs.js	/^function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {$/;"	f
+beforeEach	tmp/jasmine/assets/jasmine.js	/^    this.beforeEach = function(beforeEachFunction) {$/;"	f
+bind	tmp/jasmine/assets/jasmine-console-shims.js	/^    Function.prototype.bind = function (oThis) {$/;"	m
+boolHook.set	tmp/jasmine/assets/jasmine-specs.js	/^	set: function( elem, value, name ) {$/;"	m
+browserCompatibleDocumentParser	tmp/jasmine/assets/jasmine-specs.js	/^  browserCompatibleDocumentParser = function() {$/;"	f
+build	app/actions/creates_project.rb	/^  def build$/;"	f	class:CreatesProject
+buildParams	tmp/jasmine/assets/jasmine-specs.js	/^function buildParams( prefix, obj, traditional, add ) {$/;"	f
+bypassOnLoadPopstate	tmp/jasmine/assets/jasmine-specs.js	/^  bypassOnLoadPopstate = function(fn) {$/;"	f
+cacheCurrentPage	tmp/jasmine/assets/jasmine-specs.js	/^  cacheCurrentPage = function() {$/;"	f
+can_view?	app/models/user.rb	/^  def can_view?(project)$/;"	f	class:User
+catchException	tmp/jasmine/assets/jasmine.js	/^    var catchException = function(e) {$/;"	f
+catchExceptions	tmp/jasmine/assets/jasmine.js	/^    this.catchExceptions = function(value) {$/;"	f
+catchingExceptions	tmp/jasmine/assets/boot.js	/^  var catchingExceptions = queryString.getParam("catch");$/;"	v
+catchingExceptions	tmp/jasmine/assets/jasmine.js	/^    this.catchingExceptions = function() {$/;"	f
+change	db/migrate/20131111054846_create_projects.rb	/^  def change$/;"	f	class:CreateProjects
+change	db/migrate/20131111060211_create_tasks.rb	/^  def change$/;"	f	class:CreateTasks
+change	db/migrate/20140518182734_add_order_to_tasks.rb	/^  def change$/;"	f	class:AddOrderToTasks
+change	db/migrate/20140530042427_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20140617021340_create_roles.rb	/^  def change$/;"	f	class:CreateRoles
+change	db/migrate/20140621051744_add_public_fields.rb	/^  def change$/;"	f	class:AddPublicFields
+changePage	tmp/jasmine/assets/jasmine-specs.js	/^  changePage = function(title, body, csrfToken, runScripts) {$/;"	f
+clearStack	tmp/jasmine/assets/jasmine.js	/^    function clearStack(fn) {$/;"	f
+clientOrServerError	tmp/jasmine/assets/jasmine-specs.js	/^    clientOrServerError = function() {$/;"	f
+cloneCopyEvent	tmp/jasmine/assets/jasmine-specs.js	/^function cloneCopyEvent( src, dest ) {$/;"	f
+complete	app/models/task.rb	/^  def self.complete$/;"	F	class:Task
+complete?	app/models/task.rb	/^  def complete?$/;"	f	class:Task
+completed	tmp/jasmine/assets/jasmine-specs.js	/^function completed() {$/;"	f
+completed_velocity	app/models/project.rb	/^  def completed_velocity$/;"	f	class:Project
+computeStyleTests	tmp/jasmine/assets/jasmine-specs.js	/^	function computeStyleTests() {$/;"	f
+constrainPageCacheTo	tmp/jasmine/assets/jasmine-specs.js	/^  constrainPageCacheTo = function(limit) {$/;"	f
+convert_string_to_tasks	app/actions/creates_project.rb	/^  def convert_string_to_tasks$/;"	f	class:CreatesProject
+counts_toward_velocity?	app/models/task.rb	/^  def counts_toward_velocity?$/;"	f	class:Task
+create	app/actions/creates_project.rb	/^  def create$/;"	f
+create	app/controllers/projects_controller.rb	/^  def create$/;"	f	class:ProjectsController
+create	app/controllers/tasks_controller.rb	/^  def create$/;"	f	class:TasksController
+createActiveXHR	tmp/jasmine/assets/jasmine-specs.js	/^function createActiveXHR() {$/;"	f
+createDocumentUsingDOM	tmp/jasmine/assets/jasmine-specs.js	/^    createDocumentUsingDOM = function(html) {$/;"	f
+createDocumentUsingParser	tmp/jasmine/assets/jasmine-specs.js	/^    createDocumentUsingParser = function(html) {$/;"	f
+createDocumentUsingWrite	tmp/jasmine/assets/jasmine-specs.js	/^    createDocumentUsingWrite = function(html) {$/;"	f
+createFxNow	tmp/jasmine/assets/jasmine-specs.js	/^function createFxNow() {$/;"	f
+createOptions	tmp/jasmine/assets/jasmine-specs.js	/^function createOptions( options ) {$/;"	f
+createSafeFragment	tmp/jasmine/assets/jasmine-specs.js	/^function createSafeFragment( document ) {$/;"	f
+createStandardXHR	tmp/jasmine/assets/jasmine-specs.js	/^function createStandardXHR() {$/;"	f
+createTween	tmp/jasmine/assets/jasmine-specs.js	/^function createTween( value, prop, animation ) {$/;"	f
+create_project_with_data	test/models/project_with_data_test.rb	/^  def create_project_with_data$/;"	f	class:ProjectWithDataTest
+create_two_projects	test/models/user_test.rb	/^  def create_two_projects$/;"	f	class:UserTest
+csrfParam	tmp/jasmine/assets/jasmine-specs.js	/^      var csrfParam = $('meta[name=csrf-param]').attr('content');$/;"	v
+cssExpand	tmp/jasmine/assets/jasmine-specs.js	/^var cssExpand = [ "Top", "Right", "Bottom", "Left" ];$/;"	v
+ctor	tmp/jasmine/assets/jasmine-specs.js	/^    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },$/;"	c
+curCSS	tmp/jasmine/assets/jasmine-specs.js	/^	curCSS = function( elem, name, computed ) {$/;"	f
+currentSpecCallbackDepth	tmp/jasmine/assets/jasmine.js	/^    var currentSpecCallbackDepth = 0;$/;"	v
+currentWindowOnload	tmp/jasmine/assets/boot.js	/^  var currentWindowOnload = window.onload;$/;"	v
+current_rate	app/models/project.rb	/^  def current_rate$/;"	f	class:Project
+dataAttr	tmp/jasmine/assets/jasmine-specs.js	/^function dataAttr( elem, key, data ) {$/;"	f
+dataType	tmp/jasmine/assets/jasmine-specs.js	/^		var dataType,$/;"	v
+defaultDisplay	tmp/jasmine/assets/jasmine-specs.js	/^function defaultDisplay( nodeName ) {$/;"	f
+defaultPrefilter	tmp/jasmine/assets/jasmine-specs.js	/^function defaultPrefilter( elem, props, opts ) {$/;"	f
+describe	tmp/jasmine/assets/jasmine.js	/^    this.describe = function(description, specDefinitions) {$/;"	f
+detach	tmp/jasmine/assets/jasmine-specs.js	/^function detach() {$/;"	f
+disableScript	tmp/jasmine/assets/jasmine-specs.js	/^function disableScript( elem ) {$/;"	f
+docElem	tmp/jasmine/assets/jasmine-specs.js	/^var docElem = window.document.documentElement;$/;"	v
+done?	app/models/project.rb	/^  def done?$/;"	f	class:Project
+down	app/controllers/tasks_controller.rb	/^  def down$/;"	f	class:TasksController
+enableTransitionCache	tmp/jasmine/assets/jasmine-specs.js	/^  enableTransitionCache = function(enable) {$/;"	f
+env	tmp/jasmine/assets/boot.js	/^  var env = jasmine.getEnv();$/;"	v
+env.specFilter	tmp/jasmine/assets/boot.js	/^  env.specFilter = function(spec) {$/;"	f
+epic?	app/models/task.rb	/^  def epic?$/;"	f	class:Task
+eq	tmp/jasmine/assets/jasmine.js	/^  function eq(a, b, aStack, bStack, customTesters) {$/;"	f
+eq.has	tmp/jasmine/assets/jasmine.js	/^    function has(obj, key) {$/;"	f
+eq.isFunction	tmp/jasmine/assets/jasmine.js	/^    function isFunction(obj) {$/;"	f
+execute	tmp/jasmine/assets/jasmine.js	/^    this.execute = function(runnablesToRun) {$/;"	f
+executeScriptTags	tmp/jasmine/assets/jasmine-specs.js	/^  executeScriptTags = function() {$/;"	f
+expect	tmp/jasmine/assets/jasmine.js	/^    this.expect = function(actual) {$/;"	f
+extend	tmp/jasmine/assets/boot.js	/^  function extend(destination, source) {$/;"	f
+extended	features/support/minitest.rb	/^  def self.extended(base)$/;"	F	class:MiniTestAssertions
+extractTitleAndBody	tmp/jasmine/assets/jasmine-specs.js	/^  extractTitleAndBody = function(doc) {$/;"	f
+extractTrackAssets	tmp/jasmine/assets/jasmine-specs.js	/^    extractTrackAssets = function(doc) {$/;"	f
+f	tmp/jasmine/assets/jasmine.js	/^        f = function() { return eval(funcToCall); };$/;"	f
+fNOP	tmp/jasmine/assets/jasmine-console-shims.js	/^      fNOP.prototype = this.prototype;$/;"	c
+fetch	tmp/jasmine/assets/jasmine-specs.js	/^  fetch = function(url) {$/;"	f
+fetchHistory	tmp/jasmine/assets/jasmine-specs.js	/^  fetchHistory = function(cachedPage) {$/;"	f
+fetchReplacement	tmp/jasmine/assets/jasmine-specs.js	/^  fetchReplacement = function(url, onLoadFunction) {$/;"	f
+find	tmp/jasmine/assets/jasmine-html.js	/^        find(".failures-menu").onclick = function() {$/;"	f
+first_in_project?	app/models/task.rb	/^  def first_in_project?$/;"	f	class:Task
+fixCloneNodeIssues	tmp/jasmine/assets/jasmine-specs.js	/^function fixCloneNodeIssues( src, dest ) {$/;"	f
+fixDefaultChecked	tmp/jasmine/assets/jasmine-specs.js	/^function fixDefaultChecked( elem ) {$/;"	f
+fn	tmp/jasmine/assets/jasmine-specs.js	/^				fn = function( elem, key, value ) {$/;"	f
+fontWeight	tmp/jasmine/assets/jasmine-specs.js	/^		fontWeight: 400$/;"	p
+from_project_list	app/presenters/project_presenter.rb	/^  def self.from_project_list(*projects) # <label id="code.presenter_factory" \/>$/;"	F	class:ProjectPresenter
+function.attemptAsync	tmp/jasmine/assets/jasmine.js	/^    function attemptAsync(fn) {$/;"	f
+function.attemptAsync.next	tmp/jasmine/assets/jasmine.js	/^      var next = function () { self.run(fns, iterativeIndex + 1); };$/;"	f
+function.attemptSync	tmp/jasmine/assets/jasmine.js	/^    function attemptSync(fn) {$/;"	f
+function.complete	tmp/jasmine/assets/jasmine.js	/^    function complete() {$/;"	f
+function.ctor	tmp/jasmine/assets/jasmine-specs.js	/^    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },$/;"	c
+function.defaultNegativeCompare	tmp/jasmine/assets/jasmine.js	/^      function defaultNegativeCompare() {$/;"	f
+function.handleException	tmp/jasmine/assets/jasmine.js	/^    function handleException(e) {$/;"	f
+function.timeoutable	tmp/jasmine/assets/jasmine.js	/^    function timeoutable(fn) {$/;"	f
+function.wrapChildAsAsync	tmp/jasmine/assets/jasmine.js	/^    function wrapChildAsAsync(child) {$/;"	f
+genFx	tmp/jasmine/assets/jasmine-specs.js	/^function genFx( type, includeWidth ) {$/;"	f
+genFx.which.height	tmp/jasmine/assets/jasmine-specs.js	/^		attrs = { height: type },$/;"	p
+getAll	tmp/jasmine/assets/jasmine-specs.js	/^function getAll( context, tag ) {$/;"	f
+getJasmineRequireObj	tmp/jasmine/assets/jasmine.js	/^function getJasmineRequireObj() {$/;"	f
+getJasmineRequireObj	tmp/jasmine/assets/jasmine.js	/^getJasmineRequireObj().Spec = function(j$) {$/;"	c
+getJasmineRequireObj..clearInterval	tmp/jasmine/assets/jasmine.js	/^        clearInterval: clearInterval$/;"	p
+getJasmineRequireObj..clearTimeout	tmp/jasmine/assets/jasmine.js	/^        clearTimeout: clearTimeout,$/;"	p
+getJasmineRequireObj..setInterval	tmp/jasmine/assets/jasmine.js	/^        setInterval: setInterval,$/;"	p
+getJasmineRequireObj..setTimeout	tmp/jasmine/assets/jasmine.js	/^        setTimeout: setTimeout,$/;"	p
+getJasmineRequireObj.Any	tmp/jasmine/assets/jasmine.js	/^  function Any(expectedObject) {$/;"	c
+getJasmineRequireObj.CallTracker	tmp/jasmine/assets/jasmine.js	/^  function CallTracker() {$/;"	c
+getJasmineRequireObj.CallTracker.track	tmp/jasmine/assets/jasmine.js	/^    this.track = function(context) {$/;"	m
+getJasmineRequireObj.Clock	tmp/jasmine/assets/jasmine.js	/^  function Clock(global, delayedFunctionScheduler) {$/;"	f
+getJasmineRequireObj.DelayedFunctionScheduler	tmp/jasmine/assets/jasmine.js	/^  function DelayedFunctionScheduler() {$/;"	f
+getJasmineRequireObj.Env	tmp/jasmine/assets/jasmine.js	/^  function Env(options) {$/;"	c
+getJasmineRequireObj.ExceptionFormatter	tmp/jasmine/assets/jasmine.js	/^  function ExceptionFormatter() {$/;"	c
+getJasmineRequireObj.ExceptionFormatter.message	tmp/jasmine/assets/jasmine.js	/^    this.message = function(error) {$/;"	m
+getJasmineRequireObj.Expectation	tmp/jasmine/assets/jasmine.js	/^  function Expectation(options) {$/;"	c
+getJasmineRequireObj.JsApiReporter	tmp/jasmine/assets/jasmine.js	/^  function JsApiReporter(options) {$/;"	c
+getJasmineRequireObj.JsApiReporter.jasmineStarted	tmp/jasmine/assets/jasmine.js	/^    this.jasmineStarted = function() {$/;"	m
+getJasmineRequireObj.ObjectContaining	tmp/jasmine/assets/jasmine.js	/^  function ObjectContaining(sample) {$/;"	c
+getJasmineRequireObj.PrettyPrinter	tmp/jasmine/assets/jasmine.js	/^  function PrettyPrinter() {$/;"	c
+getJasmineRequireObj.QueueRunner	tmp/jasmine/assets/jasmine.js	/^  function QueueRunner(attrs) {$/;"	c
+getJasmineRequireObj.ReportDispatcher	tmp/jasmine/assets/jasmine.js	/^  function ReportDispatcher(methods) {$/;"	c
+getJasmineRequireObj.ReportDispatcher.addReporter	tmp/jasmine/assets/jasmine.js	/^    this.addReporter = function(reporter) {$/;"	m
+getJasmineRequireObj.Spec	tmp/jasmine/assets/jasmine.js	/^  function Spec(attrs) {$/;"	c
+getJasmineRequireObj.SpyStrategy	tmp/jasmine/assets/jasmine.js	/^  function SpyStrategy(options) {$/;"	c
+getJasmineRequireObj.StringPrettyPrinter	tmp/jasmine/assets/jasmine.js	/^  function StringPrettyPrinter() {$/;"	c
+getJasmineRequireObj.Suite	tmp/jasmine/assets/jasmine.js	/^  function Suite(attrs) {$/;"	c
+getJasmineRequireObj.Timer	tmp/jasmine/assets/jasmine.js	/^  function Timer(options) {$/;"	c
+getJasmineRequireObj.afterFns	tmp/jasmine/assets/jasmine.js	/^    var afterFns = function(suite) {$/;"	f
+getJasmineRequireObj.buildExpectationResult	tmp/jasmine/assets/jasmine.js	/^  function buildExpectationResult(options) {$/;"	f
+getJasmineRequireObj.clearTimeoutable	tmp/jasmine/assets/jasmine.js	/^    function clearTimeoutable() {$/;"	f
+getJasmineRequireObj.complete	tmp/jasmine/assets/jasmine.js	/^    function complete() {$/;"	f
+getJasmineRequireObj.message	tmp/jasmine/assets/jasmine.js	/^    function message() {$/;"	f
+getJasmineRequireObj.noopTimer.elapsed	tmp/jasmine/assets/jasmine.js	/^    elapsed: function(){ return 0; }$/;"	m
+getJasmineRequireObj.noopTimer.start	tmp/jasmine/assets/jasmine.js	/^    start: function(){},$/;"	m
+getJasmineRequireObj.onException	tmp/jasmine/assets/jasmine.js	/^    function onException(e) {$/;"	f
+getJasmineRequireObj.return.pass	tmp/jasmine/assets/jasmine.js	/^          pass: (actual !== actual)$/;"	p
+getJasmineRequireObj.return.pass	tmp/jasmine/assets/jasmine.js	/^        var result = { pass: false },$/;"	p
+getJasmineRequireObj.self.tick	tmp/jasmine/assets/jasmine.js	/^    self.tick = function(millis) {$/;"	f
+getJasmineRequireObj.stack	tmp/jasmine/assets/jasmine.js	/^    function stack() {$/;"	f
+getJasmineRequireObj.toBe	tmp/jasmine/assets/jasmine.js	/^  function toBe() {$/;"	f
+getJasmineRequireObj.toBeCloseTo	tmp/jasmine/assets/jasmine.js	/^  function toBeCloseTo() {$/;"	f
+getJasmineRequireObj.toBeDefined	tmp/jasmine/assets/jasmine.js	/^  function toBeDefined() {$/;"	f
+getJasmineRequireObj.toBeFalsy	tmp/jasmine/assets/jasmine.js	/^  function toBeFalsy() {$/;"	f
+getJasmineRequireObj.toBeGreaterThan	tmp/jasmine/assets/jasmine.js	/^  function toBeGreaterThan() {$/;"	f
+getJasmineRequireObj.toBeLessThan	tmp/jasmine/assets/jasmine.js	/^  function toBeLessThan() {$/;"	f
+getJasmineRequireObj.toBeNaN	tmp/jasmine/assets/jasmine.js	/^  function toBeNaN() {$/;"	f
+getJasmineRequireObj.toBeNull	tmp/jasmine/assets/jasmine.js	/^  function toBeNull() {$/;"	f
+getJasmineRequireObj.toBeTruthy	tmp/jasmine/assets/jasmine.js	/^  function toBeTruthy() {$/;"	f
+getJasmineRequireObj.toBeUndefined	tmp/jasmine/assets/jasmine.js	/^  function toBeUndefined() {$/;"	f
+getJasmineRequireObj.toContain	tmp/jasmine/assets/jasmine.js	/^  function toContain(util, customEqualityTesters) {$/;"	f
+getJasmineRequireObj.toEqual	tmp/jasmine/assets/jasmine.js	/^  function toEqual(util, customEqualityTesters) {$/;"	f
+getJasmineRequireObj.toHaveBeenCalled	tmp/jasmine/assets/jasmine.js	/^  function toHaveBeenCalled() {$/;"	f
+getJasmineRequireObj.toHaveBeenCalledWith	tmp/jasmine/assets/jasmine.js	/^  function toHaveBeenCalledWith(util) {$/;"	f
+getJasmineRequireObj.toMatch	tmp/jasmine/assets/jasmine.js	/^  function toMatch() {$/;"	f
+getJasmineRequireObj.toThrow	tmp/jasmine/assets/jasmine.js	/^  function toThrow(util) {$/;"	f
+getSpecName	tmp/jasmine/assets/jasmine.js	/^    var getSpecName = function(spec, suite) {$/;"	f
+getStyles	tmp/jasmine/assets/jasmine-specs.js	/^	getStyles = function( elem ) {$/;"	f
+getStyles	tmp/jasmine/assets/jasmine-specs.js	/^var getStyles, curCSS,$/;"	v
+getWidthOrHeight	tmp/jasmine/assets/jasmine-specs.js	/^function getWidthOrHeight( elem, name, extra ) {$/;"	f
+getWindow	tmp/jasmine/assets/jasmine-specs.js	/^function getWindow( elem ) {$/;"	f
+hooks.empty.fire	tmp/jasmine/assets/jasmine-specs.js	/^			hooks.empty.fire = function() {$/;"	f
+i	tmp/jasmine/assets/jasmine-specs.js	/^		var i, prop, copy,$/;"	v
+i	tmp/jasmine/assets/jasmine-specs.js	/^var i;$/;"	v
+incomplete_tasks	app/models/project.rb	/^  def incomplete_tasks$/;"	f	class:Project
+index	app/controllers/projects_controller.rb	/^  def index$/;"	f	class:ProjectsController
+init	tmp/jasmine/assets/jasmine-specs.js	/^init.prototype = jQuery.fn;$/;"	c
+initialize	app/actions/creates_project.rb	/^  def initialize(name: "", task_string: "", users: [])$/;"	f	class:CreatesProject
+initialize	app/presenters/project_presenter.rb	/^  def initialize(project) # <label id="code.presenter_constructor" \/>$/;"	f	class:ProjectPresenter
+initializeTurbolinks	tmp/jasmine/assets/jasmine-specs.js	/^  initializeTurbolinks = function() {$/;"	f
+inspectPrefiltersOrTransports	tmp/jasmine/assets/jasmine-specs.js	/^function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {$/;"	f
+inspectPrefiltersOrTransports.inspect	tmp/jasmine/assets/jasmine-specs.js	/^	function inspect( dataType ) {$/;"	f
+installDocumentReadyPageEventTriggers	tmp/jasmine/assets/jasmine-specs.js	/^  installDocumentReadyPageEventTriggers = function() {$/;"	f
+installHistoryChangeHandler	tmp/jasmine/assets/jasmine-specs.js	/^  installHistoryChangeHandler = function(event) {$/;"	f
+installJqueryAjaxSuccessPageUpdateTrigger	tmp/jasmine/assets/jasmine-specs.js	/^  installJqueryAjaxSuccessPageUpdateTrigger = function() {$/;"	f
+internalData	tmp/jasmine/assets/jasmine-specs.js	/^function internalData( elem, name, data, pvt \/* Internal Use Only *\/ ) {$/;"	f
+internalRemoveData	tmp/jasmine/assets/jasmine-specs.js	/^function internalRemoveData( elem, name, pvt ) {$/;"	f
+intersection	tmp/jasmine/assets/jasmine-specs.js	/^    intersection = function(a, b) {$/;"	f
+isArraylike	tmp/jasmine/assets/jasmine-specs.js	/^function isArraylike( obj ) {$/;"	f
+isEmptyDataObject	tmp/jasmine/assets/jasmine-specs.js	/^function isEmptyDataObject( obj ) {$/;"	f
+isHidden	tmp/jasmine/assets/jasmine-specs.js	/^var isHidden = function( elem, el ) {$/;"	f
+it	tmp/jasmine/assets/jasmine.js	/^    this.it = function(description, fn) {$/;"	f
+j$.Env.getNextSpecId	tmp/jasmine/assets/jasmine.js	/^    var getNextSpecId = function() {$/;"	m
+j$.any	tmp/jasmine/assets/jasmine.js	/^  j$.any = function(clazz) {$/;"	f
+j$.createSpy	tmp/jasmine/assets/jasmine.js	/^  j$.createSpy = function(name, originalFn) {$/;"	f
+j$.createSpyObj	tmp/jasmine/assets/jasmine.js	/^  j$.createSpyObj = function(baseName, methodNames) {$/;"	f
+j$.getEnv	tmp/jasmine/assets/jasmine.js	/^  j$.getEnv = function(options) {$/;"	f
+j$.isA_	tmp/jasmine/assets/jasmine.js	/^  j$.isA_ = function(typeName, value) {$/;"	f
+j$.isArray_	tmp/jasmine/assets/jasmine.js	/^  j$.isArray_ = function(value) {$/;"	f
+j$.isDomNode	tmp/jasmine/assets/jasmine.js	/^  j$.isDomNode = function(obj) {$/;"	f
+j$.isNumber_	tmp/jasmine/assets/jasmine.js	/^  j$.isNumber_ = function(value) {$/;"	f
+j$.isSpy	tmp/jasmine/assets/jasmine.js	/^  j$.isSpy = function(putativeSpy) {$/;"	f
+j$.isString_	tmp/jasmine/assets/jasmine.js	/^  j$.isString_ = function(value) {$/;"	f
+j$.objectContaining	tmp/jasmine/assets/jasmine.js	/^  j$.objectContaining = function(sample) {$/;"	f
+j$.unimplementedMethod_	tmp/jasmine/assets/jasmine.js	/^  j$.unimplementedMethod_ = function() {$/;"	f
+jQuery.Callbacks	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.Callbacks = function( options ) {$/;"	f
+jQuery.Event	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.Event = function( src, props ) {$/;"	c
+jQuery.Event.isDefaultPrevented	tmp/jasmine/assets/jasmine-specs.js	/^	isDefaultPrevented: returnFalse,$/;"	p
+jQuery.Event.isImmediatePropagationStopped	tmp/jasmine/assets/jasmine-specs.js	/^	isImmediatePropagationStopped: returnFalse,$/;"	p
+jQuery.Event.isPropagationStopped	tmp/jasmine/assets/jasmine-specs.js	/^	isPropagationStopped: returnFalse,$/;"	p
+jQuery.Event.preventDefault	tmp/jasmine/assets/jasmine-specs.js	/^	preventDefault: function() {$/;"	m
+jQuery.Event.stopImmediatePropagation	tmp/jasmine/assets/jasmine-specs.js	/^	stopImmediatePropagation: function() {$/;"	m
+jQuery.Event.stopPropagation	tmp/jasmine/assets/jasmine-specs.js	/^	stopPropagation: function() {$/;"	m
+jQuery._evalUrl	tmp/jasmine/assets/jasmine-specs.js	/^jQuery._evalUrl = function( url ) {$/;"	f
+jQuery.acceptData	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.acceptData = function( elem ) {$/;"	f
+jQuery.attrHooks.contenteditable.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: function( elem, value, name ) {$/;"	m
+jQuery.attrHooks.style.get	tmp/jasmine/assets/jasmine-specs.js	/^		get: function( elem ) {$/;"	m
+jQuery.attrHooks.style.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: function( elem, value ) {$/;"	m
+jQuery.attrHooks.value.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: function( elem, value, name ) {$/;"	m
+jQuery.cssHooks.opacity.get	tmp/jasmine/assets/jasmine-specs.js	/^		get: function( elem, computed ) {$/;"	m
+jQuery.cssHooks.opacity.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: function( elem, value ) {$/;"	m
+jQuery.easing.linear	tmp/jasmine/assets/jasmine-specs.js	/^	linear: function( p ) {$/;"	m
+jQuery.easing.swing	tmp/jasmine/assets/jasmine-specs.js	/^	swing: function( p ) {$/;"	m
+jQuery.event.global	tmp/jasmine/assets/jasmine-specs.js	/^	global: {},$/;"	p
+jQuery.event.special.change.handle	tmp/jasmine/assets/jasmine-specs.js	/^		handle: function( event ) {$/;"	m
+jQuery.event.special.change.setup	tmp/jasmine/assets/jasmine-specs.js	/^		setup: function() {$/;"	m
+jQuery.event.special.change.teardown	tmp/jasmine/assets/jasmine-specs.js	/^		teardown: function() {$/;"	m
+jQuery.event.special.submit.postDispatch	tmp/jasmine/assets/jasmine-specs.js	/^		postDispatch: function( event ) {$/;"	m
+jQuery.event.special.submit.setup	tmp/jasmine/assets/jasmine-specs.js	/^		setup: function() {$/;"	m
+jQuery.event.special.submit.teardown	tmp/jasmine/assets/jasmine-specs.js	/^		teardown: function() {$/;"	m
+jQuery.expr.filters.animated	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.expr.filters.animated = function( elem ) {$/;"	f
+jQuery.expr.filters.hidden	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.expr.filters.hidden = function( elem ) {$/;"	f
+jQuery.expr.filters.visible	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.expr.filters.visible = function( elem ) {$/;"	f
+jQuery.filter	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.filter = function( expr, elems, not ) {$/;"	f
+jQuery.fn.delay	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fn.delay = function( time, type ) {$/;"	f
+jQuery.fn.load	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fn.load = function( url, params, callback ) {$/;"	f
+jQuery.fn.ready	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fn.ready = function( fn ) {$/;"	f
+jQuery.fn.size	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fn.size = function() {$/;"	f
+jQuery.fx.speeds._default	tmp/jasmine/assets/jasmine-specs.js	/^	_default: 400$/;"	p
+jQuery.fx.speeds.fast	tmp/jasmine/assets/jasmine-specs.js	/^	fast: 200,$/;"	p
+jQuery.fx.speeds.slow	tmp/jasmine/assets/jasmine-specs.js	/^	slow: 600,$/;"	p
+jQuery.fx.start	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fx.start = function() {$/;"	f
+jQuery.fx.stop	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fx.stop = function() {$/;"	f
+jQuery.fx.tick	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fx.tick = function() {$/;"	f
+jQuery.fx.timer	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.fx.timer = function( timer ) {$/;"	f
+jQuery.noConflict	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.noConflict = function( deep ) {$/;"	f
+jQuery.offset.setOffset	tmp/jasmine/assets/jasmine-specs.js	/^	setOffset: function( elem, options, i ) {$/;"	m
+jQuery.param	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.param = function( a, traditional ) {$/;"	f
+jQuery.parseHTML	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.parseHTML = function( data, context, keepScripts ) {$/;"	f
+jQuery.parseJSON	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.parseJSON = function( data ) {$/;"	f
+jQuery.parseXML	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.parseXML = function( data ) {$/;"	f
+jQuery.propHooks.selected.get	tmp/jasmine/assets/jasmine-specs.js	/^		get: function( elem ) {$/;"	m
+jQuery.ready.promise	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.ready.promise = function( obj ) {$/;"	f
+jQuery.speed	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.speed = function( speed, easing, fn ) {$/;"	f
+jQuery.swap	tmp/jasmine/assets/jasmine-specs.js	/^jQuery.swap = function( elem, options, callback, args ) {$/;"	f
+jQuery.valHooks.button.get	tmp/jasmine/assets/jasmine-specs.js	/^		get: function( elem, name ) {$/;"	m
+jQuery.valHooks.button.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: nodeHook.set$/;"	p
+jasmine.addCustomEqualityTester	tmp/jasmine/assets/boot.js	/^  jasmine.addCustomEqualityTester = function(tester) {$/;"	f
+jasmine.addMatchers	tmp/jasmine/assets/boot.js	/^  jasmine.addMatchers = function(matchers) {$/;"	f
+jasmine.clock	tmp/jasmine/assets/boot.js	/^  jasmine.clock = function() {$/;"	f
+jasmineInterface.afterEach	tmp/jasmine/assets/boot.js	/^    afterEach: function(afterEachFunction) {$/;"	m
+jasmineInterface.beforeEach	tmp/jasmine/assets/boot.js	/^    beforeEach: function(beforeEachFunction) {$/;"	m
+jasmineInterface.describe	tmp/jasmine/assets/boot.js	/^    describe: function(description, specDefinitions) {$/;"	m
+jasmineInterface.expect	tmp/jasmine/assets/boot.js	/^    expect: function(actual) {$/;"	m
+jasmineInterface.it	tmp/jasmine/assets/boot.js	/^    it: function(desc, func) {$/;"	m
+jasmineInterface.jsApiReporter	tmp/jasmine/assets/boot.js	/^    jsApiReporter: new jasmine.JsApiReporter({$/;"	p
+jasmineInterface.pending	tmp/jasmine/assets/boot.js	/^    pending: function() {$/;"	m
+jasmineInterface.spyOn	tmp/jasmine/assets/boot.js	/^    spyOn: function(obj, methodName) {$/;"	m
+jasmineInterface.xdescribe	tmp/jasmine/assets/boot.js	/^    xdescribe: function(description, specDefinitions) {$/;"	m
+jasmineInterface.xit	tmp/jasmine/assets/boot.js	/^    xit: function(desc, func) {$/;"	m
+jasmineRequire.HtmlReporter	tmp/jasmine/assets/jasmine-html.js	/^jasmineRequire.HtmlReporter = function(j$) {$/;"	f
+jasmineRequire.HtmlReporter.HtmlReporter	tmp/jasmine/assets/jasmine-html.js	/^  function HtmlReporter(options) {$/;"	c
+jasmineRequire.HtmlReporter.noopTimer.elapsed	tmp/jasmine/assets/jasmine-html.js	/^    elapsed: function() { return 0; }$/;"	m
+jasmineRequire.HtmlReporter.noopTimer.start	tmp/jasmine/assets/jasmine-html.js	/^    start: function() {},$/;"	m
+jasmineRequire.HtmlSpecFilter	tmp/jasmine/assets/jasmine-html.js	/^jasmineRequire.HtmlSpecFilter = function() {$/;"	f
+jasmineRequire.HtmlSpecFilter.HtmlSpecFilter	tmp/jasmine/assets/jasmine-html.js	/^  function HtmlSpecFilter(options) {$/;"	c
+jasmineRequire.HtmlSpecFilter.HtmlSpecFilter.matches	tmp/jasmine/assets/jasmine-html.js	/^    this.matches = function(specName) {$/;"	m
+jasmineRequire.QueryString	tmp/jasmine/assets/jasmine-html.js	/^jasmineRequire.QueryString = function() {$/;"	f
+jasmineRequire.QueryString.QueryString	tmp/jasmine/assets/jasmine-html.js	/^  function QueryString(options) {$/;"	c
+jasmineRequire.QueryString.QueryString.setParam	tmp/jasmine/assets/jasmine-html.js	/^    this.setParam = function(key, value) {$/;"	m
+jasmineRequire.ResultsNode	tmp/jasmine/assets/jasmine-html.js	/^jasmineRequire.ResultsNode = function() {$/;"	f
+jasmineRequire.ResultsNode.ResultsNode	tmp/jasmine/assets/jasmine-html.js	/^  function ResultsNode(result, type, parent) {$/;"	c
+jasmineRequire.ResultsNode.ResultsNode.addChild	tmp/jasmine/assets/jasmine-html.js	/^    this.addChild = function(result, type) {$/;"	m
+jasmineRequire.html	tmp/jasmine/assets/jasmine-html.js	/^jasmineRequire.html = function(j$) {$/;"	f
+jqxhr	tmp/jasmine/assets/jasmine-specs.js	/^        var jqxhr = rails.ajax(options);$/;"	v
+last_in_project?	app/models/task.rb	/^  def last_in_project?$/;"	f	class:Task
+letterSpacing	tmp/jasmine/assets/jasmine-specs.js	/^		letterSpacing: 0,$/;"	p
+log_in_as	spec/features/user_and_role_spec.rb	/^  def log_in_as(user)$/;"	f
+log_in_as	test/integration/user_and_role_test.rb	/^  def log_in_as(user) # <label id="code.security_log_in" \/>$/;"	f	class:UserAndRoleTest
+manipulationTarget	tmp/jasmine/assets/jasmine-specs.js	/^function manipulationTarget( elem, content ) {$/;"	f
+mark_completed	app/models/task.rb	/^  def mark_completed(date = nil)$/;"	f	class:Task
+maximumSpecCallbackDepth	tmp/jasmine/assets/jasmine.js	/^    var maximumSpecCallbackDepth = 20;$/;"	v
+message	tmp/jasmine/assets/jasmine.js	/^      var message = "Expected " +$/;"	v
+move_down	app/models/task.rb	/^  def move_down$/;"	f	class:Task
+move_up	app/models/task.rb	/^  def move_up$/;"	f	class:Task
+my_place_in_project	app/models/task.rb	/^  def my_place_in_project$/;"	f	class:Task
+name_with_status	app/helpers/projects_helper.rb	/^  def name_with_status(project)$/;"	f	class:ProjectsHelper
+name_with_status	app/presenters/project_presenter.rb	/^  def name_with_status # <label id="code.presenter_method" \/>$/;"	f	class:ProjectPresenter
+new	app/controllers/projects_controller.rb	/^  def new$/;"	f	class:ProjectsController
+next_task	app/models/task.rb	/^  def next_task$/;"	f	class:Task
+next_task_order	app/models/project.rb	/^  def next_task_order$/;"	f	class:Project
+nodeHook	tmp/jasmine/assets/jasmine-specs.js	/^var nodeHook, boolHook,$/;"	v
+nodeHook.set	tmp/jasmine/assets/jasmine-specs.js	/^		set: function( elem, value, name ) {$/;"	m
+nodeNames	tmp/jasmine/assets/jasmine-specs.js	/^var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|details|figcaption|figure|footer|" +$/;"	v
+nonce	tmp/jasmine/assets/jasmine-specs.js	/^var nonce = jQuery.now();$/;"	v
+oldCallbacks	tmp/jasmine/assets/jasmine-specs.js	/^var oldCallbacks = [],$/;"	v
+on_schedule?	app/models/project.rb	/^  def on_schedule?$/;"	f	class:Project
+opt.complete	tmp/jasmine/assets/jasmine-specs.js	/^	opt.complete = function() {$/;"	f
+options.type	tmp/jasmine/assets/jasmine-specs.js	/^          type: method || 'GET', data: data, dataType: dataType,$/;"	p
+options.xhrFields.withCredentials	tmp/jasmine/assets/jasmine-specs.js	/^            withCredentials: withCredentials$/;"	p
+pageCache.url	tmp/jasmine/assets/jasmine-specs.js	/^      url: currentStateUrl.relative,$/;"	p
+pageChangePrevented	tmp/jasmine/assets/jasmine-specs.js	/^  pageChangePrevented = function() {$/;"	f
+pagesCached	tmp/jasmine/assets/jasmine-specs.js	/^  pagesCached = function(size) {$/;"	f
+pending	tmp/jasmine/assets/jasmine.js	/^    this.pending = function() {$/;"	f
+points_toward_velocity	app/models/task.rb	/^  def points_toward_velocity$/;"	f	class:Task
+popCookie	tmp/jasmine/assets/jasmine-specs.js	/^  popCookie = function(name) {$/;"	f
+previous_task	app/models/task.rb	/^  def previous_task$/;"	f	class:Task
+processResponse	tmp/jasmine/assets/jasmine-specs.js	/^  processResponse = function() {$/;"	f
+project_with_three_tasks	test/models/task_test.rb	/^  def project_with_three_tasks$/;"	f
+projected_days_remaining	app/models/project.rb	/^  def projected_days_remaining$/;"	f	class:Project
+propFilter	tmp/jasmine/assets/jasmine-specs.js	/^function propFilter( props, specialEasing ) {$/;"	f
+proto.log	tmp/jasmine/assets/jasmine-console-reporter.js	/^  proto.log = function(str, color) {$/;"	f
+proto.statuses.fail	tmp/jasmine/assets/jasmine-console-reporter.js	/^    fail    : "fail",$/;"	p
+proto.statuses.running	tmp/jasmine/assets/jasmine-console-reporter.js	/^    running : "running",$/;"	p
+proto.statuses.skipped_or_pending	tmp/jasmine/assets/jasmine-console-reporter.js	/^    skipped_or_pending : "skipped or pending"$/;"	p
+proto.statuses.stopped	tmp/jasmine/assets/jasmine-console-reporter.js	/^    stopped : "stopped",$/;"	p
+proto.statuses.success	tmp/jasmine/assets/jasmine-console-reporter.js	/^    success : "success",$/;"	p
+queueRunnerFactory	tmp/jasmine/assets/jasmine.js	/^    var queueRunnerFactory = function(options) {$/;"	f
+quote	tmp/jasmine/assets/json2.js	/^    function quote(string) {$/;"	f
+r20	tmp/jasmine/assets/jasmine-specs.js	/^var r20 = \/%20\/g,$/;"	v
+rails	tmp/jasmine/assets/jasmine-specs.js	/^  var rails;$/;"	v
+rbrace	tmp/jasmine/assets/jasmine-specs.js	/^var rbrace = \/^(?:\\{[\\w\\W]*\\}|\\[[\\w\\W]*\\])$\/,$/;"	v
+rclass	tmp/jasmine/assets/jasmine-specs.js	/^var rclass = \/[\\t\\r\\n\\f]\/g;$/;"	v
+readyList	tmp/jasmine/assets/jasmine-specs.js	/^var readyList;$/;"	v
+recallScrollPosition	tmp/jasmine/assets/jasmine-specs.js	/^  recallScrollPosition = function(page) {$/;"	f
+reflectNewUrl	tmp/jasmine/assets/jasmine-specs.js	/^  reflectNewUrl = function(url) {$/;"	f
+reflectRedirectedUrl	tmp/jasmine/assets/jasmine-specs.js	/^  reflectRedirectedUrl = function() {$/;"	f
+remaining_size	app/models/project.rb	/^  def remaining_size$/;"	f	class:Project
+rememberCurrentState	tmp/jasmine/assets/jasmine-specs.js	/^  rememberCurrentState = function() {$/;"	f
+rememberCurrentUrl	tmp/jasmine/assets/jasmine-specs.js	/^  rememberCurrentUrl = function() {$/;"	f
+rememberReferer	tmp/jasmine/assets/jasmine-specs.js	/^  rememberReferer = function() {$/;"	f
+removeNoscriptTags	tmp/jasmine/assets/jasmine-specs.js	/^  removeNoscriptTags = function(node) {$/;"	f
+resetScrollPosition	tmp/jasmine/assets/jasmine-specs.js	/^  resetScrollPosition = function() {$/;"	f
+restoreScript	tmp/jasmine/assets/jasmine-specs.js	/^function restoreScript( elem ) {$/;"	f
+return	tmp/jasmine/assets/jasmine-specs.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	c
+return	tmp/jasmine/assets/jasmine.js	/^    return Object.prototype.toString.apply(value) === '[object ' + typeName + ']';$/;"	c
+return.apply	tmp/jasmine/assets/jasmine.js	/^      return Function.prototype.apply.apply(timer.setInterval, [global, arguments]);$/;"	m
+return.apply	tmp/jasmine/assets/jasmine.js	/^      return Function.prototype.apply.apply(timer.setTimeout, [global, arguments]);$/;"	m
+return.call	tmp/jasmine/assets/jasmine.js	/^      return Function.prototype.call.apply(timer.clearInterval, [global, id]);$/;"	m
+return.call	tmp/jasmine/assets/jasmine.js	/^      return Function.prototype.call.apply(timer.clearTimeout, [global, id]);$/;"	m
+return.init	tmp/jasmine/assets/jasmine-specs.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	m
+return.pass	tmp/jasmine/assets/jasmine.js	/^          pass: false$/;"	p
+return.toString	tmp/jasmine/assets/jasmine.js	/^    return Object.prototype.toString.apply(value) === '[object ' + typeName + ']';$/;"	m
+returnFalse	tmp/jasmine/assets/jasmine-specs.js	/^function returnFalse() {$/;"	f
+returnTrue	tmp/jasmine/assets/jasmine-specs.js	/^function returnTrue() {$/;"	f
+rfocusable	tmp/jasmine/assets/jasmine-specs.js	/^var rfocusable = \/^(?:input|select|textarea|button|object)$\/i,$/;"	v
+rformElems	tmp/jasmine/assets/jasmine-specs.js	/^var rformElems = \/^(?:input|select|textarea)$\/i,$/;"	v
+risSimple	tmp/jasmine/assets/jasmine-specs.js	/^var risSimple = \/^.[^:#\\[\\.,]*$\/;$/;"	v
+rneedsContext	tmp/jasmine/assets/jasmine-specs.js	/^var rneedsContext = jQuery.expr.match.needsContext;$/;"	v
+rreturn	tmp/jasmine/assets/jasmine-specs.js	/^var rreturn = \/\\r\/g;$/;"	v
+rvalidtokens	tmp/jasmine/assets/jasmine-specs.js	/^var rvalidtokens = \/(,)|(\\[|{)|(}|])|"(?:[^"\\\\\\r\\n]|\\\\["\\\\\\\/bfnrt]|\\\\u[\\da-fA-F]{4})*"\\s*:?|true|false|null|-?(?!0\\d)\\d+(?:\\.\\d+|)(?:[eE][+-]?\\d+|)\/g;$/;"	v
+safeActiveElement	tmp/jasmine/assets/jasmine-specs.js	/^function safeActiveElement() {$/;"	f
+save	app/actions/creates_project.rb	/^  def save$/;"	f
+self.clearInterval	tmp/jasmine/assets/jasmine.js	/^    self.clearInterval = function(id) {$/;"	f
+self.clearTimeout	tmp/jasmine/assets/jasmine.js	/^    self.clearTimeout = function(id) {$/;"	f
+self.install	tmp/jasmine/assets/jasmine.js	/^    self.install = function() {$/;"	f
+self.removeFunctionWithId	tmp/jasmine/assets/jasmine.js	/^    self.removeFunctionWithId = function(timeoutKey) {$/;"	f
+self.reset	tmp/jasmine/assets/jasmine.js	/^    self.reset = function() {$/;"	f
+self.scheduleFunction	tmp/jasmine/assets/jasmine.js	/^    self.scheduleFunction = function(funcToCall, millis, params, recurring, timeoutKey, runAtMillis) {$/;"	f
+self.scheduleFunction.funcToSchedule.funcToCall	tmp/jasmine/assets/jasmine.js	/^        funcToCall: f,$/;"	p
+self.scheduleFunction.funcToSchedule.millis	tmp/jasmine/assets/jasmine.js	/^        millis: millis$/;"	p
+self.scheduleFunction.funcToSchedule.params	tmp/jasmine/assets/jasmine.js	/^        params: params,$/;"	p
+self.scheduleFunction.funcToSchedule.recurring	tmp/jasmine/assets/jasmine.js	/^        recurring: recurring,$/;"	p
+self.scheduleFunction.funcToSchedule.runAtMillis	tmp/jasmine/assets/jasmine.js	/^        runAtMillis: runAtMillis,$/;"	p
+self.scheduleFunction.funcToSchedule.timeoutKey	tmp/jasmine/assets/jasmine.js	/^        timeoutKey: timeoutKey,$/;"	p
+self.setInterval	tmp/jasmine/assets/jasmine.js	/^    self.setInterval = function(fn, delay, params) {$/;"	f
+self.setTimeout	tmp/jasmine/assets/jasmine.js	/^    self.setTimeout = function(fn, delay, params) {$/;"	f
+self.tick	tmp/jasmine/assets/jasmine.js	/^    self.tick = function(millis) {$/;"	f
+self.uninstall	tmp/jasmine/assets/jasmine.js	/^    self.uninstall = function() {$/;"	f
+setGlobalEval	tmp/jasmine/assets/jasmine-specs.js	/^function setGlobalEval( elems, refElements ) {$/;"	f
+setPositiveNumber	tmp/jasmine/assets/jasmine-specs.js	/^function setPositiveNumber( elem, value, subtract ) {$/;"	f
+setup	test/presenters/project_presenter_test.rb	/^  def setup$/;"	f	class:ProjectPresenterTest
+show	app/controllers/projects_controller.rb	/^  def show$/;"	f	class:ProjectsController
+show	app/controllers/tasks_controller.rb	/^  def show$/;"	f	class:TasksController
+showHide	tmp/jasmine/assets/jasmine-specs.js	/^function showHide( elements, show ) {$/;"	f
+sibling	tmp/jasmine/assets/jasmine-specs.js	/^function sibling( cur, dir ) {$/;"	f
+size	app/models/project.rb	/^  def size$/;"	f	class:Project
+small?	app/models/task.rb	/^  def small?$/;"	f	class:Task
+specFactory	tmp/jasmine/assets/jasmine.js	/^    var specFactory = function(description, fn, suite) {$/;"	f
+specFactory.removeAllSpies	tmp/jasmine/assets/jasmine.js	/^      function removeAllSpies() {$/;"	f
+specFactory.specResultCallback	tmp/jasmine/assets/jasmine.js	/^      function specResultCallback(result) {$/;"	f
+spyOn	tmp/jasmine/assets/jasmine.js	/^    this.spyOn = function(obj, methodName) {$/;"	f
+str	tmp/jasmine/assets/json2.js	/^    function str(key, holder) {$/;"	f
+strundefined	tmp/jasmine/assets/jasmine-specs.js	/^var strundefined = typeof undefined;$/;"	v
+suiteFactory	tmp/jasmine/assets/jasmine.js	/^    var suiteFactory = function(description) {$/;"	f
+suiteStarted	tmp/jasmine/assets/jasmine.js	/^    var suiteStarted = function(suite) {$/;"	f
+support.shrinkWrapBlocks	tmp/jasmine/assets/jasmine-specs.js	/^	support.shrinkWrapBlocks = function() {$/;"	f
+swap_order_with	app/models/task.rb	/^  def swap_order_with(other)$/;"	f	class:Task
+task_completed_email	app/mailers/task_mailer.rb	/^  def task_completed_email(task)$/;"	f	class:TaskMailer
+test_project_name_with_status_info	test/presenters/project_presenter_test.rb	/^  def test_project_name_with_status_info$/;"	f	class:ProjectPresenterTest
+test_project_name_with_status_info_behind_sechdule	test/presenters/project_presenter_test.rb	/^  def test_project_name_with_status_info_behind_sechdule$/;"	f	class:ProjectPresenterTest
+timeoutable.callDone	tmp/jasmine/assets/jasmine.js	/^        var callDone = function() {$/;"	f
+topSuite	tmp/jasmine/assets/jasmine.js	/^    this.topSuite = function() {$/;"	f
+total_size	app/models/project.rb	/^  def total_size$/;"	f	class:Project
+transitionCacheFor	tmp/jasmine/assets/jasmine-specs.js	/^  transitionCacheFor = function(url) {$/;"	f
+triggerEvent	tmp/jasmine/assets/jasmine-specs.js	/^  triggerEvent = function(name, data) {$/;"	f
+undefined_rate?	app/models/project.rb	/^  def undefined_rate?$/;"	f	class:Project
+up	app/controllers/tasks_controller.rb	/^  def up$/;"	f	class:TasksController
+update	app/controllers/projects_controller.rb	/^  def update$/;"	f	class:ProjectsController
+update	app/controllers/tasks_controller.rb	/^  def update$/;"	f	class:TasksController
+util.argsToArray	tmp/jasmine/assets/jasmine.js	/^  util.argsToArray = function(args) {$/;"	f
+util.htmlEscape	tmp/jasmine/assets/jasmine.js	/^  util.htmlEscape = function(str) {$/;"	f
+util.inherit	tmp/jasmine/assets/jasmine.js	/^  util.inherit = function(childClass, parentClass) {$/;"	f
+util.inherit.Subclass	tmp/jasmine/assets/jasmine.js	/^    var Subclass = function() {$/;"	f
+util.isUndefined	tmp/jasmine/assets/jasmine.js	/^  util.isUndefined = function(obj) {$/;"	f
+validContent	tmp/jasmine/assets/jasmine-specs.js	/^    validContent = function() {$/;"	f
+var.hasKey	tmp/jasmine/assets/jasmine.js	/^    var hasKey = function(obj, keyName) {$/;"	f
+velocity_length_in_days	app/models/project.rb	/^  def self.velocity_length_in_days$/;"	F	class:Project
+vendorPropName	tmp/jasmine/assets/jasmine-specs.js	/^function vendorPropName( style, name ) {$/;"	f
+visible_projects	app/models/user.rb	/^  def visible_projects$/;"	f	class:User
+window.onload	tmp/jasmine/assets/boot.js	/^  window.onload = function() {$/;"	f
+winnow	tmp/jasmine/assets/jasmine-specs.js	/^function winnow( elements, qualifier, not ) {$/;"	f
+xdescribe	tmp/jasmine/assets/jasmine.js	/^    this.xdescribe = function(description, specDefinitions) {$/;"	f
+xhr.onerror	tmp/jasmine/assets/jasmine-specs.js	/^    xhr.onerror = function() {$/;"	f
+xhr.onload	tmp/jasmine/assets/jasmine-specs.js	/^    xhr.onload = function() {$/;"	f
+xhr.onloadend	tmp/jasmine/assets/jasmine-specs.js	/^    xhr.onloadend = function() {$/;"	f
+xit	tmp/jasmine/assets/jasmine.js	/^    this.xit = function(description, fn) {$/;"	f
