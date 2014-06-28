@@ -1,7 +1,7 @@
 ##START:task_setup
 class Task
 
-  attr_accessor :size
+  attr_accessor :size, :completed
 
   def initialize(options = {})
     @completed = options[:completed]
