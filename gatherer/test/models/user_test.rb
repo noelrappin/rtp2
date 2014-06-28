@@ -43,7 +43,4 @@ class UserTest < ActiveSupport::TestCase
     assert_visiblity_of(@project_1)
   end
   ##END:index
-
-
-
 end
