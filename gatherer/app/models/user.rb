@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :roles
   has_many :projects, through: :roles
+  has_many :tasks
 
   ##START:new_can_view
   def can_view?(project)
@@ -19,4 +20,11 @@ class User < ActiveRecord::Base
     (projects.to_a + Project.all_public).uniq.sort_by(&:id)
   end
   ##END:visible_projecs
+
+  ##START:avatar_url
+  def avatar_url
+    adapter = AvatarAdapter.new(self)
+    adapter.image_url
+  end
+  ##END:avatar_url
 end

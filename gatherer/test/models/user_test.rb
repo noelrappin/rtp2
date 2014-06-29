@@ -43,4 +43,14 @@ class UserTest < ActiveSupport::TestCase
     assert_visiblity_of(@project_1)
   end
   ##END:index
+
+    ##START:image_url
+    test "can get a twitter avatar URL" do
+      user = User.new(email: "test@example.com")
+      fake_adapter = mock("avatar").responds_like_instance_of(AvatarAdapter)
+      fake_adapter.expects(:image_url).returns("fake_url")
+      AvatarAdapter.expects(:new).with(user).returns(fake_adapter)
+      user.avatar_url
+    end
+    ##END:image_url
 end

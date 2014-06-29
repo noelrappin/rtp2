@@ -14,6 +14,8 @@ gem 'devise'
 
 gem 'jbuilder', '~> 2.0'
 
+gem 'twitter'
+
 group :development, :test do
   gem "mocha", require: false
   gem "rspec-rails", "~> 3.0.1"
@@ -28,7 +30,10 @@ group :test do
   gem "minitest-rails-capybara"
   gem 'm'
   gem 'minitest-reporters'
+  gem 'vcr'
+  gem 'webmock'
 end
+
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :doc do
