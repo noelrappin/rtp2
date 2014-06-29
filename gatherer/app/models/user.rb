@@ -20,4 +20,11 @@ class User < ActiveRecord::Base
     (projects.to_a + Project.all_public).uniq.sort_by(&:id)
   end
   ##END:visible_projecs
+
+  ##START:image_url
+  def image_url
+    adapter = AvatarAdapter.new(email)
+    adapter.image_url
+  end
+  ##END:image_url
 end

@@ -44,6 +44,15 @@ class UserTest < ActiveSupport::TestCase
   end
   ##END:index
 
+  ##START:image_url
+  test "can get a gravatar URL" do
+    user = User.new(email: "test@example.com")
+    fake_adapter = mock("avatar").responds_like_instance_of(AvatarAdapter)
+    fake_adapter.expects(:image_url).returns("fake_url")
+    AvatarAdapter.expects(:new).with("test@example.com").returns(fake_adapter)
+    user.image_url
+  end
+  ##END:image_url
 
 
 end

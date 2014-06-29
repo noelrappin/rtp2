@@ -1,3 +1,3 @@
-class UserPresenter < SimpleDeletegator
+class UserPresenter < SimpleDelegator
 
 end
