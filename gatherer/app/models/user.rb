@@ -21,10 +21,10 @@ class User < ActiveRecord::Base
   end
   ##END:visible_projecs
 
-  ##START:image_url
-  def image_url
+  ##START:avatar_url
+  def avatar_url
     adapter = AvatarAdapter.new(email)
     adapter.image_url
   end
-  ##END:image_url
+  ##END:avatar_url
 end

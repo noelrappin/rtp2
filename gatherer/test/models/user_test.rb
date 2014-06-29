@@ -50,7 +50,7 @@ class UserTest < ActiveSupport::TestCase
     fake_adapter = mock("avatar").responds_like_instance_of(AvatarAdapter)
     fake_adapter.expects(:image_url).returns("fake_url")
     AvatarAdapter.expects(:new).with("test@example.com").returns(fake_adapter)
-    user.image_url
+    user.avatar_url
   end
   ##END:image_url
 
