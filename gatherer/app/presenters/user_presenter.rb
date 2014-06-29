@@ -1,0 +1,3 @@
+class UserPresenter < SimpleDeletegator
+
+end
