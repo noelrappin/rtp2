@@ -13,7 +13,7 @@ class TaskShowsGravatar < Capybara::Rails::TestCase
   end
 
   test "i see a gravatar" do
-    VCR.use_cassette("loading gravatar") do
+    VCR.use_cassette("loading_gravatar") do
       visit project_path(projects(:bluebook))
       url = "http://www.gravatar.com/avatar/6b767d8a4c9910e007c122d81eb4de73"
       within("#task_1") do

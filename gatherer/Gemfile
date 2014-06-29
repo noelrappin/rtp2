@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
 gem 'gravatar-ultimate'
+gem 'twitter'
 
 gem 'jbuilder', '~> 2.0'
 
