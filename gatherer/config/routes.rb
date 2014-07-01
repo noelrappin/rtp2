@@ -1,5 +1,6 @@
 Gatherer::Application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  devise_for :users
   resources :tasks do
     member do
       patch :up
@@ -8,4 +9,6 @@ Gatherer::Application.routes.draw do
   end
 
   resources :projects
+
+  root to: "projects#index"
 end

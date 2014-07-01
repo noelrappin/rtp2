@@ -1,6 +1,7 @@
 class Task < ActiveRecord::Base
 
   belongs_to :project
+  belongs_to :user
 
   def self.complete
     where(["completed_at < ?", Time.current])

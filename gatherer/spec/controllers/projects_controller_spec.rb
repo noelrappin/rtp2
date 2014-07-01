@@ -1,6 +1,10 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe ProjectsController do
+
+  before(:each) do
+    sign_in User.create!(email: "rspec@example.com", password: "password")
+  end
 
   describe "#create" do
     it "creates a project" do

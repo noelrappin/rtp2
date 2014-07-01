@@ -1,19 +1,21 @@
 class CreatesProject
 
-  attr_accessor :name, :task_string, :project
+  ##START:users
+  attr_accessor :name, :task_string, :project, :users
 
-  def initialize(name: "", task_string: "")
+  def initialize(name: "", task_string: "", users: [])
     @name = name
     @task_string = task_string
+    @users = users
   end
 
-  ##START: string_convert
   def build
     self.project = Project.new(name: name)
     project.tasks = convert_string_to_tasks
+    project.users = users
     project
   end
-
+  ##END:users
 
   def convert_string_to_tasks
     task_string.split("\n").map do |task_string|
@@ -31,7 +33,5 @@ class CreatesProject
     build
     save
   end
-
-  ##END: string_convert
 
 end

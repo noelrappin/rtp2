@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
   ##START: index
   def index
-    @projects = ProjectPresenter.from_project_list(Project.all)
+    @projects = ProjectPresenter.from_project_list(current_user.visible_projects)
   end
   ##END: index
 
@@ -13,6 +13,10 @@ class ProjectsController < ApplicationController
   ##START: show
   def show
     @project = Project.find(params[:id])
+    unless current_user.can_view?(@project)
+      redirect_to new_user_session_path
+      return
+    end
   end
   ##END: show
 
@@ -20,7 +24,8 @@ class ProjectsController < ApplicationController
   def create
     @action = CreatesProject.new(
       name: params[:project][:name],
-      task_string: params[:project][:tasks] || "")
+      task_string: params[:project][:tasks] || "",
+      users: [current_user])
     success = @action.create
     if success
       redirect_to projects_path
@@ -34,7 +39,7 @@ class ProjectsController < ApplicationController
   ##START: update
   def update
     @project = Project.find(params[:id])
-    if @project.update_attributes(params[:project])
+    if @project.update_attributes(params[:project].permit(:name))
       redirect_to @project, notice: "'project was successfully updated.'"
     else
       render action: 'edit'

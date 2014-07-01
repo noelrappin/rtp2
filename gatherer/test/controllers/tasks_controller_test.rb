@@ -4,6 +4,7 @@ class TasksControllerTest < ActionController::TestCase
 
   setup do
     ActionMailer::Base.deliveries.clear
+    sign_in users(:user)
   end
 
   test "on update with no completion, no email is sent" do
@@ -12,7 +13,6 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal 0, ActionMailer::Base.deliveries.size
   end
 
-  ##START:with_email
   test "on update with completion, send an email" do
     task = Task.create!(title: "Write section on testing mailers", size: 2)
     patch :update, id: task.id, task: {size: 3, completed: true}
@@ -24,6 +24,23 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal ["monitor@tasks.com"], email.to
     assert_match /Write section on testing mailers/, email.body.to_s # <label id="code.check_email_end" />
   end
-  ##END:with_email
+
+  ##START:create
+  test "a user can create a task for a project they belong to" do
+    project = Project.create!(name: "Project Runway")
+    users(:user).projects << project
+    users(:user).save!
+    post :create, task: {
+        project_id: project.id, title: "just do it", size: "1" }
+    assert_equal project.reload.tasks.first.title, "just do it"
+  end
+
+  test "a user can not create a task for a project they do not belong to" do
+    project = Project.create!(name: "Project Runway")
+    post :create, task: {
+        project_id: project.id, title: "just do it", size: "1" }
+    assert_equal project.reload.tasks.size, 0
+  end
+  ##END:create
 
 end

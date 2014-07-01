@@ -3,9 +3,12 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "minitest/rails/capybara"
 require "mocha/mini_test"
+require 'minitest/reporters'
+
+reporter_options = { color: true }
+Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
 
 class ActiveSupport::TestCase
-  ActiveRecord::Migration.check_pending!
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
@@ -22,3 +25,16 @@ class ActiveSupport::TestCase
   end
   ##END:assert_select_string
 end
+
+##START: devise_helper
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
+##END: devise_helper
+
+##START:vcr
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/vcr'
+  c.hook_into :webmock
+end
+##END:vcr

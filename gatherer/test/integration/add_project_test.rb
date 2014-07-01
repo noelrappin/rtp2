@@ -1,6 +1,15 @@
 require "test_helper"
 
 class AddProjectTest < Capybara::Rails::TestCase
+
+  ##START:setup
+  include Warden::Test::Helpers
+
+  setup do
+    login_as users(:user)
+  end
+  ##END:setup
+
   test "a user can add a a project and give it tasks" do
     visit new_project_path
     fill_in "Name", with: "Project Runway"
