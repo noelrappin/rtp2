@@ -7,7 +7,7 @@ describe("with a list of tasks", function() {
     table.affix("tr.task#task_3 a.up");
   });
 
-  it("correctly processes a click", function() {
+  it("correctly processes an up click", function() {
     $("#task_2 .up").click();
     expect($.map($("tr"), function(item) { return $(item).attr("id") }))
         .toEqual(["task_2", "task_1", "task_3"]);
