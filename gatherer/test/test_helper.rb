@@ -34,7 +34,7 @@ end
 
 ##START:vcr
 VCR.configure do |c|
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.cassette_library_dir = 'test/vcr'
   c.hook_into :webmock
 end
 ##END:vcr
