@@ -39,6 +39,10 @@ var Project = {
     nextRow = Project.nextTask(row);
     if(previousRow == null) { return };
     Project.swapRows(row, nextRow);
+  },
+
+  successfulUpdate: function(data) {
+
   }
 
 
