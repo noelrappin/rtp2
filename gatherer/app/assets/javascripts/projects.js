@@ -45,7 +45,8 @@ var Project = {
 }
 
 $(function() {
-  $(document).on("click", ".up", function() {
+  $(document).on("click", ".up", function(event) {
+    event.preventDefault();
     Project.upClickOn($(this));
   });
 
