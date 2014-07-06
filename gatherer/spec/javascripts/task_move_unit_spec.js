@@ -25,8 +25,27 @@ describe("with a list of tasks", function() {
     expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);
   });
 
-  //START:spy
   it("can handle up click", function() {
+    Project.upClickOn($("#task_2 .up"));
+    expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);
+  });
+
+  it("identifies successor if it exists", function() {
+    expect(Project.nextTask($("#task_2"))).toHaveId("task_3");
+  });
+
+  it("returns null as a successor if there is none", function() {
+    expect(Project.nextTask($("#task_3"))).toBeNull();
+  });
+
+  it("can handle up click", function() {
+    Project.downClickOn($("#task_2 .down"));
+    expect($("tr")).toMatchDomIds(["task_1", "task_3", "task_2"]);
+  });
+
+
+  //START:spy
+  it("can handle up click with spy", function() {
     spyOn(Project, 'taskFromAnchor').and.returnValue($("#task_2"))
     Project.upClickOn($("#task_2 .up"));
     expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);
