@@ -47,7 +47,7 @@ describe("with a list of tasks", function() {
       expect(Project.failedUpdate).toHaveBeenCalled();
     });
   });
-  //END:success
+  //END:failure
 
   it("correctly processes an up click", function() {
     $("#task_2 .up").click();
