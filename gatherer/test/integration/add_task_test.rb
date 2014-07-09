@@ -5,8 +5,14 @@ class AddTaskTest < Capybara::Rails::TestCase
   include Warden::Test::Helpers
 
   setup do
+    Capybara.current_driver = Capybara.javascript_driver
     projects(:bluebook).roles.create(user: users(:user))
     login_as users(:user)
+
+  end
+
+  teardown do
+    Capybara.current_driver = Capybara.default_driver
   end
 
   test "i can add and reorder a task" do
@@ -22,8 +28,6 @@ class AddTaskTest < Capybara::Rails::TestCase
       click_on("Up")
     end
     assert_equal project_path(projects(:bluebook)), current_path
-    within("#task_2") do
-      assert_selector(".name", text: "Find UFOs")
-    end
+    assert_selector("tbody:nth-child(2) .name", text: "Find UFOs")
   end
 end
