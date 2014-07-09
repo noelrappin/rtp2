@@ -39,13 +39,14 @@ describe("with a list of tasks", function() {
   });
 
   it("can handle up click", function() {
+    spyOn(Project, 'ajaxCall');
     Project.downClickOn($("#task_2 .down"));
     expect($("tr")).toMatchDomIds(["task_1", "task_3", "task_2"]);
   });
 
-
   //START:spy
   it("can handle up click with spy", function() {
+    spyOn(Project, 'ajaxCall');
     spyOn(Project, 'taskFromAnchor').and.returnValue($("#task_2"))
     Project.upClickOn($("#task_2 .up"));
     expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);

@@ -32,6 +32,23 @@ describe("with a list of tasks", function() {
   });
   //END:success
 
+  //START:failure
+  describe("with an unsuccessful Ajax call", function() {
+
+    beforeEach(function() {
+      this.server.respondWith("PATCH", "/tasks/2/up.js",
+          [500, {}, ""]);
+    });
+
+    it("invokes a callback on failure", function() {
+      spyOn(Project, "failedUpdate").and.callThrough();
+      $("#task_2 .up").click();
+      this.server.respond()
+      expect(Project.failedUpdate).toHaveBeenCalled();
+    });
+  });
+  //END:success
+
   it("correctly processes an up click", function() {
     $("#task_2 .up").click();
     expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);
