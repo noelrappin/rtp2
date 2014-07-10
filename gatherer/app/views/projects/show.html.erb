@@ -9,8 +9,7 @@
   </thead>
   <tbody>
     <% @project.tasks.each do |task| %>
-      <tr id="task_<%= task.project_order %>" class="task",
-          data-task="<%= task.id %>">
+      <tr id="task_<%= task.id %>" class="task">
         <td class="name"><%= task.title %></td>
         <td class="size"><%= task.size %></td>
         <td class="completed">

@@ -21,7 +21,8 @@ class AddTaskTest < Capybara::Rails::TestCase
     select "2", from: "Size"
     click_on "Add Task"
     assert_equal project_path(projects(:bluebook)), current_path
-    within("#task_3") do
+    added_task = Task.last
+    within("#task_#{added_task.id}") do
       assert_selector(".name", text: "Find UFOs")
       assert_selector(".size", text: "2")
       refute_selector("a", text: "Down")

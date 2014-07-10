@@ -16,7 +16,7 @@ class TaskShowsTwitterAvatar < Capybara::Rails::TestCase
     VCR.use_cassette("loading_twitter") do
       visit project_path(projects(:bluebook))
       url = "http://pbs.twimg.com/profile_images/40008602/head_shot_bigger.jpg"
-      within("#task_1") do
+      within("#task_#{tasks(:one).id}") do
         assert_selector(".completed", text: users(:user).email)
         assert_selector("img[src='#{url}']")
       end

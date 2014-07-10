@@ -33,7 +33,7 @@ var Project = {
     previousRow = Project.previousTask(row);
     if(previousRow == null) { return };
     Project.swapRows(previousRow, row);
-    Project.ajaxCall(row.data("task"), "up");
+    Project.ajaxCall(row.attr("id"), "up");
   },
 
   downClickOn: function(anchorElement) {
@@ -41,10 +41,11 @@ var Project = {
     nextRow = Project.nextTask(row);
     if(previousRow == null) { return };
     Project.swapRows(row, nextRow);
-    Project.ajaxCall(row.data("task"), "down");
+    Project.ajaxCall(row.attr("id"), "down");
   },
 
-  ajaxCall: function(taskId, upOrDown) {
+  ajaxCall: function(domId, upOrDown) {
+    taskId = domId.split("_")[1];
     $.ajax({
       url: "/tasks/" + taskId + "/" + upOrDown + ".js",
       data: { "_method": "PATCH"},
