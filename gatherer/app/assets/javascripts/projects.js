@@ -64,8 +64,6 @@ var Project = {
 
   }
   //#END:ajax
-
-
 }
 
 $(function() {
