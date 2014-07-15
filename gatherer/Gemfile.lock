@@ -30,6 +30,7 @@ GEM
     addressable (2.3.6)
     ansi (1.4.3)
     arel (5.0.1.20140414130214)
+    awesome_print (1.2.0)
     bcrypt (3.1.7)
     bcrypt-ruby (3.0.1)
     buftok (0.2.0)
@@ -241,6 +242,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 4.0.0)
