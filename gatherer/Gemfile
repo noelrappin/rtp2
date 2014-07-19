@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '4.1.2'
 
@@ -26,6 +26,9 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'jasmine-rails'
   gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 end
 
 group :test do
