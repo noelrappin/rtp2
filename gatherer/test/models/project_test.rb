@@ -1,7 +1,8 @@
-require "minitest/autorun"
+##START:new_header
 require_relative '../active_record_test_helper'
-require_relative '../../app/models/project.rb'
-require_relative '../../app/models/task.rb'
+require_relative '../../app/models/project'
+require_relative '../../app/models/task'
+##END:new_header
 
 class ProjectTest < ActiveSupport::TestCase
 

@@ -1,4 +1,13 @@
-require 'test_helper'
+require "minitest/autorun"
+require_relative '../active_record_test_helper'
+require 'devise'
+require 'devise/orm/active_record'
+require_relative '../../app/models/project.rb'
+require_relative '../../app/models/task.rb'
+require_relative '../../app/models/role.rb'
+require_relative '../../app/models/user.rb'
+require_relative '../../app/actions/creates_project.rb'
+
 
 class CreatesProjectTest < ActiveSupport::TestCase
 
@@ -47,10 +56,10 @@ class CreatesProjectTest < ActiveSupport::TestCase
 
   ##START:users
   test "adds users to the project" do
-    creator = CreatesProject.new(name: "Project Runway",
-        users: [users(:user)])
+    user = User.new
+    creator = CreatesProject.new(name: "Project Runway", users: [user])
     creator.build
-    assert_equal [users(:user)], creator.project.users
+    assert_equal [user], creator.project.users
   end
   ##END:users
 end

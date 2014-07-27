@@ -1,4 +1,7 @@
-require 'rails_helper'
+require 'active_record_spec_helper'
+require_relative '../../app/models/project.rb'
+require_relative '../../app/models/task.rb'
+require_relative '../support/size_matcher.rb'
 
 describe Project do
 
