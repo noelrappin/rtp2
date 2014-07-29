@@ -1,7 +1,9 @@
+##START:rspec_header
 require 'active_record_spec_helper'
 require_relative '../../app/models/project.rb'
 require_relative '../../app/models/task.rb'
 require_relative '../support/size_matcher.rb'
+##END:rspec_header
 
 describe Project do
 
