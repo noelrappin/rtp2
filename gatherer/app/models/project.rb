@@ -68,4 +68,10 @@ class Project < ActiveRecord::Base
   end
   ##END: next_task_order
 
+  ##START:add_users
+  def add_users(users)
+    users << users
+  end
+  ##END:add_users
+
 end
