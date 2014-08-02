@@ -30,6 +30,11 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem 'pry-rescue'
+  gem 'minitest-line'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
 end
 
 group :test do
