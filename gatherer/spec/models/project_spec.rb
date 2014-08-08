@@ -15,13 +15,34 @@ RSpec.describe Project do
       expect(project).not_to be_done
     end
 
-    ##START:third_spec
     it "marks a project done if its tasks are done" do
       project.tasks << task
       task.mark_completed
       expect(project).to be_done
     end
-    ##END:third_spec
   end
+
+  ##START: estimates
+  describe "estimates" do
+    let(:project) { Project.new }
+    let(:done) { Task.new(size: 2, completed: true) }
+    let(:small_not_done) { Task.new(size: 1) }
+    let(:large_not_done) { Task.new(size: 4) }
+
+    before(:each) do
+      project.tasks = [done, small_not_done, large_not_done]
+    end
+
+    it "can calculate total size" do
+      expect(project.total_size).to eq(7)
+    end
+
+    it "can calculate remaining size" do
+      expect(project.remaining_size).to eq(5)
+    end
+
+  end
+
+  ##END: estiamates
 end
 
