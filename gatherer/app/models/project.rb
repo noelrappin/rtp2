@@ -6,8 +6,9 @@ class Project
     @tasks = []
   end
 
+  ##START: new_done
   def done?
-    tasks.empty?
+    tasks.reject(&:complete?).empty?
   end
-
+  ##END: new_done
 end
