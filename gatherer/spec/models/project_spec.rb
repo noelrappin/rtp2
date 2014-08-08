@@ -1,17 +1,19 @@
-require 'rails_helper' # <label id="code.require_rails" />
+require 'rails_helper'
 
-RSpec.describe Project do # <label id="code.describe" />
-  it "considers a project with no test to be done" do # <label id="code.id" />
-    project = Project.new
-    expect(project.done?).to be_truthy # <label id="code.expect" />
-  end
+RSpec.describe Project do
 
-##START:second_spec
-  it "knows that a project with an incomplete test is not done" do
-    project = Project.new
-    task = Task.new
-    project.tasks << task
-    expect(project.done?).to be_falsy
+  describe "initialization" do
+    let(:project) { Project.new }
+    let(:task) { Task.new }
+
+    it "considers a project with no test to be done" do
+      expect(project).to be_done
+    end
+
+    it "knows that a project with an incomplete test is not done" do
+      project.tasks << task
+      expect(project).not_to be_done
+    end
   end
 end
-##END:second_spec
+
