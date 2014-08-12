@@ -18,4 +18,10 @@ class ProjectsController < ApplicationController
     end
   end
   ##END:create
+
+  ##START:index
+  def index
+    @projects = Project.all
+  end
+  ##END:index
 end
