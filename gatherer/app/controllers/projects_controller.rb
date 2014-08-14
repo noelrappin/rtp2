@@ -21,6 +21,7 @@ class ProjectsController < ApplicationController
     end
   end
 
+  ##START: update
   def update
     @project = Project.find(params[:id])
     if @project.update_attributes(params[:project])
@@ -29,4 +30,5 @@ class ProjectsController < ApplicationController
       render action: 'edit'
     end
   end
+  ##END: update
 end
