@@ -40,12 +40,12 @@ RSpec.describe Project do
       project.tasks = [newly_done, old_done, small_not_done, large_not_done]
     end
 
-    ##START: matcher
+    ##START: matcher_chained
     it "can calculate total size" do
       expect(project).to be_of_size(10)
-      expect(project).not_to be_of_size(5)
+      expect(project).to be_of_size(5).for_incomplete_tasks_only
     end
-    ##END: matcher
+    ##END: matcher_chained
 
     it "can calculate remaining size" do
       expect(project.remaining_size).to eq(5)
