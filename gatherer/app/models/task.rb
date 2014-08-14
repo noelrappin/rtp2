@@ -18,4 +18,14 @@ class Task < ActiveRecord::Base
     if part_of_velocity? then size else 0 end
   end
 
+  ##START: size_methods
+  def epic?
+    size >= 5
+  end
+
+  def small?
+    size <= 1
+  end
+  ##END: size_methods
+
 end
