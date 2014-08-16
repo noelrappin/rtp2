@@ -13,7 +13,7 @@ RSpec.describe ProjectsController, :type => :controller do
 
     ##START:mock_test
     it "creates a project (mock version)" do
-      fake_action = double(create: true) # <label id="mock_project" />
+      fake_action = instance_double("Project", create: true) # <label id="mock_project" />
       expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
           .with(name: "Runway", task_string: "start something:2")
           .and_return(fake_action)
