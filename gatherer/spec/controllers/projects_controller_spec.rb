@@ -11,6 +11,18 @@ RSpec.describe ProjectsController, :type => :controller do
     end
     ##END: state_test
 
+    ##START:mock_test
+    it "creates a project (mock version)" do
+      fake_action = double(create: true) # <label id="mock_project" />
+      expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
+          .with(name: "Runway", task_string: "start something:2")
+          .and_return(fake_action)
+      post :create, project: {name: "Runway", tasks: "start something:2"}
+      expect(response).to redirect_to(projects_path)
+      expect(assigns(:action)).not_to be_nil # <label id="mock_refute_nil" />
+    end
+  ##END:mock_test
+
     ##START:failure
     it "goes back to the form on failure" do
       post :create, project: {name: "", tasks: ""} # <label id="code.blank_form" />
