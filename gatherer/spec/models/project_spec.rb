@@ -104,5 +104,15 @@ RSpec.describe Project do
   end
 ##END:  mock_one
 
+##START: multi_return
+  it "stubs with multiple returns" do
+    project = Project.new
+    allow(project).to receive(:user_count).and_return(1, 2)
+    assert_equal(1, project.user_count)
+    assert_equal(2, project.user_count)
+    assert_equal(2, project.user_count)
+  end
+##END:  multi_return
+
 end
 
