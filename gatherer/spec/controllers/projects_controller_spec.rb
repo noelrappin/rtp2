@@ -1,15 +1,15 @@
+##START: intro
 require 'rails_helper'
 
 RSpec.describe ProjectsController, :type => :controller do
 
   describe "POST create" do
-    ##START: state_test
     it "creates a project" do
-      post :create, project: {name: "Runway", tasks: "Start somethig:2"} # <label id="code.call_post" />
-      expect(response).to redirect_to(projects_path) # <label id="code.redirect" />
-      expect(assigns(:action).project.name).to eq("Runway") # <label id="code.assigns" />
+      post :create, project: {name: "Runway", tasks: "Start something:2"} # <label id="code.create_request" />
+      expect(response).to redirect_to(projects_path) # <label id="code.controller_assert_redirect" />
+      expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.assigns" />
     end
-    ##END: state_test
+##END: intro
 
     ##START:mock_test
     it "creates a project (mock version)" do
