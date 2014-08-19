@@ -7,7 +7,7 @@ RSpec.describe ProjectsController, :type => :controller do
     it "creates a project" do
       post :create, project: {name: "Runway", tasks: "Start something:2"} # <label id="code.create_request" />
       expect(response).to redirect_to(projects_path) # <label id="code.controller_assert_redirect" />
-      expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.assigns" />
+      expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.controller_assigns" />
     end
 ##END: intro
 
