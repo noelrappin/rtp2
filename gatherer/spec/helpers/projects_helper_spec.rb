@@ -1,14 +1,12 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ProjectsHelper. For example:
-#
-# describe ProjectsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe ProjectsHelper, :type => :helper do
+  let(:project) { Project.new(name: "Project Runway") }  # <label id="code.create" />
+
+  it "augments with status info" do
+    project.stubs(:on_schedule?).returns(true) # <label id="code.mock_project" />
+    actual = name_with_status(project) # <label id="code.actual" />
+    expected = "<span class='on_schedule'>Project Runway</span>" # <label id="code.expected" />
+    expect(actual).to have_selector("span.on_schedule", text: "Project Runway")
+  end
 end
