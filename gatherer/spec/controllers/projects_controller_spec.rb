@@ -2,22 +2,6 @@ require 'rails_helper'
 
 RSpec.describe ProjectsController, :type => :controller do
 
-  ##START:index
-  describe "GET index" do
-    it "displays all projects correctly" do
-      on_schedule = Project.create!(due_date: 1.year.from_now,
-          name: "On Schedule",
-          tasks: [Task.create!(completed_at: 1.day.ago, size: 1)])
-      behind_schedule = Project.create!(due_date: 1.day.from_now,
-          name: "Behind Schedule",
-          tasks: [Task.create!(size: 1)])
-      get :index
-      expect(response).to have_selector("#project_#{on_schedule.id} .on_schedule")
-      expect(response).to have_selector("#project_#{behind_schedule.id} .behind_schedule")
-    end
-  end
-  ##END:index
-
   describe "POST create" do
     it "creates a project" do
       post :create, project: {name: "Runway", tasks: "Start something:2"} # <label id="code.create_request" />
