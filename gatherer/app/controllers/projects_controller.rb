@@ -1,16 +1,13 @@
 class ProjectsController < ApplicationController
 
-  ##START: index
   def index
     @projects = ProjectPresenter.from_project_list(Project.all)
   end
-  ##END: index
 
   def new
     @project = Project.new
   end
 
-  ##START: create
   def create
     @action = CreatesProject.new(
       name: params[:project][:name],
@@ -23,7 +20,6 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
-  ##END: create
 
   ##START: update
   def update
