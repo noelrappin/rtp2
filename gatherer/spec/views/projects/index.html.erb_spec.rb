@@ -9,7 +9,7 @@ describe "projects/index" do
       name: "Behind Schedule", tasks: [incomplete_task]) }
 
   it "renders the index page with correct dom elements" do
-    @projects = [on_schedule, behind_schedule]
+    @projects = ProjectPresenter.from_project_list([on_schedule, behind_schedule])
     render
     expect(rendered).to have_selector(
         "#project_#{on_schedule.id} .on_schedule")
