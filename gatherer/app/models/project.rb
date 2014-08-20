@@ -1,4 +1,3 @@
-##START:as_active_record
 class Project < ActiveRecord::Base
   has_many :tasks
 
@@ -15,7 +14,6 @@ class Project < ActiveRecord::Base
   def completed_velocity
     tasks.to_a.sum(&:points_toward_velocity)
   end
-##END:as_active_record
 
   def self.velocity_length_in_days
     21
@@ -45,5 +43,4 @@ class Project < ActiveRecord::Base
     return false if undefined_rate?
     (Date.today + projected_days_remaining) <= due_date
   end
-
 end
