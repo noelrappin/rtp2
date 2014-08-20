@@ -1,7 +1,22 @@
-##START: intro
 require 'rails_helper'
 
 RSpec.describe ProjectsController, :type => :controller do
+
+  ##START:index
+  describe "GET index" do
+    it "displays all projects correctly" do
+      on_schedule = Project.create!(due_date: 1.year.from_now,
+          name: "On Schedule",
+          tasks: [Task.create!(completed_at: 1.day.ago, size: 1)])
+      behind_schedule = Project.create!(due_date: 1.day.from_now,
+          name: "Behind Schedule",
+          tasks: [Task.create!(size: 1)])
+      get :index
+      expect(response).to have_selector("#project_#{on_schedule.id} .on_schedule")
+      expect(response).to have_selector("#project_#{behind_schedule.id} .behind_schedule")
+    end
+  end
+  ##END:index
 
   describe "POST create" do
     it "creates a project" do
@@ -9,9 +24,7 @@ RSpec.describe ProjectsController, :type => :controller do
       expect(response).to redirect_to(projects_path) # <label id="code.controller_assert_redirect" />
       expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.controller_assigns" />
     end
-##END: intro
 
-    ##START:mock_test
     it "creates a project (mock version)" do
       fake_action = instance_double(CreatesProject, create: true) # <label id="mock_project" />
       expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
@@ -21,7 +34,6 @@ RSpec.describe ProjectsController, :type => :controller do
       expect(response).to redirect_to(projects_path)
       expect(assigns(:action)).not_to be_nil # <label id="mock_refute_nil" />
     end
-  ##END:mock_test
 
     ##START:failure
     it "goes back to the form on failure" do
