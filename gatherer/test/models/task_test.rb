@@ -17,14 +17,14 @@ class TaskTest < ActiveSupport::TestCase
 
   test "a task completed long ago does not count toward velocity" do
     task = Task.new(size: 3)
-    task.mark_completed(6.months.ago) # <label id="code.old_complete" />
+    task.mark_completed(6.months.ago)
     refute(task.part_of_velocity?)
     assert_equal(0, task.points_toward_velocity)
   end
 
   test "a task completed recently counts toward velocity" do
     task = Task.new(size: 3)
-    task.mark_completed(1.day.ago) # <label id="code.new_complete" />
+    task.mark_completed(1.day.ago)
     assert(task.part_of_velocity?)
     assert_equal(3, task.points_toward_velocity)
   end
