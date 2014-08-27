@@ -7,7 +7,6 @@ class CreatesProject
     @task_string = task_string
   end
 
-  ##START: string_convert
   def build
     self.project = Project.new(name: name)
     project.tasks = convert_string_to_tasks
@@ -24,14 +23,12 @@ class CreatesProject
   end
 
   def save
-    project.save
+
   end
 
   def create
     build
-    save
+    project.save
   end
-
-  ##END: string_convert
 
 end

@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'test_helper' # <label id="code.minitest_require" />
 
 class TaskTest < ActiveSupport::TestCase
 
@@ -9,27 +9,25 @@ class TaskTest < ActiveSupport::TestCase
     assert(task.complete?)
   end
 
-  ##START:vel_test
   test "an uncompleted task does not count toward velocity" do
     task = Task.new(size: 3)
-    refute(task.counts_toward_velocity?)
+    refute(task.part_of_velocity?)
     assert_equal(0, task.points_toward_velocity)
   end
 
   test "a task completed long ago does not count toward velocity" do
     task = Task.new(size: 3)
-    task.mark_completed(6.months.ago) # <label id="code.old_complete" />
-    refute(task.counts_toward_velocity?)
+    task.mark_completed(6.months.ago)
+    refute(task.part_of_velocity?)
     assert_equal(0, task.points_toward_velocity)
   end
 
   test "a task completed recently counts toward velocity" do
     task = Task.new(size: 3)
-    task.mark_completed(1.day.ago) # <label id="code.new_complete" />
-    assert(task.counts_toward_velocity?)
+    task.mark_completed(1.day.ago)
+    assert(task.part_of_velocity?)
     assert_equal(3, task.points_toward_velocity)
   end
-  ##END:vel_test
 
   test "it finds completed tasks" do
     Task.delete_all

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe "adding a new task" do
+  fixtures :all
 
   it "can add and reorder a task" do
     visit project_path(projects(:bluebook))
