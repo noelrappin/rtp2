@@ -51,7 +51,7 @@ class Project < ActiveRecord::Base
   ##START: next_task_order
   def next_task_order
     return 1 if tasks.empty?
-    tasks.last.project_order + 1
+    (tasks.last.project_order || tasks.size) + 1
   end
   ##END: next_task_order
 
