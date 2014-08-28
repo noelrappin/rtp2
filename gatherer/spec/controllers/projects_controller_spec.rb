@@ -56,6 +56,14 @@ RSpec.describe ProjectsController, :type => :controller do
       patch :update, id: sample.id, project: {name: "Fred"} # <label id="update_controller" />
       expect(response).to render_template(:edit) # <label id="update_template" />
     end
+
+    ##START:update
+    it "does not allow user to make a project public if it is not theirs" do
+      sample = Project.create!(name: "Test Project", public: false)
+      patch :update, id: sample.id, project: {public: true}
+      expect(sample.reload.public).to be_falsy
+    end
+    ##END:update
   end
   ##END: mock_update
 
