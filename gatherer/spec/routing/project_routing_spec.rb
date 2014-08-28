@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "project routing" do
+RSpec.describe "project routing" do
   it "routes projects" do
     expect(get: "/projects").to route_to(
         controller: "projects", action: "index")
