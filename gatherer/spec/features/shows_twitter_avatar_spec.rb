@@ -18,7 +18,7 @@ describe "task display" do
     visit project_path(projects(:bluebook))
     url = "http://pbs.twimg.com/profile_images/40008602/head_shot_bigger.jpg"
     within("#task_1") do
-      expect(page).to have_selector(".completed_by", text: users(:user).email)
+      expect(page).to have_selector(".completed", text: users(:user).email)
       expect(page).to have_selector("img[src='#{url}']")
     end
   end
