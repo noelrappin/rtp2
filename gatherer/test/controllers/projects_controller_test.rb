@@ -20,11 +20,13 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_select("#project_#{behind_schedule.id} .behind_schedule")
   end
 
+  ##START:post
   test "the project method creates a project" do
-    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.create_request" />
+    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.mintest_call_post" />
     assert_redirected_to projects_path # <label id="code.controller_assert_redirect" />
     assert_equal "Runway", assigns[:action].project.name # <label id="code.assigns" />
   end
+  ##END:post
 
   test "the project method creates a project (mock version)" do
     fake_project = mock(create: true)

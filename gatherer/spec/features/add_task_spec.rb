@@ -3,6 +3,7 @@ require 'rails_helper'
 include Warden::Test::Helpers
 
 describe "adding a new task" do
+  fixtures :all
 
   fixtures :all
 
