@@ -16,6 +16,7 @@ RSpec.describe ProjectsController, :type => :controller do
       expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.controller_assigns" />
     end
 
+    ##START:mocks
     it "creates a project (mock version)" do
       fake_action = instance_double(CreatesProject, create: true) # <label id="mock_project" />
       expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
@@ -25,6 +26,7 @@ RSpec.describe ProjectsController, :type => :controller do
       expect(response).to redirect_to(projects_path)
       expect(assigns(:action)).not_to be_nil # <label id="mock_refute_nil" />
     end
+    ##END:mocks
 
     ##START:failure
     it "goes back to the form on failure" do
