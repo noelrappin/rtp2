@@ -39,23 +39,23 @@ class ProjectTest < ActiveSupport::TestCase
   ##START:stub_one
   test "lets stub an object" do
     project = Project.new(name: "Project Greenlight")
-    project.stubs(:name) # <label id="stub_one_stub" />
-    assert_nil(project.name) # <label id="stub_one_assert" />
+    project.stubs(:name)
+    assert_nil(project.name)
   end
   ##END:stub_one
 
   ##START:stub_two
   test "lets stub an object again" do
     project = Project.new(:name => "Project Greenlight")
-    project.stubs(:name).returns("Fred") # <label id="stub_two_stub" />
-    assert_equal("Fred", project.name) # <label id="stub_two_assert" />
+    project.stubs(:name).returns("Fred")
+    assert_equal("Fred", project.name)
   end
   ##END:stub_two
 
 ##START: stub_class
   test "let's stub a class" do
     Project.stubs(:find).returns(Project.new(:name => "Project Greenlight"))
-    project = Project.find(1) # <label id="stub_class_stub" />
+    project = Project.find(1)
     assert_equal("Project Greenlight", project.name)
   end
 ##END:  stub_class

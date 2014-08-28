@@ -1,7 +1,7 @@
 var Project = {
 
-  taskFromAnchor: function(anchor_element) {
-    return anchor_element.parents("tr");
+  taskFromAnchor: function(anchorElement) {
+    return anchorElement.parents("tr");
   },
 
   previousTask: function(task_row) {
@@ -27,21 +27,44 @@ var Project = {
     second_row.insertBefore(first_row);
   },
 
-  upClickOn: function(anchor_element) {
-    row = Project.taskFromAnchor(anchor_element);
+  //##START:ajax
+  upClickOn: function(anchorElement) {
+    row = Project.taskFromAnchor(anchorElement);
     previousRow = Project.previousTask(row);
     if(previousRow == null) { return };
     Project.swapRows(previousRow, row);
+    Project.ajaxCall(row.attr("id"), "up");
   },
 
-  downClickOn: function(anchor_element) {
-    row = Project.taskFromAnchor(anchor_element);
+  downClickOn: function(anchorElement) {
+    row = Project.taskFromAnchor(anchorElement);
     nextRow = Project.nextTask(row);
     if(previousRow == null) { return };
     Project.swapRows(row, nextRow);
+    Project.ajaxCall(row.attr("id"), "down");
+  },
+
+  ajaxCall: function(domId, upOrDown) {
+    taskId = domId.split("_")[1];
+    $.ajax({
+      url: "/tasks/" + taskId + "/" + upOrDown + ".js",
+      data: { "_method": "PATCH"},
+      type: "POST"
+    }).done(function(data) {
+      Project.successfulUpdate(data)
+    }).fail(function(data) {
+      Project.failedUpdate(data);
+    });
+  },
+
+  successfulUpdate: function(data) {
+
+  },
+
+  failedUpdate: function(data) {
+
   }
-
-
+  //#END:ajax
 }
 
 $(function() {
