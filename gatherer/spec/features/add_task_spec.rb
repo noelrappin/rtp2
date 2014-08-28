@@ -4,11 +4,15 @@ include Warden::Test::Helpers
 
 describe "adding a new task" do
 
+  ##START:setup
   fixtures :all
+  include Warden::Test::Helpers
 
   before(:each) do
-    login_as User.create!(email: "rspec@example.com", password: "password")
+    projects(:bluebook).roles.create(user: users(:user))
+    login_as users(:user)
   end
+  ##END:setup
 
   it "can add and reorder a task" do
     visit project_path(projects(:bluebook))
