@@ -17,14 +17,14 @@ When(/^I complete the new task form$/) do
 end
 
 Then(/^I am back on the project page$/) do
-  assert_equal project_path(@project), current_path
+  expect(current_path).to eq(project_path(@project))
 end
 
 Then(/^I see the new task is last in the list$/) do
   within("#task_3") do
-    assert_selector(".name", text: "Find UFOs")
-    assert_selector(".size", text: "2")
-    assert_no_selector("a", text: "Down")
+    expect(page).to have_selector(".name", text: "Find UFOs")
+    expect(page).to have_selector(".size", text: "2")
+    expect(page).to have_no_selector("a", text: "Down")
   end
 end
 
@@ -36,6 +36,6 @@ end
 
 Then(/^the new task is in the middle of the list$/) do
   within("#task_2") do
-    assert_selector(".name", text: "Find UFOs")
+    expect(page).to have_selector(".name", text: "Find UFOs")
   end
 end
