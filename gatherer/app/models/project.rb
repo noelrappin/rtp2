@@ -1,4 +1,3 @@
-##START:as_active_record
 class Project < ActiveRecord::Base
   has_many :tasks, -> { order "project_order ASC" }
 
@@ -24,7 +23,6 @@ class Project < ActiveRecord::Base
   def completed_velocity
     tasks.to_a.sum(&:points_toward_velocity)
   end
-##END:as_active_record
 
   def self.velocity_length_in_days
     21
@@ -58,7 +56,7 @@ class Project < ActiveRecord::Base
   ##START: next_task_order
   def next_task_order
     return 1 if tasks.empty?
-    tasks.last.project_order + 1
+    (tasks.last.project_order || tasks.size) + 1
   end
   ##END: next_task_order
 

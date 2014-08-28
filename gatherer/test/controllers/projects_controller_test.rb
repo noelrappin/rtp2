@@ -20,11 +20,13 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     assert_select("#project_#{behind_schedule.id} .behind_schedule")
   end
 
+  ##START:post
   test "the project method creates a project" do
-    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.create_request" />
+    post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.mintest_call_post" />
     assert_redirected_to projects_path # <label id="code.controller_assert_redirect" />
     assert_equal "Runway", assigns[:action].project.name # <label id="code.assigns" />
   end
+  ##END:post
 
   test "the project method creates a project (mock version)" do
     fake_project = mock(create: true)
@@ -83,6 +85,7 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
         controller: "projects", action: "destroy", id: "1")
   end
 
+  ##START:can_view
   test "a user who is part of the project can see the project" do
     project = Project.create(name: "Project Runway")
     @controller.current_user.stubs(can_view?: true)
@@ -96,5 +99,6 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     get :show, id: project.id
     assert_redirected_to new_user_session_path
   end
+  ##END:can_view
 
 end
