@@ -54,3 +54,4 @@ group :doc do
 end
 
 gem 'spring',        group: :development
+gem 'spring-commands-rspec',        group: :development
