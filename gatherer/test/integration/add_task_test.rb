@@ -8,7 +8,6 @@ class AddTaskTest < Capybara::Rails::TestCase
     Capybara.current_driver = Capybara.javascript_driver
     projects(:bluebook).roles.create(user: users(:user))
     login_as users(:user)
-
   end
 
   teardown do
