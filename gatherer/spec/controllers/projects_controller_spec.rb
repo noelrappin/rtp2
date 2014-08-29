@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe ProjectsController, :type => :controller do
 
+  ##START:setup
   before(:each) do
     sign_in User.create!(email: "rspec@example.com", password: "password")
   end
+  ##END:setup
 
   describe "POST create" do
     it "creates a project" do
