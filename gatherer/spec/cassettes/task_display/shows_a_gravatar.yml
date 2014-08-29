@@ -29,76 +29,42 @@ http_interactions:
         https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src
         https: data:; media-src https:; object-src https:; script-src ''unsafe-inline''
         ''unsafe-eval'' about: https:; style-src ''unsafe-inline'' https:; report-uri
-<<<<<<< HEAD
-        https://twitter.com/i/csp_report;'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 19 Jul 2014 02:57:49 GMT
-=======
         https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 28 Aug 2014 21:24:17 UTC
->>>>>>> javascript_06
+      - Fri, 29 Aug 2014 04:54:40 GMT
       Etag:
       - '"734b3bcc5937abd7e82fa57d929774a2"'
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-<<<<<<< HEAD
-      - Sat, 19 Jul 2014 02:57:49 GMT
+      - Fri, 29 Aug 2014 04:54:40 GMT
       Pragma:
       - no-cache
       Server:
-      - tfe
+      - tfe_b
       Set-Cookie:
-      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCDTVjUxHAToMY3NyZl9pZCIlYzA4ZDNhNjRm%250AYjgzZjdmZjQ3ODRhODQ2OTBkMzA0YTg6B2lkIiVjMzI5ZmQ0YWIzMmNlODZj%250AYmQwZjhkMWViMzJjZTlmNw%253D%253D--9c6e5c30f3a8c8f5256952352a2762c94261f58d;
+      - _twitter_sess=BAh7CDoMY3NyZl9pZCIlNmQ4Yjk4YTMxMjY0ZGZkNGNiMzZiMTViOThkZDE5%250AYzY6B2lkIiVlYTJjZWQyMDgwZjRjOTk0ZDA5NjY5MDg0ZWQyMjY0YjoPY3Jl%250AYXRlZF9hdGwrCFSLHSBIAQ%253D%253D--782927095a4c2d47cdfa361205e2ac31ea622833;
         domain=.twitter.com; path=/; secure; HttpOnly
-      - guest_id=v1%3A140573866928802842; Domain=.twitter.com; Path=/; Expires=Mon,
-        18-Jul-2016 02:57:49 UTC
-=======
-      - Thu, 28 Aug 2014 21:24:17 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_a
-      Set-Cookie:
-      - _twitter_sess=BAh7CDoMY3NyZl9pZCIlZWE0ZTA3ZDI4MjQ5Y2E2NDBmMGUyNTdiNWEzOWVl%250AYTE6B2lkIiUxYjkxZmFmMjQ3OWEwNTlmMDdiZDdkYTUzZGQ1YmMyYzoPY3Jl%250AYXRlZF9hdGwrCIw1gR5IAQ%253D%253D--a11fdfaa01aacfc1b21d8fd729ac5ff1f2884f48;
-        domain=.twitter.com; path=/; secure; HttpOnly
-      - guest_id=v1%3A140926105741591753; Domain=.twitter.com; Path=/; Expires=Sat,
-        27-Aug-2016 21:24:17 UTC
->>>>>>> javascript_06
+      - guest_id=v1%3A140928808015460334; Domain=.twitter.com; Path=/; Expires=Sun,
+        28-Aug-2016 04:54:40 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       Vary:
       - Accept-Encoding
-<<<<<<< HEAD
-=======
-      X-Connection-Hash:
-      - d86722d1f25741aa28fb511562b87a44
->>>>>>> javascript_06
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Mid:
-<<<<<<< HEAD
-      - 2c5fdee07bd5046c350323c5cebf8a55f321f8e4
+      - a2c0ed5a13fa6a1f553e06b25662a0f99b389442
       X-Runtime:
-      - '0.02401'
+      - '0.01757'
       X-Transaction:
-      - 0c77b4adc05e573b
-=======
-      - 9b8c783d235ebecddb471dc61e3a27a99ba2b319
-      X-Runtime:
-      - '0.02052'
-      X-Transaction:
-      - 3ec6f43155299548
->>>>>>> javascript_06
+      - 8525ac14026425d9
       X-Ua-Compatible:
       - IE=edge,chrome=1
       X-Xss-Protection:
@@ -107,11 +73,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAALVzYQAAAAAAIItU1SgTX8I%2B7Q3Cl3mqvuZiAAc%3D0AtbuGPnZgRlOHbTIk3JudxSGqXxgfkwpMG367Rtyw6GGLwO6N"}'
     http_version: 
-<<<<<<< HEAD
-  recorded_at: Sat, 19 Jul 2014 02:57:49 GMT
-=======
-  recorded_at: Thu, 28 Aug 2014 21:24:17 GMT
->>>>>>> javascript_06
+  recorded_at: Fri, 29 Aug 2014 04:54:40 GMT
 - request:
     method: get
     uri: https://api.twitter.com/1.1/users/show.json?screen_name=noelrap
@@ -135,52 +97,28 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Length:
-<<<<<<< HEAD
-      - '1056'
+      - '1054'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 19 Jul 2014 02:57:50 GMT
+      - Fri, 29 Aug 2014 04:54:40 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 19 Jul 2014 02:57:50 GMT
+      - Fri, 29 Aug 2014 04:54:40 GMT
       Pragma:
       - no-cache
       Server:
-      - tfe
+      - tfe_b
       Set-Cookie:
-      - guest_id=v1%3A140573867009500443; Domain=.twitter.com; Path=/; Expires=Mon,
-        18-Jul-2016 02:57:50 UTC
-=======
-      - '1030'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Thu, 28 Aug 2014 21:24:17 UTC
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Thu, 28 Aug 2014 21:24:17 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_a
-      Set-Cookie:
-      - guest_id=v1%3A140926105775109990; Domain=.twitter.com; Path=/; Expires=Sat,
-        27-Aug-2016 21:24:17 UTC
->>>>>>> javascript_06
+      - guest_id=v1%3A140928808053884076; Domain=.twitter.com; Path=/; Expires=Sun,
+        28-Aug-2016 04:54:40 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       X-Access-Level:
       - read
-<<<<<<< HEAD
-=======
-      X-Connection-Hash:
-      - 50275def6e53ea39d58ac6118783b8b4
->>>>>>> javascript_06
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -188,19 +126,11 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-<<<<<<< HEAD
       - '179'
       X-Rate-Limit-Reset:
-      - '1405739570'
+      - '1409288980'
       X-Transaction:
-      - 752cb8c4df0843fe
-=======
-      - '177'
-      X-Rate-Limit-Reset:
-      - '1409261841'
-      X-Transaction:
-      - 4b8359d900886e5e
->>>>>>> javascript_06
+      - db3e7b932ab94ebb
       X-Xss-Protection:
       - 1; mode=block
     body:
@@ -208,26 +138,13 @@ http_interactions:
       string: '{"id":1515231,"id_str":"1515231","name":"Noel Rappin","screen_name":"noelrap","location":"Chicago
         IL","description":"Noel Rappin is a developer at Table XI. He is the author
         of Rails 4 Test Prescriptions, Trust-Driven Development, and Master Space
-<<<<<<< HEAD
-        and Time With JavaScript.","url":"http:\/\/t.co\/2Mt0aaFfGL","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/2Mt0aaFfGL","expanded_url":"http:\/\/www.noelrappin.com","display_url":"noelrappin.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1966,"friends_count":683,"listed_count":179,"created_at":"Mon
-        Mar 19 15:10:21 +0000 2007","favourites_count":428,"utc_offset":-18000,"time_zone":"Central
-        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":7842,"lang":"en","status":{"created_at":"Sat
-        Jul 19 00:07:32 +0000 2014","id":490286780831531008,"id_str":"490286780831531008","text":"@juliansimioni
-        It\u2019s the bundle for the test code for Rails 4 Test Prescriptions. I\u2019ll
-        risk it.","source":"\u003ca href=\"http:\/\/tapbots.com\/software\/tweetbot\/mac\"
-        rel=\"nofollow\"\u003eTweetbot for Mac\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":490286606029291522,"in_reply_to_status_id_str":"490286606029291522","in_reply_to_user_id":15061294,"in_reply_to_user_id_str":"15061294","in_reply_to_screen_name":"juliansimioni","geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"juliansimioni","name":"Julian
-        Simioni","id":15061294,"id_str":"15061294","indices":[0,14]}]},"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"9AE4E8","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_link_color":"0000FF","profile_sidebar_border_color":"87BC44","profile_sidebar_fill_color":"E0FF92","profile_text_color":"000000","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null}'
-    http_version: 
-  recorded_at: Sat, 19 Jul 2014 02:57:50 GMT
-=======
-        and Time With JavaScript.","url":"http:\/\/t.co\/2Mt0aaFfGL","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/2Mt0aaFfGL","expanded_url":"http:\/\/www.noelrappin.com","display_url":"noelrappin.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1998,"friends_count":682,"listed_count":179,"created_at":"Mon
+        and Time With JavaScript.","url":"http:\/\/t.co\/2Mt0aaFfGL","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/2Mt0aaFfGL","expanded_url":"http:\/\/www.noelrappin.com","display_url":"noelrappin.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1999,"friends_count":681,"listed_count":179,"created_at":"Mon
         Mar 19 15:10:21 +0000 2007","favourites_count":429,"utc_offset":-18000,"time_zone":"Central
-        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":8053,"lang":"en","status":{"created_at":"Thu
-        Aug 28 19:28:29 +0000 2014","id":505074458957062145,"id_str":"505074458957062145","text":"@CoralineAda
-        Congratulations","source":"\u003ca href=\"http:\/\/tapbots.com\/software\/tweetbot\/mac\"
-        rel=\"nofollow\"\u003eTweetbot for Mac\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":505054440328421376,"in_reply_to_status_id_str":"505054440328421376","in_reply_to_user_id":9526722,"in_reply_to_user_id_str":"9526722","in_reply_to_screen_name":"CoralineAda","geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"CoralineAda","name":"Coraline
-        Ada Ehmke","id":9526722,"id_str":"9526722","indices":[0,12]}]},"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"9AE4E8","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_link_color":"0000FF","profile_sidebar_border_color":"87BC44","profile_sidebar_fill_color":"E0FF92","profile_text_color":"000000","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null}'
+        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":8058,"lang":"en","status":{"created_at":"Fri
+        Aug 29 03:44:18 +0000 2014","id":505199236112453632,"id_str":"505199236112453632","text":"@saronyitbarek
+        No problem, you can email me at noel at noelrappin dot com.","source":"\u003ca
+        href=\"http:\/\/tapbots.com\/software\/tweetbot\/mac\" rel=\"nofollow\"\u003eTweetbot
+        for Mac\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":505199116612567040,"in_reply_to_status_id_str":"505199116612567040","in_reply_to_user_id":158065720,"in_reply_to_user_id_str":"158065720","in_reply_to_screen_name":"saronyitbarek","geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"saronyitbarek","name":"Saron","id":158065720,"id_str":"158065720","indices":[0,14]}]},"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"9AE4E8","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/40008602\/head_shot_normal.jpg","profile_link_color":"0000FF","profile_sidebar_border_color":"87BC44","profile_sidebar_fill_color":"E0FF92","profile_text_color":"000000","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 21:24:17 GMT
->>>>>>> javascript_06
+  recorded_at: Fri, 29 Aug 2014 04:54:40 GMT
 recorded_with: VCR 2.9.2
