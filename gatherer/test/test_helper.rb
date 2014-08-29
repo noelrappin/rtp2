@@ -4,6 +4,7 @@ require 'rails/test_help'
 require "minitest/rails/capybara"
 require "mocha/mini_test"
 require 'minitest/reporters'
+require 'capybara/poltergeist'
 
 reporter_options = { color: true }
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
@@ -36,5 +37,20 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr'
   c.hook_into :webmock
+  c.ignore_localhost = true
 end
 ##END:vcr
+
+##START:capybara
+Capybara.javascript_driver = :poltergeist
+
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+
+  def self.connection
+    @@shared_connection || retrieve_connection
+  end
+end
+ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
+##END:capybara

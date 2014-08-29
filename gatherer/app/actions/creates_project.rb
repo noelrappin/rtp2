@@ -27,12 +27,12 @@ class CreatesProject
   end
 
   def save
-    project.save
+
   end
 
   def create
     build
-    save
+    project.save
   end
 
 end
