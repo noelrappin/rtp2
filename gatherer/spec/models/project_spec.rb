@@ -113,9 +113,9 @@ RSpec.describe Project do
   it "stubs with multiple returns" do
     project = Project.new
     allow(project).to receive(:user_count).and_return(1, 2)
-    assert_equal(1, project.user_count)
-    assert_equal(2, project.user_count)
-    assert_equal(2, project.user_count)
+    expect(project.user_count).to eq(1)
+    expect(project.user_count).to eq(2)
+    expect(project.user_count).to eq(2)
   end
 ##END:  multi_return
 

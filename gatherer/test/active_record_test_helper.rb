@@ -8,10 +8,10 @@ reporter_options = { color: true }
 Minitest::Reporters.use!(
   [Minitest::Reporters::DefaultReporter.new(reporter_options)])
 
-connection_info = YAML.load_file("config/database.yml")["test"] # <label id="code.connection_info" />
+connection_info = YAML.load_file("config/database.yml")["test"]
 ActiveRecord::Base.establish_connection(connection_info)
 
-module ActiveSupport # <label id="code.teardown" />
+module ActiveSupport
   class TestCase
     teardown do
       ActiveRecord::Base.subclasses.each(&:delete_all)
