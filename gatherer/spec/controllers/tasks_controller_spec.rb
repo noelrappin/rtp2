@@ -45,7 +45,7 @@ RSpec.describe TasksController, :type => :controller do
       expect(project.reload.tasks.first.title).to eq("just do it")
     end
 
-    it "does not allow a user to create a task for a project they do not belong to" do
+    it "does not allow a user to create a task for a project without access" do
       post :create, task: {project_id: project.id, title: "just do it", size: "1" }
       expect(project.reload.tasks.size).to eq(0)
     end
