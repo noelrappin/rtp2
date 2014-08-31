@@ -7,7 +7,4 @@ describe CreatesProject do
     creator.build
     expect(creator.project.name).to eq("Project Runway")
   end
-
-
-
 end
