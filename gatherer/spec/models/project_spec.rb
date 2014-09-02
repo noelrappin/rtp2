@@ -58,11 +58,11 @@ RSpec.describe Project do
     end
 
     it "knows its rate" do
-      expect(project.current_rate).to eq(1.0 / 7)
+      expect(project.current_rate).to eq(1.0 / 7) # <label id="code.algebra" />
     end
 
     it "knows its projected time remaining" do
-      expect(project.projected_days_remaining).to eq(35)
+      expect(project.projected_days_remaining).to eq(35) # <label id="code.number" />
     end
 
     it "knows if it is on schedule" do
