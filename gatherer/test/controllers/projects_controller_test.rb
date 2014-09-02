@@ -19,7 +19,7 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
   ##START:post
   test "the project method creates a project" do
     post :create, project: {name: "Runway", tasks: "start something:2"} # <label id="code.mintest_call_post" />
-    assert_redirected_to projects_path # <label id="code.controller_assert_redirect" />
+    assert_redirected_to projects_path # <label id="code.minitest_controller_assert_redirect" />
     assert_equal "Runway", assigns[:action].project.name # <label id="code.assigns" />
   end
   ##END:post
