@@ -54,7 +54,7 @@ RSpec.describe Project do
 
     ##START:new_tests
     it "knows its velocity" do
-      expect(project.completed_velocity).to eq(3)
+      expect(projectproc.completed_velocity).to eq(3)
     end
 
     it "knows its rate" do
