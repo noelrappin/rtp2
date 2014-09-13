@@ -33,14 +33,16 @@ describe CreatesProject do
       expect(tasks.map(&:size)).to eq([3])
     end
 
+    ##START:compound
     it "handles a multiple tasks" do
       creator = CreatesProject.new(name: "Test",
           task_string: "Start things:3\nEnd things:2")
       tasks = creator.convert_string_to_tasks
-      expect(tasks.size).to eq(2)
-      expect(tasks.map(&:title)).to eq(["Start things", "End things"])
-      expect(tasks.map(&:size)).to eq([3, 2])
+      expect(tasks).to match([
+        an_object_having_attributes(title: "Start things", size: 3),
+        an_object_having_attributes(title: "End things", size: 2)])
     end
+    ##END:compound
 
     it "attaches tasks to the project" do
       creator = CreatesProject.new(name: "Test",
