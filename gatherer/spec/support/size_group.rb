@@ -1,4 +1,4 @@
-shared_examples "sizeable" do
+RSpec.shared_examples "sizeable" do
   let(:instance) { described_class.new }
 
   it "knows a one point story is small" do
