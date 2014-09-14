@@ -2,11 +2,11 @@
 require_relative '../active_record_spec_helper'
 require 'devise'
 require 'devise/orm/active_record'
-require_relative '../../app/models/project.rb'
-require_relative '../../app/models/task.rb'
-require_relative '../../app/models/role.rb'
-require_relative '../../app/models/user.rb'
-require_relative '../../app/actions/creates_project.rb'
+require_relative '../../app/models/project'
+require_relative '../../app/models/task'
+require_relative '../../app/models/role'
+require_relative '../../app/models/user'
+require_relative '../../app/actions/creates_project'
 ##END:action_header
 
 describe CreatesProject do
