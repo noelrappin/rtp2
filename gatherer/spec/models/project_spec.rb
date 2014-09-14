@@ -10,7 +10,7 @@ RSpec.describe Project do
       expect(project).to be_done
     end
 
-    it "knows that a project with an incomplete test is not done" do
+    it "knows that a project with an incomplete task is not done" do
       project.tasks << task
       expect(project).not_to be_done
     end
