@@ -38,7 +38,7 @@ describe User do
     let!(:project_1) { Project.create!(name: "Project 1") }
     let!(:project_2) { Project.create!(name: "Project 2") }
 
-    before(:all) do
+    before(:context) do
       Project.delete_all
     end
 
