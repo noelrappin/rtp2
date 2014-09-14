@@ -16,7 +16,7 @@ describe User do
     let(:project_2) { Project.create!(name: "Project 2") }
     let(:all_projects) { [project_1, project_2] }
 
-    before(:each) do
+    before(:example) do
       Project.delete_all
     end
 
