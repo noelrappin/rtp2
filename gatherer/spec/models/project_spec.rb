@@ -21,14 +21,6 @@ RSpec.describe Project do
       expect(project).to be_done
     end
 
-    ##START: init_project
-    it "properly estimates a blank project" do
-      expect(project.completed_velocity).to eq(0)
-      expect(project.current_rate).to eq(0)
-      expect(project.projected_days_remaining.nan?).to be_truthy
-      expect(project).not_to be_on_schedule
-    end
-    ##END: init_project
   end
 
   describe "estimates" do
@@ -39,7 +31,7 @@ RSpec.describe Project do
     let(:small_not_done) { Task.new(size: 1) }
     let(:large_not_done) { Task.new(size: 4) }
 
-    before(:each) do
+    before(:example) do
       project.tasks = [newly_done, old_done, small_not_done, large_not_done]
     end
     ##END:new_setup
