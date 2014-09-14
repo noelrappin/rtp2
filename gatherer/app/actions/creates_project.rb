@@ -2,7 +2,7 @@ class CreatesProject
   attr_accessor :name, :task_string, :project
 
   def initialize(name: "", task_string: "")
-    @name= name
+    @name = name
     @task_string = task_string
   end
 
