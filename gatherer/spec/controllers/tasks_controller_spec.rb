@@ -9,7 +9,7 @@ RSpec.describe TasksController, :type => :controller do
     sign_in(user)
     ActionMailer::Base.deliveries.clear
   end
-  ##START:setup
+  ##END:setup
 
   describe "PATCH update" do
     let(:task) { Task.create!(title: "Write section on testing mailers", size: 2) }
