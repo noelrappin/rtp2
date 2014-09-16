@@ -21,6 +21,15 @@ RSpec.describe Project do
       expect(project).to be_done
     end
 
+    ##START: init_project
+    it "properly estimates a blank project" do
+      expect(project.completed_velocity).to eq(0)
+      expect(project.current_rate).to eq(0)
+      expect(project.projected_days_remaining.nan?).to be_truthy
+      expect(project).not_to be_on_schedule
+    end
+    ##END: init_project
+
   end
 
   describe "estimates" do
