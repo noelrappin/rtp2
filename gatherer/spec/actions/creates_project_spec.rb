@@ -34,7 +34,7 @@ describe CreatesProject do
     end
 
     ##START:compound
-    it "handles a multiple tasks" do
+    it "handles multiple tasks" do
       creator = CreatesProject.new(name: "Test",
           task_string: "Start things:3\nEnd things:2")
       tasks = creator.convert_string_to_tasks
