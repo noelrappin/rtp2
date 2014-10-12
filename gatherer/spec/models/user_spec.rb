@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  it "can not view a project it is not a part of" do
+  it "cannot view a project it is not a part of" do
     user = User.new
     project = Project.new
     expect(user.can_view?(project)).to be_falsy
