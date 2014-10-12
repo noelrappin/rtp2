@@ -60,7 +60,7 @@ RSpec.describe ProjectsController, :type => :controller do
   describe "GET show" do
     let(:project) { Project.create(name: "Project Runway") }
 
-    it "allows a user who is part of the project can see the project" do
+    it "allows a user who is part of the project to see the project" do
       controller.current_user.stubs(can_view?: true)
       get :show, id: project.id
       expect(response).to render_template(:show)
