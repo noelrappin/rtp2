@@ -28,14 +28,14 @@ describe "with users and roles" do
   describe "roles" do
     let(:project) { Project.create(name: "Project Gutenberg") }
 
-    it "allows a user who is part of a project can see that project" do
+    it "allows a user who is part of a project to see that project" do
       project.roles.create(user: user)
       log_in_as(user)
       visit(project_path(project))
       expect(current_path).to eq(project_path(project))
     end
 
-    it "allows a user who is not part of a project can not see that project" do
+    it "does not allow a user who is not part of a project to see that project" do
       log_in_as(user)
       visit(project_path(project))
       expect(current_path).not_to eq(project_path(project))
