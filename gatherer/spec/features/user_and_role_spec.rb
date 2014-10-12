@@ -44,7 +44,7 @@ describe "with users and roles" do
   ##END:basic_role
 
   ##START:index_page
-  it "allows a user to only see projects they are a part of on the index page" do
+  it "allows users to only see projects they are a part of on the index page" do
     my_project = Project.create!(name: "My Project")
     my_project.roles.create(user: user)
     not_my_project = Project.create!(name: "Not My Project")
