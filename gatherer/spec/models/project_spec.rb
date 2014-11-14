@@ -81,7 +81,7 @@ RSpec.describe Project do
 
   ##START:stub_two
   it "stubs an object again" do
-    project = Project.new(:name => "Project Greenlight")
+    project = Project.new(name: "Project Greenlight")
     allow(project).to receive(:name).and_return("Fred") # <label id="stub_two_stub" />
     expect(project.name).to eq("Fred") # <label id="stub_two_assert" />
   end
