@@ -42,7 +42,7 @@ class ProjectTest < ActiveSupport::TestCase
 
   ##START:stub_two
   test "let's stub an object again" do
-    project = Project.new(:name => "Project Greenlight")
+    project = Project.new(name: "Project Greenlight")
     project.stubs(:name).returns("Fred")
     assert_equal("Fred", project.name)
   end

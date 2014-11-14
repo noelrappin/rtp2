@@ -29,11 +29,4 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal(3, task.points_toward_velocity)
   end
 
-  test "it finds completed tasks" do
-    Task.delete_all
-    complete = Task.create(completed_at: 1.day.ago, title: "Completed")
-    incomplete = Task.create(completed_at: nil, title: "Not Completed")
-    assert_equal([complete], Task.complete.to_a)
-  end
-
 end
