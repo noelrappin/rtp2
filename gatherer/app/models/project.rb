@@ -68,7 +68,7 @@ class Project < ActiveRecord::Base
 
   ##START:add_users
   def add_users(users)
-    users << users
+    self.users << users
   end
   ##END:add_users
 
