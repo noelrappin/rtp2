@@ -1,6 +1,10 @@
 require 'rails_helper'
 
+##START: shared
 RSpec.describe Task do
+
+  it_should_behave_like "sizeable"
+##END: shared
 
   it "can distinguish a completed task" do
     task = Task.new
