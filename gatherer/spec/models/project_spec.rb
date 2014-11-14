@@ -29,7 +29,7 @@ RSpec.describe Project do
     let(:small_not_done) { Task.new(size: 1) }
     let(:large_not_done) { Task.new(size: 4) }
 
-    before(:each) do
+    before(:example) do
       project.tasks = [done, small_not_done, large_not_done]
     end
 
