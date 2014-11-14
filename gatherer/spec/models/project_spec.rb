@@ -7,7 +7,7 @@ RSpec.describe Project do # <label id="code.describe" />
   end
 
 ##START:second_spec
-  it "knows that a project with an incomplete test is not done" do
+  it "knows that a project with an incomplete task is not done" do
     project = Project.new
     task = Task.new
     project.tasks << task
