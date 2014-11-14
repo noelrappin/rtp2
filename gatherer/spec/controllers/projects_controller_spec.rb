@@ -17,7 +17,7 @@ RSpec.describe ProjectsController, :type => :controller do
       expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
           .with(name: "Runway", task_string: "start something:2")
           .and_return(fake_action)
-      post :create, project: {name: "Runway", tasks: "Start something:2"}
+      post :create, project: {name: "Runway", tasks: "start something:2"}
       expect(response).to redirect_to(projects_path)
       expect(assigns(:action)).not_to be_nil # <label id="mock_refute_nil" />
     end
