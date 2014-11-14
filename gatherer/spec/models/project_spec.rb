@@ -90,7 +90,7 @@ RSpec.describe Project do
   ##START: stub_class
   it "stubs the class" do
     allow(Project).to receive(:find).and_return(
-        Project.new(:name => "Project Greenlight"))
+        Project.new(name: "Project Greenlight"))
     project = Project.find(1) # <label id="stub_class_stub" />
     expect(project.name).to eq("Project Greenlight")
   end
