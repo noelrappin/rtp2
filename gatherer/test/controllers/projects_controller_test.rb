@@ -28,7 +28,7 @@ class ProjectsControllerTest < ActionController::TestCase # <label id="code.inhe
     fake_project = mock(create: true)
     CreatesProject.expects(:new)
         .with(name: "Runway", task_string: "start something:2")
-        .returns(fake_action)
+        .returns(fake_project)
     post :create, project: {name: "Runway", tasks: "start something:2"}
     assert_redirected_to projects_path
     refute_nil assigns[:action]
