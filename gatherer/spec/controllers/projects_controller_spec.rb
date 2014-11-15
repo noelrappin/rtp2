@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProjectsController, :type => :controller do
+RSpec.describe ProjectsController, type: :controller do
 
   describe "POST create" do
     it "creates a project" do
@@ -31,7 +31,7 @@ RSpec.describe ProjectsController, :type => :controller do
     it "fails create gracefully" do
       action_stub = double(create: false, project: Project.new) # <label id="action_stub" />
       expect(CreatesProject).to receive(:new).and_return(action_stub) # <label id="create_any_instance" />
-      post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
+      post :create, :project => {name: 'Project Runway'} # <label id="create_controller" />
       expect(response).to render_template(:new) # <label id="create_template" />
     end
     ##END: mock_failure
