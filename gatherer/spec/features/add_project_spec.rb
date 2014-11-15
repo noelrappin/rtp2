@@ -6,7 +6,7 @@ describe "adding projects" do
   fixtures :all
   include Warden::Test::Helpers
 
-  before(:each) do
+  before(:example) do
     login_as users(:user)
   end
   ##END:setup
