@@ -6,7 +6,7 @@ describe "task display" do
 
   fixtures :all
 
-  before(:each) do
+  before(:example) do
     projects(:bluebook).roles.create(user: users(:user))
     users(:user).update_attributes(twitter_handle: "noelrap")
     tasks(:one).update_attributes(user_id: users(:user).id,

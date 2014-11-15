@@ -8,7 +8,7 @@ describe "adding a new task" do
   fixtures :all
   include Warden::Test::Helpers
 
-  before(:each) do
+  before(:example) do
     projects(:bluebook).roles.create(user: users(:user))
     login_as users(:user)
   end
