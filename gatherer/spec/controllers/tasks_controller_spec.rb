@@ -7,25 +7,25 @@ RSpec.describe TasksController, :type => :controller do
 
   before(:example) do
     sign_in(user)
-    ActionMailer::Base.deliveries.clear # <label id="code.clear_mailers" />
+    ActionMailer::Base.deliveries.clear
   end
-  ##START:setup
+  ##END:setup
 
   describe "PATCH update" do
     let(:task) { Task.create!(title: "Write section on testing mailers", size: 2) }
 
     it "does not send an email if a task is not completed" do
       patch :update, id: task.id, task: {size: 3}
-      expect(ActionMailer::Base.deliveries.size).to eq(0) # <label id="code.no_emails" />
+      expect(ActionMailer::Base.deliveries.size).to eq(0)
     end
 
     ##START:with_email
     it "sends email when task is completed" do
       patch :update, id: task.id, task: {size: 3, completed: true}
-      task.reload  # <label id="code.reload" />
+      task.reload
       expect(task.completed_at).to be_present
       expect(ActionMailer::Base.deliveries.size).to eq(1)
-      email = ActionMailer::Base.deliveries.first # <label id="code.check_email_start" />
+      email = ActionMailer::Base.deliveries.first
       expect(email.subject).to eq("A task has been completed")
       expect(email.to).to eq(["monitor@tasks.com"])
       expect(email.body.to_s).to match(/Write section on testing mailers/)
@@ -45,7 +45,7 @@ RSpec.describe TasksController, :type => :controller do
       expect(project.reload.tasks.first.title).to eq("just do it")
     end
 
-    it "does not allow a user to create a task for a project they do not belong to" do
+    it "does not allow a user to create a task for a project without access" do
       post :create, task: {project_id: project.id, title: "just do it", size: "1" }
       expect(project.reload.tasks.size).to eq(0)
     end

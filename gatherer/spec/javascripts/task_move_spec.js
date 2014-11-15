@@ -54,7 +54,7 @@ describe("with a list of tasks", function() {
     expect($("tr")).toMatchDomIds(["task_2", "task_1", "task_3"]);
   });
 
-  it("correctly processes an down click", function() {
+  it("correctly processes a down click", function() {
     $("#task_2 .down").click();
     expect($("tr")).toMatchDomIds(["task_1", "task_3", "task_2"]);
   });
