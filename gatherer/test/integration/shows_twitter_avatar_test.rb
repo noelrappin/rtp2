@@ -12,7 +12,7 @@ class TaskShowsTwitterAvatar < Capybara::Rails::TestCase
     login_as users(:user)
   end
 
-  test "i see a gravatar" do
+  test "I see a gravatar" do
     VCR.use_cassette("loading_twitter") do
       visit project_path(projects(:bluebook))
       url = "http://pbs.twimg.com/profile_images/40008602/head_shot_bigger.jpg"

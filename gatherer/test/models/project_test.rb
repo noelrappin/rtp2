@@ -37,7 +37,7 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   ##START:stub_one
-  test "lets stub an object" do
+  test "let's stub an object" do
     project = Project.new(name: "Project Greenlight")
     project.stubs(:name)
     assert_nil(project.name)
@@ -45,8 +45,8 @@ class ProjectTest < ActiveSupport::TestCase
   ##END:stub_one
 
   ##START:stub_two
-  test "lets stub an object again" do
-    project = Project.new(:name => "Project Greenlight")
+  test "let's stub an object again" do
+    project = Project.new(name: "Project Greenlight")
     project.stubs(:name).returns("Fred")
     assert_equal("Fred", project.name)
   end
@@ -71,7 +71,7 @@ class ProjectTest < ActiveSupport::TestCase
 ##END:  multi_return
 
 ##START: mock_one
-  test "lets mock an object" do
+  test "let's mock an object" do
     mock_project = Project.new(:name => "Project Greenlight")
     mock_project.expects(:name).returns("Fred")
     assert_equal("Fred", mock_project.name)
