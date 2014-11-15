@@ -6,7 +6,7 @@ class TaskTest < ActiveSupport::TestCase
     task = Task.new
     refute(task.complete?)
     task.mark_completed
-    assert(task.complete?)
+    assert(task.complete?) # <label id="code.minitest_assert" />
   end
 
   test "an uncompleted task does not count toward velocity" do
@@ -27,13 +27,6 @@ class TaskTest < ActiveSupport::TestCase
     task.mark_completed(1.day.ago)
     assert(task.part_of_velocity?)
     assert_equal(3, task.points_toward_velocity)
-  end
-
-  test "it finds completed tasks" do
-    Task.delete_all
-    complete = Task.create(completed_at: 1.day.ago, title: "Completed")
-    incomplete = Task.create(completed_at: nil, title: "Not Completed")
-    assert_equal([complete], Task.complete.to_a)
   end
 
 end
