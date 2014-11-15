@@ -11,7 +11,7 @@ class ProjectsHelperTest < ActionView::TestCase
   end
 
   ##START:second_test
-  test "project name with status info behind sechdule" do
+  test "project name with status info behind schedule" do
     project = Project.new(name: "Project Runway")
     project.stubs(:on_schedule?).returns(false)
     actual = name_with_status(project)

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ProjectPresenter do
-  let(:project) { double(name: "Project Runway") }
+  let(:project) { instance_double(Project, name: "Project Runway") }
   let(:presenter) { ProjectPresenter.new(project) }
 
   it "handles name with on time status" do
