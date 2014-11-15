@@ -22,7 +22,7 @@ RSpec.describe ProjectsController, :type => :controller do
     it "creates a project (mock version)" do
       fake_action = instance_double(CreatesProject, create: true)
       expect(CreatesProject).to receive(:new)
-          .with(name: "Runway", task_string: "start something:2", users: [user])
+          .with(name: "Runway", task_string: "Start something:2", users: [user])
           .and_return(fake_action)
       post :create, project: {name: "Runway", tasks: "Start something:2"}
       expect(response).to redirect_to(projects_path)
