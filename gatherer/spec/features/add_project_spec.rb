@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "adding projects" do
 
-  it "allows a user to create a project with tasks", :pending do
+  it "allows a user to create a project with tasks" do
     visit new_project_path # <label id="code.when_start" />
     fill_in "Name", with: "Project Runway"
     fill_in "Tasks", with: "Task 1:3\nTask 2:5"
