@@ -36,7 +36,7 @@ RSpec.describe Project do
     let(:small_not_done) { Task.new(size: 1) }
     let(:large_not_done) { Task.new(size: 4) }
 
-    before(:each) do
+    before(:example) do
       project.tasks = [newly_done, old_done, small_not_done, large_not_done]
     end
 
@@ -56,11 +56,11 @@ RSpec.describe Project do
     end
 
     it "knows its rate" do
-      expect(project.current_rate).to eq(1.0 / 7)
+      expect(project.current_rate).to eq(1.0 / 7) # <label id="code.algebra" />
     end
 
     it "knows its projected time remaining" do
-      expect(project.projected_days_remaining).to eq(35)
+      expect(project.projected_days_remaining).to eq(35) # <label id="code.number" />
     end
 
     it "knows if it is on schedule" do
@@ -81,7 +81,7 @@ RSpec.describe Project do
 
   ##START:stub_two
   it "stubs an object again" do
-    project = Project.new(:name => "Project Greenlight")
+    project = Project.new(name: "Project Greenlight")
     allow(project).to receive(:name).and_return("Fred") # <label id="stub_two_stub" />
     expect(project.name).to eq("Fred") # <label id="stub_two_assert" />
   end
@@ -90,7 +90,7 @@ RSpec.describe Project do
   ##START: stub_class
   it "stubs the class" do
     allow(Project).to receive(:find).and_return(
-        Project.new(:name => "Project Greenlight"))
+        Project.new(name: "Project Greenlight"))
     project = Project.find(1) # <label id="stub_class_stub" />
     expect(project.name).to eq("Project Greenlight")
   end
@@ -98,7 +98,7 @@ RSpec.describe Project do
 
 ##START: mock_one
   it "mocks an object" do
-    mock_project = Project.new(:name => "Project Greenlight")
+    mock_project = Project.new(name: "Project Greenlight")
     expect(mock_project).to receive(:name).and_return("Fred")
     expect(mock_project.name).to eq("Fred")
   end
