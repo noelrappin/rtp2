@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProjectsController, :type => :controller do
+RSpec.describe ProjectsController, type: :controller do
 
   describe "POST create" do
     ##START: state_test
