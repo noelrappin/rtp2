@@ -1,8 +1,10 @@
 class ProjectsController < ApplicationController
 
+  ##START:index
   def index
     @projects = ProjectPresenter.from_project_list(current_user.visible_projects)
   end
+  ##END:index
 
   def new
     @project = Project.new
@@ -18,6 +20,7 @@ class ProjectsController < ApplicationController
   end
   ##END: show
 
+  ##START: create
   def create
     @action = CreatesProject.new(
       name: params[:project][:name],
@@ -31,6 +34,7 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
+  ##END: create
 
   ##START: update
   def update
