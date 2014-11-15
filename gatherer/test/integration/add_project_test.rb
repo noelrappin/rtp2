@@ -6,7 +6,7 @@ class AddProjectTest < Capybara::Rails::TestCase
   include Warden::Test::Helpers
 
   setup do
-    login_as users(:user)
+    login_as users(:user)git
   end
   ##END:setup
 
