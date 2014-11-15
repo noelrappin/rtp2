@@ -6,7 +6,7 @@ class TaskTest < ActiveSupport::TestCase
     task = Task.new
     refute(task.complete?)
     task.mark_completed
-    assert(task.complete?)
+    assert(task.complete?) # <label id="code.minitest_assert" />
   end
 
   test "an uncompleted task does not count toward velocity" do
