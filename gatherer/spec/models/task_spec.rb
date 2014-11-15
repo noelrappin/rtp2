@@ -21,7 +21,7 @@ RSpec.describe Task do
       expect(task.points_toward_velocity).to eq(0)
     end
 
-    it "does not count a long ago task toward velocity" do
+    it "does not count a long-ago task toward velocity" do
       task.mark_completed(6.months.ago) # <label id="code.old_complete" />
       expect(task).not_to be_part_of_velocity
       expect(task.points_toward_velocity).to eq(0)
