@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.5'
+gem 'rails', '~> 4.1'
 
 gem 'sqlite3'
 
@@ -18,7 +18,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.1'
 end
 
 group :test do
