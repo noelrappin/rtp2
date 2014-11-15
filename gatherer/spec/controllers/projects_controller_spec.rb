@@ -1,29 +1,33 @@
 require 'rails_helper'
 
-RSpec.describe ProjectsController, :type => :controller do
+RSpec.describe ProjectsController, type: :controller do
 
   ##START:setup
-  before(:each) do
+  before(:example) do
     sign_in User.create!(email: "rspec@example.com", password: "password")
   end
   ##END:setup
 
   describe "POST create" do
+    ##START: state_test
     it "creates a project" do
-      post :create, project: {name: "Runway", tasks: "Start something:2"} # <label id="code.create_request" />
-      expect(response).to redirect_to(projects_path) # <label id="code.controller_assert_redirect" />
-      expect(assigns(:action).project.name).to eq("Runway")  # <label id="code.controller_assigns" />
+      post :create, project: {name: "Runway", tasks: "Start something:2"}
+      expect(response).to redirect_to(projects_path)
+      expect(assigns(:action).project.name).to eq("Runway")
     end
+    ##END: state_test
 
+    ##START:mock_test
     it "creates a project (mock version)" do
       fake_action = instance_double(CreatesProject, create: true) # <label id="mock_project" />
       expect(CreatesProject).to receive(:new)  # <label id="mock_action" />
-          .with(name: "Runway", task_string: "start something:2")
+          .with(name: "Runway", task_string: "Start something:2")
           .and_return(fake_action)
-      post :create, project: {name: "Runway", tasks: "start something:2"}
+      post :create, project: {name: "Runway", tasks: "Start something:2"}
       expect(response).to redirect_to(projects_path)
       expect(assigns(:action)).not_to be_nil # <label id="mock_refute_nil" />
     end
+  ##END:mock_test
 
     ##START:failure
     it "goes back to the form on failure" do
@@ -37,7 +41,7 @@ RSpec.describe ProjectsController, :type => :controller do
     it "fails create gracefully" do
       action_stub = double(create: false, project: Project.new) # <label id="action_stub" />
       expect(CreatesProject).to receive(:new).and_return(action_stub) # <label id="create_any_instance" />
-      post :create, :project => {:name => 'Project Runway'} # <label id="create_controller" />
+      post :create, :project => {name: 'Project Runway'} # <label id="create_controller" />
       expect(response).to render_template(:new) # <label id="create_template" />
     end
     ##END: mock_failure

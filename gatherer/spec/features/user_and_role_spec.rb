@@ -11,7 +11,7 @@ describe "with users and roles" do
 
   let(:user) { User.create!(email: "test2@example.com", password: "password") }
 
-  it "allows a logged in user to view the project index page" do
+  it "allows a logged-in user to view the project index page" do
     log_in_as(user)
     visit(projects_path)
     expect(current_path).to eq(projects_path)
