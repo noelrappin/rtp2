@@ -1,11 +1,6 @@
 require 'rails_helper'
 
-##START: shared
 RSpec.describe Task do
-
-  it_should_behave_like "sizeable"
-##END: shared
-
   it "can distinguish a completed task" do
     task = Task.new
     expect(task).not_to be_complete
@@ -14,7 +9,6 @@ RSpec.describe Task do
   end
 
   ##START:vel_test
-
   describe "velocity" do
     let(:task) { Task.new(size: 3) }
 
@@ -36,5 +30,6 @@ RSpec.describe Task do
     end
   end
   ##END:vel_test
+
 end
 
